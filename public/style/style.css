@@ -1,0 +1,239 @@
+body{
+
+	font-family: 'Exo', sans-serif;
+}
+
+h1{
+	text-align: center;
+	margin :50px ;
+}
+
+.container{
+	width: 900px;
+	margin : auto;
+}
+
+.containerNav{
+
+	width : 1100px;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.ConnexionButton button[type="button"]{
+
+	position:relative;
+	left:90%;
+	/*margin : 5px 15px 5px 15px;*/
+	background-color: #008081;
+	border-color : #008081;
+
+}
+.btnCo {
+	margin: 15px;
+}
+
+/*réussir a changer la couleur quand la souris passe dessus*/
+
+.ConnexionButton button:focus{
+
+  border-color: blue;
+  box-shadow: none;
+}
+
+.NavBar{
+
+	box-shadow: 0px 1px 5px grey;
+	position: sticky;
+	border-bottom: 2px solid #008081;
+	padding : 0px;
+}
+
+.menuNavItem{
+
+	margin : 0px 10px 0px 10px;
+}
+
+div .dropdown-menu{
+
+	padding : 0px;
+}
+
+div .dropdown-divider{
+
+	margin : 0px;
+	padding: 2px;
+}
+
+
+.itemDeroulants:hover{
+
+	background-color: #008081;
+}
+
+.NavForm{
+
+	text-align: center;
+}
+
+/* main a partir d'ici */
+
+.content{
+
+	margin: 25px;
+}
+
+.Parties{
+
+	text-align: center;
+	margin: 40px;
+}
+
+.SousParties{
+
+	margin: 30px;
+}
+
+
+
+
+/* page soins*/
+
+.effetsTherapeutiques{
+
+   color : grey;
+
+}
+/*page wcbt*/
+
+.lienReseauxSociaux{
+
+
+}
+
+
+
+.effetsTherapeutiques span{
+
+	color : black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer a partir d'ici*/
+
+footer{
+
+	background-color: #333333;
+  	color: white;
+  	margin-top: 200px;
+
+}
+
+.listecate a{
+text-decoration: none;
+color: inherit;
+padding: 10px ;
+display: block;
+}
+
+.chevron{
+	padding : 5px 10px;
+	color :#008081;
+}
+
+.telephone{
+	padding : 5px 10px;
+	color :#008081;
+
+	transform: rotateZ(90deg);
+	/*transform: scale(1,-1);*/
+}
+
+.Liens{
+  margin: 5px;
+}
+.Liens:after{
+  content:'';
+  display: block;
+  height: 3px;
+  width: 50px;
+  background-color: #008081;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.listeliens{
+  padding-left: 0;
+  list-style-type:none;
+}
+
+.Liens .listeliens .listecate i{
+
+padding: 20px 0;
+}
+.Contact{
+ margin: 5px;
+
+}
+
+.Contact:after{
+
+	content:'';
+  	display: block;
+	height: 3px;
+	width: 50px;
+	background-color: #008081;
+	margin-top: 5px;
+	margin-bottom: 15px;
+
+}
+/*
+.Contact i .phone{
+
+	image-orientation: -90deg flip;
+	margin : 10px;
+}*/
+
+.RDV{
+  margin: 5px;
+}
+
+.RDVButton a[role="button"]{
+
+	margin : 10px 20px 10px 20px;
+	background-color: #008081;
+	border-color: #008081;
+	padding: 15px;
+}
+
+.RDV:after{
+  content:'';
+  display: block;
+  height: 3px;
+  width: 50px;
+  background-color: #008081;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.RDVtxt{
+  margin: 5px;
+}
+
+.copyright{
+  background-color: #008081;
+  text-align: center;
+  padding:20px;
+}
