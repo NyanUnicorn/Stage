@@ -19,11 +19,11 @@
 
 			<div class="row">
 
-				<div class="LogoTable col-xs-12 col-lg-4"><img src="P:\Projet Site Stage\LogoTable.png"></div>
+				<div class="LogoTable col-xs-12 col-lg-4"><img src="C:\wamp64\www\Stage\LCQR\assets\img\LogoTable.png"></div>
 
 				<div class="col-lg-4"><h1>Le Chiro Qui Roule</h1></i></div>
 
-				<div class="LogoVelo col-lg-4"><img src="P:\Projet Site Stage\LogoVelo.png"></div>	
+				<div class="LogoVelo col-lg-4"><img src="C:\wamp64\www\Stage\LCQR\assets\img\LogoVelo.png"></div>	
 
 			</div>		
 
@@ -101,7 +101,7 @@
 		</div>
 		<div class="AlexandreVelo">
 
-			<img class="img_alexandre_velo" src="P:\Projet Site Stage\BandeauAlexandre.png" width="100%" height="100%">
+			<img class="img_alexandre_velo" src="C:\wamp64\www\Stage\LCQR\assets\img\BandeauAlexandre.png" width="100%" height="100%">
 
 		</div>
 
