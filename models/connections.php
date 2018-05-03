@@ -1,6 +1,10 @@
 <?php
 function navConnexion(){
-  echo '<a class="itemDeroulants NavForm nav-link" href="#">Connexion</a>';
+  if(sessionConnected()){
+    require '/pieces/nav_profile_drop.php';
+  }else{
+    require '/pieces/nav_conn_btn.php';
+  }
 }
 
 function sessionConnected(){
@@ -15,5 +19,5 @@ function sessionConnected(){
 }
 
 function resetTimeout(){
-  $_SESSION['timeout'] = strtotime('+30 minutes');
+  $_SESSION['timeout'] = strtotime('+1 minutes');
 }
