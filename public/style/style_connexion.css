@@ -1,0 +1,70 @@
+/*:required {
+
+  background-color: red;
+
+}*/
+h4{
+  text-align: center;
+
+}
+
+
+fieldset{
+
+    padding: 5px;
+    border: solid 1px #008081;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.flex-container{
+
+  display : flex;
+  justify-content: center;
+
+}
+
+.form{
+
+    width: 100%;
+
+}
+
+.flex-input{
+
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+
+}
+
+.flex-input *{
+
+    padding: 3px;
+    margin: 0px 5px;
+}
+
+.ConnectionBouton{
+  display: inline;
+}
+
+.checkbox{
+
+display: inline;
+
+
+}
+
+.checkbox *{
+
+    padding: 3px;
+    margin: 0px 8px;
+}
+
+.clearfix{
+    display: table;
+    clear: both;
+
+}
