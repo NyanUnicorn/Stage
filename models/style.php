@@ -6,10 +6,10 @@ function getStylesheet($_name){
 
 }
 
-function includeBootstrapHead(){
-  require 'pieces/head_bootstrap.php';
+function includeExternalHead(){
+  require 'pieces/head_external.php';
 }
 
-function includeBootstrapFoot(){
+function includeExternalFoot(){
   require 'pieces/foot_bootstrap.php';
 }

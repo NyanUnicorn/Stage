@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 
 	<?php
-	includeBootstrapHead();
+	includeExternalHead();
 	echo getStylesheet('style');
 	?>
 
@@ -50,7 +50,7 @@
 
 	<?php
 	require 'footer-view.php';
-	includeBootstrapFoot();
+	includeExternalFoot();
 	?>
 
 </body>
