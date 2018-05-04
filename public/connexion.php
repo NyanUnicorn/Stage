@@ -5,6 +5,7 @@ require '../src/autoload.php';
 require '../lib/form.php';
 require '../models/style.php';
 require '../models/connections.php';
+require '../models/image.php';
 
 if (authenticated()){
 

@@ -7,10 +7,10 @@
   <div class="MenuNavBar collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="menuNavItem nav-item active">
-          <a class="itemDeroulants nav-link" href="file:///P:/Projet%20Site%20Stage/index.html">Acceuil <span class="sr-only"></span></a>
+          <a class="itemDeroulants nav-link" href="../">Acceuil <span class="sr-only"></span></a>
         </li>
         <li class="menuNavItem nav-item dropdown">
-          <a class="itemDeroulants NavForm nav-link dropdown-toggle" href="file:///P:/Projet%20Site%20Stage/chiropraxie.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="itemDeroulants NavForm nav-link dropdown-toggle" href="chiropraxie.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             La chiropraxie
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">

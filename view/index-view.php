@@ -26,7 +26,8 @@
 		</div>
 		<div class="AlexandreVelo">
 
-			<img class="img_alexandre_velo" src="C:\wamp64\www\Stage\LCQR\assets\img\BandeauAlexandre.png" width="100%" height="100%">
+			<!--<img  src="C:\wamp64\www\Stage\LCQR\assets\img\BandeauAlexandre.png" width="100%" height="100%">-->
+			<img class="img_alexandre_velo" <?php  echo displayImage('BandeauAlexandre.png'); ?>>
 
 		</div>
 

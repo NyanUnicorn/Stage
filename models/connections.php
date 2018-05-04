@@ -1,8 +1,8 @@
 <?php
 
-$Username
-$Password
-$Email
+$Username = '';
+$Password = '';
+$Email = '';
 
 
 function navConnexion(){
@@ -26,4 +26,7 @@ function authenticated(){
 
 function resetTimeout(){
   $_SESSION['timeout'] = strtotime('+1 minutes');
+}
+function checkInput(){
+
 }
