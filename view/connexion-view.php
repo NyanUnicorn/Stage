@@ -3,6 +3,7 @@
 <head>
 
 <?php
+		includeExternalHead();
 		echo getStylesheet('style');
 		echo getStylesheet('style_connexion');
  ?>
@@ -48,21 +49,43 @@
 
 				<input class="ConnectionBouton" type="submit" name="ConnectionBouton" value="Se Connecter">
 
-				<div class="checkbox">
-						 <input type="checkbox" name="resteConnecte" value="resteConnecte" id="resteConnecte" />
+				<div class="checkboxArea">
+						 <input class="checkbox" type="checkbox" name="resteConnecte" value="resteConnecte" id="resteConnecte" />
 						 <label for="resteConnecte">Rester connecté</label>
 				</div>
 
 			</form>
 
+			<form class="" action="inscrpition.php" method="post">
+
+				<div class="linkInscription">
+
+					<p>Vous n'avez pas encore de compte?</p>
+
+					<input class="CreateAcc" type="submit" name="button" value="Créer un compte"/>
+
+				</div>
+
+			</form>
+
+
 		</div>
 
 		<div class="clearfix"></div>
+
+
 
 </div>
 
 
 </main>
+
+<?php
+
+	require 'footer-view.php';
+	includeExternalFoot();
+
+ ?>
 
 </body>
 </html>
