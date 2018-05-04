@@ -38,7 +38,3 @@ function printM($_type, $_string){
   }
   echo $toEcho;
 }
-
-
-
- ?>
