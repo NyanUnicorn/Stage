@@ -5,3 +5,11 @@ function getStylesheet($_name){
   return $styleSheet;
 
 }
+
+function includeBootstrapHead(){
+  require 'pieces/head_bootstrap.php';
+}
+
+function includeBootstrapFoot(){
+  require 'pieces/foot_bootstrap.php';
+}
