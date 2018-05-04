@@ -5,3 +5,11 @@ function getStylesheet($_name){
   return $styleSheet;
 
 }
+
+function includeExternalHead(){
+  require 'pieces/head_external.php';
+}
+
+function includeExternalFoot(){
+  require 'pieces/foot_bootstrap.php';
+}
