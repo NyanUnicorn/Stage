@@ -1,0 +1,38 @@
+footer en php (<?php	require 'footer-view.php'; ?>)
+
+page de connection{
+en html sans header et footer (disponible en php (<?php	require 'header-view.php'; ?>))
+form en post{
+input email
+input mot de passe
+checkbox rester connecté
+}
+lien pas de compt vers page d'inscription
+}
+
+page d'inscription{
+en html sans header et footer (disponible en php (<?php	require 'header-view.php'; ?>))
+form en post{
+input nom
+input prenom
+date date de naissance
+input adresse (numero de maison et rue dans une même string)
+input code postale
+input ville
+input proffession
+select motif (comment avez vous cenue le site?)
+input (si selection de autre (condition a ajouter plus tard en JS))
+}
+validation()
+}
+
+validation(){
+tout recuperer
+generer date de création du compte
+envoyer sur le serveur sql
+}
+
+fair fonctionner les images{
+chercher solution pour récuperer des docs en dehor du dossier répertorié
+sinon mettre dossier image dans public
+}

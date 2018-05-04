@@ -13,17 +13,20 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+	<?php	require 'header-view.php'; ?>
+=======
 	<header>
 		<div class="container">
 
 
 			<div class="row">
 
-				<div class="LogoTable col-xs-12 col-lg-4"><img src="P:\Projet Site Stage\LogoTable.png"></div>
+				<div class="LogoTable col-xs-12 col-lg-4"><img src="C:\wamp64\www\Stage\LCQR\assets\img\LogoTable.png"></div>
 
 				<div class="col-lg-4"><h1>Le Chiro Qui Roule</h1></i></div>
 
-				<div class="LogoVelo col-lg-4"><img src="P:\Projet Site Stage\LogoVelo.png"></div>	
+				<div class="LogoVelo col-lg-4"><img src="..\assets\img\logoVelo.png"></div>	
 
 			</div>		
 
@@ -38,10 +41,10 @@
 			  <div class="MenuNavBar collapse navbar-collapse" id="navbarSupportedContent">
 			    <ul class="navbar-nav mr-auto">
 			    	<li class="menuNavItem nav-item active">
-        				<a class="itemDeroulants nav-link" href="file:///P:/Projet%20Site%20Stage/index.html">Acceuil <span class="sr-only"></span></a>
+        				<a class="itemDeroulants nav-link" href="file:///C:\wamp64\www\Stage\LCQR\view/index.html">Acceuil <span class="sr-only"></span></a>
       				</li>
 			      	<li class="menuNavItem nav-item dropdown">
-			        	<a class="itemDeroulants NavForm nav-link dropdown-toggle" href="file:///P:/Projet%20Site%20Stage/chiropraxie.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        	<a class="itemDeroulants NavForm nav-link dropdown-toggle" href="../view/chiropraxie.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			          	La chiropraxie
 			        	</a>
 			        	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -53,7 +56,7 @@
 				        </div>
 				    </li>
 				    <li class="menuNavItem nav-item dropdown">
-				        <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle" href="C:\wamp64\www\Stage\LCQR\view\soins.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				      		Les Soins Chiropratiques 
 				        </a>
 				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -90,18 +93,19 @@
 		
 
 	</header>
+>>>>>>> fcc7607e4945a89ebd606d717bd4635750e0b48b
 
 
 	<main>
 		<div class="encart">
 
 			<p class="Bandeau"><span>Telephone : 07 68 48 10 02</span> <button type="button" class="RdvBandeau btn .btn-primary btn-sm">Prendre Rendez-Vous</button></p>
-			
+
 
 		</div>
 		<div class="AlexandreVelo">
 
-			<img class="img_alexandre_velo" src="P:\Projet Site Stage\BandeauAlexandre.png" width="100%" height="100%">
+			<img class="img_alexandre_velo" src="C:\wamp64\www\Stage\LCQR\assets\img\BandeauAlexandre.png" width="100%" height="100%">
 
 		</div>
 
@@ -110,15 +114,15 @@
 			<h2 class="Presentation">Présentation</h2>
 
 				<p>Bienvenue sur le site du Chiro Qui Roule,
-					Le Chiro Qui Roule, c’est l’idée innovante d’Alexandre Chassagne, Chiropracteur depuis Novembre 2016 après avoir passé 6 années d’études à l’Institut Franco Européen de Chiropraxie (lien URL vers le site de mon école https://www.ifec.net/). 
+					Le Chiro Qui Roule, c’est l’idée innovante d’Alexandre Chassagne, Chiropracteur depuis Novembre 2016 après avoir passé 6 années d’études à l’Institut Franco Européen de Chiropraxie (lien URL vers le site de mon école https://www.ifec.net/).
 					En effet, jeune chiropracteur de 26 ans, décide depuis le premier trimestre 2018 de sillonner les rues de Laval agglomération à vélo accompagné de sa petite table de soins portable posé sur une remorque dans le but de prodiguer des soins chiropratiques à domicile tout en étant éco-responsable.
 				</p>
 
 			<h2 class="Presentation">Témoignages</h2>
 
 			<h2 class="Presentation">Actualités</h2>
-			
-			
+
+
 
 		</div>
 	</main>
@@ -139,11 +143,11 @@
 		            <li class="listecate"><a href="chiropraxie.html#Reconnaissance_légale_en_France"><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>Reconnaissance légale en France</a></li>
 		            <li class="listecate"><a href="chiropraxie.html#Reconnaissance_dans_le_monde"><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>Reconnaissance dans le monde </a></li>
 		            <li class="listecate"><a href="chiropraxie.html#La_formation_en_chiropraxie"><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>La formation en chiropraxie </a></li>
-		            <li class="listecate"><a href="chiropraxie.html#La_recherche_en_chiropraxie"><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>La recherche en chiropraxie</a></li>		       
+		            <li class="listecate"><a href="chiropraxie.html#La_recherche_en_chiropraxie"><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>La recherche en chiropraxie</a></li>
 		          </ul>
 		        </div>
 		        <div class="col-lg-3">
-		        	<h5 class="Contact">Contact</h5>		        	
+		        	<h5 class="Contact">Contact</h5>
 		        	<p class="ContactFooter"><i class="telephone fas fa-phone" data-fa-transform="flip-v flip-h" ></i>07 68 48 10 02</p>
 		        	<p><i class="chevron fab fa-facebook fa-spin"></i>Le Chiro qui roule</p>
 		        	<p><i class="chevron fab fa-instagram fa-spin"></i>Lechiroquiroule</p>
@@ -152,10 +156,10 @@
 		          		<a href="#" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Prendre rendez-vous</a>
 		          	</div>
 		          	<p class="RDVtxt">N'hésitez pas à prendre rendez-vous dès maintenant.</p>
-		          
+
 		      </div>
         	</div>
-        	
+
 	    </div>
 
   	</footer>
