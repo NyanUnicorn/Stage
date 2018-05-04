@@ -8,6 +8,7 @@
 		echo getStylesheet('style_connexion');
  ?>
 
+	<meta charset="utf-8">
 	<title>page de connection</title>
 
 </head>
