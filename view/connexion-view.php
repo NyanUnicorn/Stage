@@ -5,7 +5,7 @@
 <?php
 		includeExternalHead();
 		echo getStylesheet('style');
-		echo getStylesheet('style_connexion');
+		echo getStylesheet('style_form');
  ?>
 
 	<meta charset="utf-8">

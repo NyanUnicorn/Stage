@@ -10,6 +10,12 @@ h1{
 	font-size: 300%;
 }
 
+
+
+
+
+
+
 .container{
 	width: 900px;
 	margin : auto;
@@ -63,6 +69,7 @@ h1{
 	box-shadow: 0px 1px 5px grey;
 	border-bottom: 2px solid #ED7E39;
 	padding : 0px;
+	margin-bottom: 0;
 }
 
 
@@ -131,7 +138,7 @@ div .dropdown-divider{
 	background-color: #ED7E39;
 	box-shadow: 3px 3px 5px rgba(85,85,85,1);
 	border : 2px solid #ED7E39;
-	
+
 
 }
 

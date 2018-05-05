@@ -1,0 +1,86 @@
+
+.NavBar{
+	border-bottom: 2px solid #008081;
+}
+
+.RdvBandeau{
+	color: black;
+	background-color: #008081;
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	border : 2px solid #008081;
+
+
+}
+
+.RdvBandeau:hover{
+
+	border : 2px ridge #E6F2F2;
+}
+
+
+div.affix-top{
+  display: inline-block;
+}
+
+
+.flex-container{
+
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.affix span{
+  color: black;
+  margin: 5px;
+}
+
+div.affix-top span{
+  margin: 0 3px;
+}
+
+
+div.affix div.flex-container{
+
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.affix {
+  top: 53px;
+  z-index: 9999 !important;
+	background-color: RGBA(230,242,242,0.4);
+  padding: 10px 0;
+  margin: 0;
+}
+
+fieldset{
+
+
+  border: solid 1px #E6F2F2;
+
+  text-align: center;
+
+}
+
+div.affix fieldset{
+  padding: 5px;
+  margin: 20px 0;
+}
+
+div.affix-top fieldset{
+  padding: 3px;
+    margin: 0 20px;
+}
+
+nav.affix {
+      top: 0;
+      width: 100%;
+      z-index: 9999 !important;
+
+}

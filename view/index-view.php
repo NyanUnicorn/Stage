@@ -9,18 +9,19 @@
 	<?php
 	includeExternalHead();
 	echo getStylesheet('style');
+	echo getStylesheet('style_menu');
 	?>
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 	<?php	require 'header-view.php'; ?>
 
 
 	<main>
 		<div class="encart">
 
-			<p class="Bandeau"><span>Telephone : 07 68 48 10 02</span> <button type="button" class="RdvBandeau btn .btn-primary btn-sm">Prendre Rendez-Vous</button></p>
+			<?php require 'side-nav-view.php'; ?>
 
 
 		</div>
