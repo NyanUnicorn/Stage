@@ -6,7 +6,7 @@ require '../models/style.php';
 require '../models/connections.php';
 require '../models/image.php';
 
-require '../view/index-view.php';
+require '../view/index-view2.php';
 
 ?>
 

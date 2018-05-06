@@ -20,15 +20,12 @@
 
 	<main>
 		<div class="encart">
-
 			<?php require 'side-nav-view.php'; ?>
-
-
 		</div>
 		<div class="AlexandreVelo">
 
 			<!--<img  src="C:\wamp64\www\Stage\LCQR\assets\img\BandeauAlexandre.png" width="100%" height="100%">-->
-			<img class="img_alexandre_velo" <?php  echo displayImage('BandeauAlexandre.png'); ?>>
+			<img class="img_alexandre_velo" <?php  echo displayImage('BandeauAlexandre2.png'); ?>>
 
 		</div>
 
