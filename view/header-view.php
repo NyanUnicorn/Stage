@@ -1,5 +1,11 @@
 <header>
-  <div class="container">
+  <div class="row">
+
+<div class="col-lg-2">
+
+</div>
+
+<div class="col-lg-8">
 
 
     <div class="row">
@@ -13,6 +19,12 @@
       <div class="LogoVelo col-lg-4">
       <img <?php  echo displayImage('logoVelo.png'); ?>>
       </div>
+
+    </div>
+
+
+</div>
+    <div class="col-lg-2">
 
     </div>
 
