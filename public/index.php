@@ -9,5 +9,3 @@ require '../models/image.php';
 require '../view/index-view2.php';
 
 ?>
-
-<img src="image.php" />

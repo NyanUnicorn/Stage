@@ -21,6 +21,14 @@ h1{
 	margin : auto;
 }
 
+.LogoTable{
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+
+
+}
+
 .LogoTable img{
 
 	width: 200px;
@@ -44,7 +52,9 @@ h1{
 	align-items: center;
 }
 
-
+.nav-wrapper{
+	min-height: 50px;
+}
 
 .ConnexionButton button[type="button"]{
 
@@ -120,15 +130,24 @@ div .dropdown-divider{
 
 
 
-
 .NavForm{
 
 	text-align: center;
 }
 
 /* main a partir d'ici */
+div.affix + .img_alexandre_velo{
+
+
+}
 
 .img_alexandre_velo{
+
+	width : 100%;
+}
+
+.affix-top .img_alexandre_velo{
+
 
 	width : 100%;
 }
@@ -148,7 +167,7 @@ div .dropdown-divider{
 }
 
 .encart{
-
+	min-height: 58px;
 	background-color:  #008081;
 	padding: 5px;
 	text-align: center;
@@ -156,7 +175,7 @@ div .dropdown-divider{
 }
 
 .Bandeau{
-
+	display: flow-root;
 	margin: 5px;
 }
 
