@@ -25,7 +25,17 @@ h1{
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
+		align-items: center;
+		justify-content: center;
 
+}
+
+.LogoVelo{
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 }
 
@@ -33,14 +43,13 @@ h1{
 
 	width: 200px;
 	height: 150px;
-	margin: 30px;
+	margin-top: 10px;
 
 }
 .LogoVelo img{
 	width: 300px;
 	height: 140px;
-	padding-right: 40px;
-	margin: 30px 50px 30px 20px;
+	margin: 10px 50px 0 40px;
 
 }
 

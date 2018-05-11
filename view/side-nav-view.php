@@ -1,4 +1,4 @@
-<div class="Bandeau nav nav-pills nav-stacked" data-spy="affix" data-offset-top="212">
+<div class="Bandeau nav nav-pills nav-stacked" data-spy="affix" data-offset-top="180">
   <div class="flex-container">
     <fieldset>
       <div class="row">
