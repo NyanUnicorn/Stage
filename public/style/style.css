@@ -183,6 +183,14 @@ div.affix + .img_alexandre_velo{
 	color: white;
 }
 
+.no-pad{
+	width: 100%;
+}
+
+.no-pad>*{
+	padding: 0;
+}
+
 .Bandeau{
 	display: flow-root;
 	margin: 5px;
