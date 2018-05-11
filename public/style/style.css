@@ -155,6 +155,7 @@ div.affix + .img_alexandre_velo{
 	width : 100%;
 }
 
+
 .affix-top .img_alexandre_velo{
 
 
@@ -177,7 +178,8 @@ div.affix + .img_alexandre_velo{
 
 .encart{
 	min-height: 58px;
-	background-color:  #008081;
+	/*background-color:  #008081;*/
+	background:  -webkit-linear-gradient(top, rgba(0,127,128,1) 0%, rgba(0,127,128,1) 14%, rgba(0,163,163,1) 100%);
 	padding: 5px;
 	text-align: center;
 	color: white;
@@ -220,6 +222,7 @@ div.affix + .img_alexandre_velo{
 .Presentation{
 	margin: 40px;
 }
+
 
 
 /* page soins*/

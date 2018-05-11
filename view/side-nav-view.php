@@ -1,6 +1,6 @@
 <div class="Bandeau nav nav-pills nav-stacked" data-spy="affix" data-offset-top="180">
   <div class="flex-container">
-    <fieldset>
+    <fieldset class="fieldset-side">
       <div class="row">
 
 <div class="phoneLabel col-lg-12 col-xl-4">

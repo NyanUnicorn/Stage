@@ -10,7 +10,7 @@ h4{
 }
 
 
-fieldset{
+fieldset.fieldset-form{
 
     padding: 5px;
     border: solid 1px #008081;
@@ -62,7 +62,7 @@ fieldset{
   padding : 5px 12px;
   margin-right: 60px;
   font-size: 15px;
-  
+
 }
 
 .ConnectionBouton:hover{

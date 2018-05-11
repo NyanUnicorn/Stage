@@ -19,6 +19,10 @@
 
     <main>
 
+      <div class="encart">
+  			<?php require 'side-nav-view.php'; ?>
+  		</div>
+
       <h4>Inscription:</h4>
 
       <div class="container">

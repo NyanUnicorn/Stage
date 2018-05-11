@@ -6,6 +6,7 @@
 		includeExternalHead();
 		echo getStylesheet('style');
 		echo getStylesheet('style_form');
+		echo getStylesheet('style_menu');
  ?>
 
 	<meta charset="utf-8">
@@ -23,14 +24,30 @@
 
 <main>
 
+	<div class="encart">
+		<?php require 'side-nav-view.php'; ?>
+	</div>
+
 	<h4>Veuillez entrez vos identifiants et mot de passe:</h4>
 <div class="container">
 
 		<div class="flex-container">
 
 			<form method="post" action="connection.php">
+				<div class="row">
+					<div class="col-xs-1 col-lg-0">
 
-				<fieldset>
+					</div>
+					<div class="col-xs-10 col-lg-12">
+
+					</div>
+					<div class="col-xs-1 col-lg-0">
+
+					</div>
+
+				</div>
+
+				<fieldset class="fieldset-form">
 
 						<legend>Vos identifiants</legend>
 						<div class="form">
