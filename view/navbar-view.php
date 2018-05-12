@@ -23,7 +23,7 @@
           </div>
       </li>
       <li class="menuNavItem nav-item dropdown">
-          <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Les Soins Chiropratiques
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
