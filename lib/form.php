@@ -28,7 +28,7 @@ function printM($_type, $_string){
       $toEcho = '<p' . $_string . '</p>';
       break;
     case 'span':
-      $toEcho = '<span' . $_string . '</<pan>';
+      $toEcho = '<span>' . $_string . '</span>';
       break;
     case 'value':
       $toEcho = 'value="' . $_string . '" ';

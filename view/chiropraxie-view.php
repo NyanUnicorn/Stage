@@ -5,95 +5,31 @@
 	<title>Le Chiro Qui Roule</title>
 
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<?php
+	includeExternalHead();
+	echo getStylesheet('style');
+	echo getStylesheet('style_menu');
+	?>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div class="ConnexionButton">
-				<button type="button" class="btcCo btn btn-primary btn-sm">Connexion</button>
-			</div>
-			<h1>Le Chiro Qui Roule</h1>
+	<?php	require 'header-view.php'; ?>
 
-				
-
-		</div>
-			<nav class="NavBar navbar navbar-expand-lg navbar-light bg-light">
-		<div class="containerNav">	
-			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    			<span class="navbar-toggler-icon"></span>
-  				</button>
-
-			  <div class="MenuNavBar collapse navbar-collapse" id="navbarSupportedContent">
-			    <ul class="navbar-nav mr-auto">
-			    	<li class="menuNavItem nav-item active">
-        				<a class="nav-link" href="file:///P:/Projet%20Site%20Stage/index.html">Acceuil <span class="sr-only"></span></a>
-      				</li>
-			      	<li class="menuNavItem nav-item dropdown">
-			        	<a class="NavForm nav-link dropdown-toggle" href="file:///P:/Projet%20Site%20Stage/chiropraxie.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          	La chiropraxie
-			        	</a>
-			        	<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				          <a class="dropdown-item" href="chiropraxie.html#Histoire_et_définition">Histoire et définition</a>
-				          <a class="dropdown-item" href="chiropraxie.html#Reconnaissance_légale_en_France">Reconnaissance légale en France</a>				         
-				          <a class="dropdown-item" href="chiropraxie.html#Reconnaissance_dans_le_monde">Reconnaissance dans le monde </a>
-				          <a class="dropdown-item" href="chiropraxie.html#La_formation_en_chiropraxie">La formation en chiropraxie </a>
-				          <a class="dropdown-item" href="chiropraxie.html#La_recherche_en_chiropraxie">La recherche en chiropraxie</a>
-				        </div>
-				    </li>
-				    <li class="menuNavItem nav-item dropdown">
-				        <a class="NavForm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				      		Les Soins Chiropratiques 
-				        </a>
-				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				          <a class="dropdown-item" href="soins.html#Pour_Qui">Pour Qui ? </a>
-				          <a class="dropdown-item" href="soins.html#Les_symptomes_pour_consulter">Les symptômes pour consulter</a>
-				          <div class="dropdown-divider"></div>
-				          <a class="dropdown-item" href="soins.html#Deroulement_d'une_séance">Déroulement d’une séance </a>
-				          <a class="dropdown-item" href="soins.html#Tarifs">Tarifs</a>
-				          <a class="dropdown-item" href="soins.html#Mutuelles_remboursant_les_soins">Mutuelles remboursant les soins </a>
-				        </div>
-				    </li>			     
-				    <li class="menuNavItem nav-item dropdown">
-			        	<a class="NavForm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          	Votre Chiropracteur 
-				        </a>
-				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				          <a class="dropdown-item" href="chiropracteur.html#Son_parcours">Son parcours </a>
-				          <a class="dropdown-item" href="chiropracteur.html#Seance_a_domicile_a_velo">Séance à domicile à vélo </a>
-				          <div class="dropdown-divider"></div>
-				          <a class="dropdown-item" href="chiropracteur.html#Contacts">Contacts</a>	       
-				        </div>
-				    </li>
-				    <li class="menuNavItem nav-item">
-			        	<a class="NavForm nav-link" href="wcbt.html">Le World Chiropractic Bike Tour</a>
-			        </li>
-			        <li class="menuNavItem nav-item">
-			        	<a class="NavForm nav-link" href="#">Connexion</a>
-			        </li>
-			     </ul>
-			    </div>
-
-		</div> 
-			</nav>			  	  
-		
-
-	</header>
-	
 
 	<main>
+
+		<div class="encart">
+			<?php require 'side-nav-view.php'; ?>
+		</div>
+
 		<div class="container">
-			
+
 			<div>
 
 				<h2 class="Parties">La Chiropraxie</h2>
-				
+
 				<h3  class="SousParties"><a name="Histoire_et_définition">Histoire et définition</a></h3>
-				
+
 
 				<p>Chiropratique ou chiropraxie vient du grec « kheir » qui signifie la main et « praxis » l’action. Il s’agit d’une profession de santé manuelle qui vise à améliorer les fonctions du corps. Même si l’approche chiropratique est globale, le chiropracteur vise à détecter, soulager et prévenir les troubles neuro musculo squelettiques (Concernant les articulations, le système nerveux périphérique et les muscles). Le Chiropracteur réalise des manipulations spécifiques appelées « ajustements chiropratiques » lui permettant de rendre la mobilité à l’articulation visée et/ou soulager certaines douleurs.</p>
 
@@ -108,7 +44,7 @@
 				<p>La chiropratique existe depuis 1895 On trouve plus de 100 000 chiropracteurs dans le monde dont environ 1000 dans l’hexagone. Elle est reconnue dans plus de 40 pays et la profession est reconnue par l’Organisation Mondiale de la Santé et est considérée comme la profession de santé manuelle de référence dans le monde.</p>
 
 				<h3  class="SousParties"><a name="Reconnaissance_légale_en_France">Reconnaissance légale en France</a></h3>
-				
+
 
 				<p>RÈGLEMENTATION FRANÇAISE DE LA CHIROPRAXIE</p>
 
@@ -137,7 +73,7 @@
 				<p>Source : AFC</p>
 
 				<h3  class="SousParties"><a name="Reconnaissance_dans_le_monde">Reconnaissance dans le monde</a></h3>
-				
+
 				<p>La place de la chiropraxie dans les systèmes de santé à l’étranger.</p>
 
 				<p>En Europe, la chiropraxie est reconnue et réglementée dans une quinzaine de pays. Très développée en Grande-Bretagne, où s’est installé le premier Collège européen de chiropraxie en 1965, c’est à ce jour en Suisse et dans les pays scandinaves qu’elle est le plus efficacement intégrée aux systèmes de santé.</p>
@@ -149,13 +85,13 @@
 					<li>Profession de premier contact – accès direct des patients</li>
 					<li>Le droit et le devoir de diagnostic, y compris la prise et / ou prescription de l'imagerie du squelette</li>
 					<li>Pas d'utilisation de médicaments ou d'une chirurgie</li>
-				</ul> 
+				</ul>
 
 				<p>La pratique de la chiropratique par des personnes sans formation formelle et non qualifiée, mais se dénommant « chiropraticiens », demeure un problème important dans certains pays sans lois de nature réglementaire (par exemple le Brésil, Allemagne, Corée, Japon).</p>
 
 				<p>Source : AFC</p>
 
-				<h3 name="La_formation_en_chiropraxie" class="SousParties"><a name="La_formation_en_chiropraxie">La formation en chiropraxie</a></h3>				
+				<h3 name="La_formation_en_chiropraxie" class="SousParties"><a name="La_formation_en_chiropraxie">La formation en chiropraxie</a></h3>
 
 				<p>Le chiropracteur, une formation de haut niveau universitaire. La formation du chiropracteur compte parmi les plus exigeantes des formations dans le champ de la santé.</p>
 
@@ -181,7 +117,7 @@
 
 
 				<h3 class="SousParties"><a name="La_recherche_en_chiropraxie">La recherche en chiropraxie</a></h3>
-				
+
 
 				<p>Les bienfaits scientifiquement prouvés de la chiropraxie.</p>
 
@@ -198,7 +134,7 @@
 			</div>
 
 		</div>
-	
+
 	</main>
 
 	<footer>
@@ -206,7 +142,7 @@
       		<div class="row">
         		<div class="col-lg-3">
           			<h5>Alexandre Chassagne</h5>
-          			<p></p> 
+          			<p></p>
           		</div>
           		<div class="col-lg-5">
 		          <h5 class="Liens">Liens</h5>
@@ -215,11 +151,11 @@
 		            <li class="listecate"><a href=""><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>Reconnaissance légale en France</a></li>
 		            <li class="listecate"><a href=""><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>Reconnaissance dans le monde </a></li>
 		            <li class="listecate"><a href=""><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>La formation en chiropraxie </a></li>
-		            <li class="listecate"><a href=""><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>La recherche en chiropraxie</a></li>		       
+		            <li class="listecate"><a href=""><i class="chevron fa fa-chevron-right" aria-hidden="true"></i>La recherche en chiropraxie</a></li>
 		          </ul>
 		        </div>
 		        <div class="col-lg-4">
-		        	<h5 class="Contact">Contact</h5>		        	
+		        	<h5 class="Contact">Contact</h5>
 		        	<p class="ContactFooter"><i class="telephone fas fa-phone" data-fa-transform="flip-v flip-h" ></i>07 68 48 10 02</p>
 		        	<p><i class="chevron fab fa-facebook fa-spin"></i>Le Chiro qui roule</p>
 		        	<p><i class="chevron fab fa-instagram fa-spin"></i>Lechiroquiroule</p>
@@ -228,10 +164,10 @@
 		          		<a href="#" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Prendre rendez-vous</a>
 		          	</div>
 		          	<p class="RDVtxt">N'hésitez pas à prendre rendez-vous dès maintenant.</p>
-		          
+
 		      </div>
         	</div>
-        	
+
 	    </div>
 
   </footer>
