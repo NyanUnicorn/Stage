@@ -1,0 +1,6 @@
+J'ai fait quelques changement, j'espère que mes descriptions sont pas trop mauvaise: sur le logiciel github / selectionner la branche "develop" / sur le menu au dessus cliquer sur "branch" / cliquer sur comparer sur github.
+ça permet de voir les changements/les commits :)
+
+d'après le mail, aligner encor plus les logos et le titre dans le header, possiblement agradir le titre.
+
+Si tu t'ennuie tu peut commencer a revoir du JS, j'ai déjà inclus la dernière version de AngularJS dans assets/js ;).
