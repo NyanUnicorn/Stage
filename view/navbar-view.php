@@ -42,6 +42,8 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Son_parcours">Son parcours </a>
             <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Seance_a_domicile_a_velo">Séance à domicile à vélo </a>
+            <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Techniques_de_soins_utilisees">Techniques de soins utilisées</a>
+            <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Equipement_lors_des_deplacements">Equipement lors des déplacements</a>
             <div class="dropdown-divider"></div>
             <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Contacts">Contacts</a>
           </div>

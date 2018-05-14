@@ -169,6 +169,7 @@ div.affix + .img_alexandre_velo{
 .RdvBandeau:hover{
 
 	border : 2px ridge white;
+	color: white;
 }
 
 .encart{
