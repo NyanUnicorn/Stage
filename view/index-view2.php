@@ -7,9 +7,9 @@
 	<meta charset="utf-8">
 
 	<?php
-	includeExternalHead();
-	echo getStylesheet('style');
-	echo getStylesheet('style_menu');
+
+	echo $head;
+	echo $stylesheet;
 	?>
 
 </head>
@@ -87,7 +87,7 @@
 
 	<?php
 	require 'footer-view.php';
-	includeExternalFoot();
+	echo $foot;
 	?>
 
 </body>

@@ -4,8 +4,8 @@ require '../src/autoload.php';
 
 //require '../lib/form.php';
 use Service\Form;
-
-require '../models/style.php';
+use Service\Style;
+//require '../models/style.php';
 require '../models/connections.php';
 require '../models/image.php';
 
