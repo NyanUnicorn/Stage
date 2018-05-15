@@ -4,9 +4,9 @@ namespace Repository;
 
 use Service\DB;
 
-class USerRepository {
+class UserRepository {
   public static function yyy(){
-    
+
   }
 
 }
