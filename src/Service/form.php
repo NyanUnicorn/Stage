@@ -1,4 +1,9 @@
 <?php
+namespace Services;
+
+
+class Form{
+
 function getInputPost($name){
   return filter_input(INPUT_POST, $name);
 }
@@ -37,4 +42,6 @@ function printM($_type, $_string){
       break;
   }
   echo $toEcho;
+}
+
 }

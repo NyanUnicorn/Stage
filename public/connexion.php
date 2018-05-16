@@ -2,8 +2,10 @@
 session_start();
 require '../src/autoload.php';
 
-require '../lib/form.php';
-require '../models/style.php';
+//require '../lib/form.php';
+use Service\Form;
+use Service\Style;
+//require '../models/style.php';
 require '../models/connections.php';
 require '../models/image.php';
 
