@@ -14,12 +14,12 @@ class Motif{
 
   public getMotif(){
 
-    return $motif;
+    return $this->motif;
   }
 
   public setMotif($_motif){
 
-    $this-> $motif = $_motif;
+    $this->motif = $_motif;
   }
 }
 

@@ -22,29 +22,29 @@ class Rdv{
 
   public getDateCrea(){
 
-    return $date_crea;
+    return $this->date_crea;
   }
 
   public setDateCrea($_date_crea){
 
-    $this->$date_crea = $_date_crea;
+    $this->date_crea = $_date_crea;
 
   }
 
   public getAdresse(){
 
-      return $adresse;
+      return $this->adresse;
   }
 
   public SetDateCrea($_adresse){
 
-    $this-> $adresse = $_adresse;
+    $this->adresse = $_adresse;
   }
 
 
   public getCdPostale(){
 
-      return $cd_postale;
+      return $this->cd_postale;
   }
 
   public setCdPostale($_cd_postale){
@@ -56,7 +56,7 @@ class Rdv{
 
   public getVille(){
 
-      return $ville;
+      return $this->ville;
   }
 
   public setVille($_ville){
@@ -68,60 +68,60 @@ class Rdv{
 
   public getDateRdv(){
 
-      return $date_rdv;
+      return $this->date_rdv;
   }
 
   public setDateRdv($_date_rdv){
 
-    $this->$date_rdv = $_date_rdv;
+    $this->date_rdv = $_date_rdv;
 
   }
 
 
   public getHeureRdv(){
 
-      return $heure_rdv;
+      return $this->heure_rdv;
   }
 
   public setHeureRdv($_heure_rdv){
 
-    $this->$heure_rdv = $_heure_rdv;
+    $this->heure_rdv = $_heure_rdv;
 
   }
 
 
   public getDureeMinRdv(){
 
-      return $duree_min_rdv;
+      return $this->duree_min_rdv;
   }
 
   public setDureeMinRdv($_duree_min_rdv){
 
-    $this-> $duree_min_rdv = $_duree_min_rdv;
+    $this->duree_min_rdv = $_duree_min_rdv;
 
   }
 
 
   public getAccompteVerse(){
 
-      return $accompte_verse;
+      return $this->accompte_verse;
   }
 
   public setAccompteVerse($_accompte_verse){
 
-    $this-> $accompte_verse = $_accompte_verse;
+    $this->accompte_verse = $_accompte_verse;
 
   }
 
 
   public getUser_Id(){
 
-      return $user_id;
+      return $this->user_id;
   }
 
   public setUser_Id($_user_id){
 
-    $this-> $user_id = $user_id;
+    $this->user_id = $user_id;
 
   }
 

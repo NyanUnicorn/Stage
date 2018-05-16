@@ -40,7 +40,7 @@ class User{
     $this->comp_adr = $_comp_adr;
     $this->cd_postale = $_cd_postale;
     $this->ville = $_ville;
-    $this->profession = $_profession;
+    $this->profession = $_prof;
     $this->motif = $_motif;
     $this->age = Tool::age($this->date_nais);
   }
