@@ -3,10 +3,8 @@
 <head>
 
 <?php
-		includeExternalHead();
-		echo getStylesheet('style');
-		echo getStylesheet('style_form');
-		echo getStylesheet('style_menu');
+		echo $head;
+		echo $stylesheet;
  ?>
 
 	<meta charset="utf-8">
@@ -101,7 +99,7 @@
 <?php
 
 	require 'footer-view.php';
-	includeExternalFoot();
+	echo $foot;
 
  ?>
 

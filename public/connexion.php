@@ -9,6 +9,12 @@ use Service\Style;
 require '../models/connections.php';
 require '../models/image.php';
 
+
+$head = Style::includeExternalHead();
+$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_form') . Style::getStylesheet('style_menu');
+$foot = Style::includeExternalFoot();
+
+
 if (authenticated()){
 
 }else{
