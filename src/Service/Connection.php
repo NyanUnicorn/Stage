@@ -1,6 +1,8 @@
 <?php
 namespace Service;
 
+use Service\DB;
+
 
 class Connection{
 
@@ -32,4 +34,17 @@ class Connection{
   public static function checkInput(){
 
   }
+
+
+
+  public static function logIn(){
+    if(isset($POST['email'])){
+      if(isset($POST['Pwd'])){
+
+      }
+    }
+  }
+
+
+
 }
