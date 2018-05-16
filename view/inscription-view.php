@@ -3,9 +3,8 @@
   <head>
 
     <?php
-    		includeExternalHead();
-    		echo getStylesheet('style');
-    		echo getStylesheet('style_inscription');
+    		echo $head;
+    		echo $stylesheet;
      ?>
     <meta charset="utf-8">
     <title>page d'inscription</title>

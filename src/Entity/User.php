@@ -5,10 +5,11 @@ namespace Entity;
 
 
 //peut-être ortir la fonction age d'ici
-use Service\Bb; //change
+use Service\ClassTools as Tool; //change
 
 
 class User{
+  private $id;
   private $nom;
   private $pre;
   private $email;
@@ -22,11 +23,12 @@ class User{
   private $ville;
   private $profession;
   private $motif;
+  private $civilite;
 
   private $role;
   private $status;
 
-  public function __construct($_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif){
+  public function __construct($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif){
     $this->role = $_role;
     $this->status = $_status;
     $this->nom = $_nom;
@@ -40,7 +42,25 @@ class User{
     $this->ville = $_ville;
     $this->profession = $_profession;
     $this->motif = $_motif;
-    $this->age = age($this->date_nais);
+    $this->age = Tool::age($this->date_nais);
+  }
+
+  public function __construct($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_ville, $_civilite){
+    $this->role = $_role;
+    $this->status = $_status;
+    $this->nom = $_nom;
+    $this->email = $_email;
+    $this->date_nais = $_dat_nais;
+    $this->date_crea = $_dat_crea;
+    $this->phone = $_phone;
+    $this->adresse = $_adresse;
+    $this->comp_adr = $_comp_adr;
+    $this->cd_postale = $_cd_postale;
+    $this->ville = $_ville;
+    $this->profession = $_profession;
+    $this->motif = $_motif;
+    $this->civilite = Tool::civilite($_civilite);
+    $this->age = Tool::age($this->date_nais);
   }
 
   public function getNom(){
@@ -129,12 +149,5 @@ class User{
   }
 
 
-
-
-  private function age($_date_nais){
-    $ajd = date("Y-m-d");
-    $diff = date_diff(date_create($_date_nais), date_create($ajd));
-    return $diff->format('%y');
-  }
 
 }
