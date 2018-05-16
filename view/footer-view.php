@@ -19,7 +19,7 @@
                 <h5>Alexandre Chassagne</h5>
                 <p>Docteur of chiropractic, formée à l'Institut Franco Européen de Chiropraxie.</p>
                 <p>Chiropracteur à domicile éco responsable sur Laval agglomération.</p>
-          <p>Fondateur de l'organisation humanitaire World Chiropractic Bike Tour.</p>
+                <p>Fondateur de l'organisation humanitaire World Chiropractic Bike Tour.</p>
               </div>
               <div class="col-lg-5">
               <h5 class="Liens">Liens</h5>

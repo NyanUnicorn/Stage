@@ -15,25 +15,25 @@ class Ville{
 
   public getLibelle(){
 
-    return $libelle;
+    return $this->libelle;
 
   }
 
   public setLibelle($_libelle){
 
-    $this->$libelle = $_libelle;
+    $this->libelle = $_libelle;
 
   }
 
 
   public getDureeMinAdd(){
 
-    return $duree_min_add;
+    return $this->duree_min_add;
   }
 
   public setDureeMinAdd($_duree_min_add){
 
-    $this-> $duree_min_add = $_duree_min_add;
+    $this->duree_min_add = $_duree_min_add;
 
   }
 
