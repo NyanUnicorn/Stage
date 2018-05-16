@@ -1,4 +1,5 @@
-<nav class="NavBar navbar navbar-expand-lg navbar-light bg-light" data-spy="affix" data-offset-top="212">
+<div class="nav-wrapper">
+<nav class="NavBar navbar navbar-expand-lg navbar-light bg-light" data-spy="affix" data-offset-top="165">
 <div class="containerNav">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,15 +15,15 @@
             La chiropraxie
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="itemDeroulants dropdown-item" href="chiropraxie.html#Histoire_et_définition">Histoire et définition</a>
-            <a class="itemDeroulants dropdown-item" href="chiropraxie.html#Reconnaissance_légale_en_France">Reconnaissance légale en France</a>
-            <a class="itemDeroulants dropdown-item" href="chiropraxie.html#Reconnaissance_dans_le_monde">Reconnaissance dans le monde </a>
-            <a class="itemDeroulants dropdown-item" href="chiropraxie.html#La_formation_en_chiropraxie">La formation en chiropraxie </a>
-            <a class="itemDeroulants dropdown-item" href="chiropraxie.html#La_recherche_en_chiropraxie">La recherche en chiropraxie</a>
+            <a class="itemDeroulants dropdown-item" href="chiropraxie.php#Histoire_et_définition">Histoire et définition</a>
+            <a class="itemDeroulants dropdown-item" href="chiropraxie.php#Reconnaissance_légale_en_France">Reconnaissance légale en France</a>
+            <a class="itemDeroulants dropdown-item" href="chiropraxie.php#Reconnaissance_dans_le_monde">Reconnaissance dans le monde </a>
+            <a class="itemDeroulants dropdown-item" href="chiropraxie.php#La_formation_en_chiropraxie">La formation en chiropraxie </a>
+            <a class="itemDeroulants dropdown-item" href="chiropraxie.php#La_recherche_en_chiropraxie">La recherche en chiropraxie</a>
           </div>
       </li>
       <li class="menuNavItem nav-item dropdown">
-          <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Les Soins Chiropratiques
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -41,6 +42,8 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Son_parcours">Son parcours </a>
             <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Seance_a_domicile_a_velo">Séance à domicile à vélo </a>
+            <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Techniques_de_soins_utilisees">Techniques de soins utilisées</a>
+            <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Equipement_lors_des_deplacements">Equipement lors des déplacements</a>
             <div class="dropdown-divider"></div>
             <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Contacts">Contacts</a>
           </div>
@@ -49,10 +52,12 @@
           <a class="itemDeroulants NavForm nav-link" href="wcbt.html">Le World Chiropractic Bike Tour</a>
       </li>
       <li class="menuNavItem nav-item">
-          <?php echo navConnexion(); ?>
+          <?php require $navStatus; ?>
       </li>
      </ul>
     </div>
 
 </div>
 </nav>
+
+</div>

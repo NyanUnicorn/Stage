@@ -14,6 +14,7 @@
 
 .RdvBandeau:hover{
 
+
 	border : 2px ridge #E6F2F2;
 }
 
@@ -35,6 +36,7 @@ div.affix-top{
 div.affix span{
   color: black;
   margin: 5px;
+
 }
 
 div.affix-top span{
@@ -56,21 +58,21 @@ div.affix {
 	background-color: RGBA(230,242,242,0.4);
   padding: 10px 0;
   margin: 0;
-	width: 16%;
+	width: 15%;
 }
 
-fieldset{
+fieldset.fieldset-side{
   text-align: center;
 }
 
-div.affix fieldset{
+div.affix fieldset.fieldset-side{
   border: solid 1px #008081;
   padding: 5px;
   margin: 20px 0;
 	width: 100%;
 }
 
-div.affix-top fieldset{
+div.affix-top fieldset.fieldset-side{
   border: solid 1px #E6F2F2;
   padding: 3px;
   margin: 0 20px;
@@ -80,8 +82,14 @@ div.affix-top .col-lg-12.phoneLabel{
 	width: 60%;
 }
 
+
+
 div.affix-top .col-lg-12.phoneNumber{
 	width: 40%;
+}
+
+.encart{
+
 }
 
 

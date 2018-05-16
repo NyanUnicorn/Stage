@@ -21,18 +21,35 @@ h1{
 	margin : auto;
 }
 
+.LogoTable{
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+}
+
+.LogoVelo{
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+}
+
 .LogoTable img{
 
 	width: 200px;
 	height: 150px;
-	margin: 30px;
+	margin-top: 10px;
 
 }
 .LogoVelo img{
 	width: 300px;
 	height: 140px;
-	padding-right: 40px;
-	margin: 30px 50px 30px 20px;
+	margin: 10px 50px 0 40px;
 
 }
 
@@ -44,7 +61,9 @@ h1{
 	align-items: center;
 }
 
-
+.nav-wrapper{
+	min-height: 50px;
+}
 
 .ConnexionButton button[type="button"]{
 
@@ -120,18 +139,23 @@ div .dropdown-divider{
 
 
 
-
 .NavForm{
 
 	text-align: center;
 }
 
 /* main a partir d'ici */
+div.affix + .img_alexandre_velo{
+
+
+}
 
 .img_alexandre_velo{
 
 	width : 100%;
 }
+
+
 
 .RdvBandeau{
 	color: white;
@@ -145,18 +169,28 @@ div .dropdown-divider{
 .RdvBandeau:hover{
 
 	border : 2px ridge white;
+	color: white;
 }
 
 .encart{
-
-	background-color:  #008081;
+	min-height: 58px;
+	/*background-color:  #008081;*/
+	background:  -webkit-linear-gradient(top, rgba(0,127,128,1) 0%, rgba(0,127,128,1) 14%, rgba(0,163,163,1) 100%);
 	padding: 5px;
 	text-align: center;
 	color: white;
 }
 
-.Bandeau{
+.no-pad{
+	width: 100%;
+}
 
+.no-pad>*{
+	padding: 0;
+}
+
+.Bandeau{
+	display: flow-root;
 	margin: 5px;
 }
 
@@ -184,6 +218,7 @@ div .dropdown-divider{
 .Presentation{
 	margin: 40px;
 }
+
 
 
 /* page soins*/
