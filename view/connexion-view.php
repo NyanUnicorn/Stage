@@ -72,7 +72,7 @@
 
 			</form>
 
-			<form class="" action="inscrpition.php" method="post">
+			<form class="" action="inscription.php" method="post">
 
 				<div class="linkInscription">
 
