@@ -8,8 +8,10 @@ class Ville{
   private $libelle;
   private $duree_min_add;
 
-  public function __construct(){
-
+  public function __construct($_id,$_libelle,$_duree_min_add){
+    $this->id = $_id;
+    $this->libelle = $_libelle;
+    $this->duree_min_add = $_duree_min_add;
 
   }
 

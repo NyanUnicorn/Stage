@@ -11,8 +11,12 @@ class Conge{
   private $user_id;
 
 
-  public function __construct(){
-
+  public function __construct($_id, $_date_deb, $_date_fin, $_comment, $_user_id){
+    $this->id = $_id;
+    $this->date_deb = $_date_deb;
+    $this->date_fin = $_date_fin;
+    $this->comment = $_comment;
+    $this->user_id = $_user_id;
 
   }
 

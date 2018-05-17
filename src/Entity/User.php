@@ -29,6 +29,7 @@ class User{
   private $status;
 
   public function __construct($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif){
+    $this->id = $_id;
     $this->role = $_role;
     $this->status = $_status;
     $this->nom = $_nom;
@@ -46,6 +47,7 @@ class User{
   }
 
   public function __construct($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_ville, $_civilite){
+    $this->id = $_id;
     $this->role = $_role;
     $this->status = $_status;
     $this->nom = $_nom;

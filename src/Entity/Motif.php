@@ -7,9 +7,9 @@ class Motif{
   private $id;
   private $motif;
 
-  public function __construct(){
-
-
+  public function __construct($_id,$_motif){
+    $this->id = $_id;
+    $this->motif = $_motif;
   }
 
   public getMotif(){
