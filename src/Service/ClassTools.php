@@ -3,9 +3,7 @@ namespace Service;
 
 use Repository\CiviliteRepository as CivRep;
 
-
-
-class{
+class ClassTools{
 
   public static function civilite($_civilite){
     return CivRep::getCivilite($_civilite);

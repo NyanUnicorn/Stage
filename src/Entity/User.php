@@ -31,11 +31,11 @@ class User{
   function __construct() {
         $argv = func_get_args();
         switch( func_num_args() ) {
-            case 1:
+            case 15:
                 self::__construct1($argv[0], $argv[1], $argv[2], $argv[3], $argv[4],
                  $argv[5], $argv[6], $argv[7], $argv[8], $argv[9], $argv[10], $argv[11], $argv[12], $argv[13], $argv[14]);
                 break;
-            case 2:
+            case 9:
                 self::__construct2($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8]);
                 break;
          }
@@ -46,8 +46,8 @@ class User{
     $this->status = $_status;
     $this->nom = $_nom;
     $this->email = $_email;
-    $this->date_nais = $_dat_nais;
-    $this->date_crea = $_dat_crea;
+    $this->date_nais = $_date_nais;
+    $this->date_crea = $_date_crea;
     $this->phone = $_phone;
     $this->adresse = $_adresse;
     $this->comp_adr = $_comp_adr;
@@ -58,21 +58,15 @@ class User{
     $this->age = Tool::age($this->date_nais);
   }
 
-  public function __construct2($_id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_ville, $_civilite){
+  public function __construct2($_id, $_role, $_status, $_nom, $_pre, $_email, $_date_nais, $_ville, $_civilite){
     $this->id = $_id;
     $this->role = $_role;
     $this->status = $_status;
     $this->nom = $_nom;
+    $this->prenom = $_pre;
     $this->email = $_email;
-    $this->date_nais = $_dat_nais;
-    $this->date_crea = $_dat_crea;
-    $this->phone = $_phone;
-    $this->adresse = $_adresse;
-    $this->comp_adr = $_comp_adr;
-    $this->cd_postale = $_cd_postale;
+    $this->date_nais = $_date_nais;
     $this->ville = $_ville;
-    $this->profession = $_profession;
-    $this->motif = $_motif;
     $this->civilite = Tool::civilite($_civilite);
     $this->age = Tool::age($this->date_nais);
   }

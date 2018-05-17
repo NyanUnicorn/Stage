@@ -22,7 +22,9 @@ $emailInput = Form::resetUserInput('email');
 
 
 $errors = Connection::checkLoginInput();
-Connection::logIn($errors);
+$errors = Connection::logIn($errors);
+var_dump($_SESSION['USER']);
+
 
 $navStatus = Connection::navConnexion();
 

@@ -48,24 +48,24 @@ class Connection{
     if(!isset($_POST['password'])){
       $toReturn[] = 'password';
     }
-    var_dump($_POST['password']);
     return $toReturn;
   }
 
   public static function logIn($_errors){
-    var_dump($_errors);
+    $toReturn = '';
     if(!(count($_errors) > 0)){
       $userInfo = UserRep::loginUser($_POST['email'], $_POST['password']);
-      var_dump($_POST['password']);
       if($userInfo){
         $data = $userInfo->fetch();
         $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
         $_SESSION['USER'] = $USER;
-        var_dump($userInfo);
+        var_dump($data['nom']);
+        var_dump($_SESSION['USER']);
+      }
+      else{
+        $toReturn = 'pasword';
       }
     }
+    return $toReturn;
   }
-
-
-
 }
