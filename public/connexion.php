@@ -18,18 +18,16 @@ $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 //input values
 $emailInput = Form::resetUserInput('email');
-
-
-
+//
 $errors = Connection::checkLoginInput();
-$errors = Connection::logIn($errors);
-var_dump($_SESSION['USER']);
+$errors = Connection::authentication($errors);
+
 
 
 $navStatus = Connection::navConnexion();
 
 
-if (Connection::authenticated()){
+if(Connection::authenticated()){
 
 }else{
   Connection::checkInput();

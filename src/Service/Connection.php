@@ -51,7 +51,7 @@ class Connection{
     return $toReturn;
   }
 
-  public static function logIn($_errors){
+  public static function authentication($_errors){
     $toReturn = '';
     if(!(count($_errors) > 0)){
       $userInfo = UserRep::loginUser($_POST['email'], $_POST['password']);
