@@ -2,6 +2,7 @@
 namespace Service;
 
 use Service\DB;
+use Service\Form;
 
 
 class Connection{
@@ -38,7 +39,9 @@ class Connection{
 
 
   public static function logIn(){
+    $toReturn = 'email';
     if(isset($POST['email'])){
+      $toReturn = 'password';
       if(isset($POST['Pwd'])){
 
       }
