@@ -3,6 +3,8 @@ namespace Service;
 
 use Service\DB;
 use Service\Form;
+use Entity\User;
+use Repository\UserRepository as UserRep;
 
 
 class Connection{
@@ -38,12 +40,28 @@ class Connection{
 
 
 
-  public static function logIn(){
-    $toReturn = 'email';
-    if(isset($POST['email'])){
-      $toReturn = 'password';
-      if(isset($POST['Pwd'])){
+  public static function checkLoginInput(){
+    $toReturn = [];
+    if(!isset($_POST['email'])){
+      $toReturn[] = 'email';
+    }
+    if(!isset($_POST['password'])){
+      $toReturn[] = 'password';
+    }
+    var_dump($_POST['password']);
+    return $toReturn;
+  }
 
+  public static function logIn($_errors){
+    var_dump($_errors);
+    if(!(count($_errors) > 0)){
+      $userInfo = UserRep::loginUser($_POST['email'], $_POST['password']);
+      var_dump($_POST['password']);
+      if($userInfo){
+        $data = $userInfo->fetch();
+        $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
+        $_SESSION['USER'] = $USER;
+        var_dump($userInfo);
       }
     }
   }

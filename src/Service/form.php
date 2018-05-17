@@ -4,29 +4,29 @@ namespace Service;
 
 class Form{
 
-function getInputPost($name){
+public static function getInputPost($name){
   return filter_input(INPUT_POST, $name);
 }
 
-function getInputArray($name){
+public static function getInputArray($name){
   return filter_input(INPUT_POST, $name , FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
 }
 
 
-function testPasswordConfirm($name1, $name2){
+public static function testPasswordConfirm($name1, $name2){
   $toReturn = 0;
-  if(getInputPost($name1) == getInputPost($name2)){
+  if(self::getInputPost($name1) == self::getInputPost($name2)){
     $toReturn = 1;
   }
   return $toReturn;
 }
 
-function resetUserInput($_name){
-    return 'value="' .  htmlentities(getInputPost($_name)) . '"';
+public static function resetUserInput($_name){
+    return 'value="' .  htmlentities(self::getInputPost($_name)) . '"';
 }
 
 
-function printM($_type, $_string){
+public static function printM($_type, $_string){
   $toEcho = '';
   switch($_type){
     case 'p':

@@ -28,7 +28,20 @@ class User{
   private $role;
   private $status;
 
-  public function __construct($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif){
+  function __construct() {
+        $argv = func_get_args();
+        switch( func_num_args() ) {
+            case 1:
+                self::__construct1($argv[0], $argv[1], $argv[2], $argv[3], $argv[4],
+                 $argv[5], $argv[6], $argv[7], $argv[8], $argv[9], $argv[10], $argv[11], $argv[12], $argv[13], $argv[14]);
+                break;
+            case 2:
+                self::__construct2($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8]);
+                break;
+         }
+    }
+
+  public function __construct1($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif){
     $this->role = $_role;
     $this->status = $_status;
     $this->nom = $_nom;
@@ -45,7 +58,8 @@ class User{
     $this->age = Tool::age($this->date_nais);
   }
 
-  public function __construct($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_ville, $_civilite){
+  public function __construct2($_id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_ville, $_civilite){
+    $this->id = $_id;
     $this->role = $_role;
     $this->status = $_status;
     $this->nom = $_nom;

@@ -31,7 +31,7 @@
 
 		<div class="flex-container">
 
-			<form method="post" action="connection.php">
+			<form method="post" action="connexion.php">
 				<div class="row">
 					<div class="col-xs-1 col-lg-0">
 
@@ -51,7 +51,7 @@
 						<div class="form">
 								<div class="flex-input">
 									<label for="email">Email :</label>
-									<input type="email" name="email" placeholder="Ex: exemple@email.fr" id="email" required>
+									<input type="email" name="email" placeholder="Ex: exemple@email.fr" <?php echo $emailInput; ?> id="email" required>
 								</div>
 
 								<div class="flex-input">
