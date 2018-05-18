@@ -1,12 +1,14 @@
 <?php
-session_start();
+
 require '../src/autoload.php';
 
 use Service\Form;
 use Service\Style;
 use Service\Connection;
 use Service\Image;
+use Entity\User;
 
+session_start();
 
 //Webpage formatting
 $head = Style::includeExternalHead();
@@ -23,14 +25,14 @@ $emailInput = Form::resetUserInput('email');
 
 $errors = Connection::checkLoginInput();
 $errors = Connection::logIn($errors);
-var_dump($_SESSION['USER']);
 
+var_dump($_SESSION['USER']->getNom());
 
 $navStatus = Connection::navConnexion();
 
 
 if (Connection::authenticated()){
-
+  
 }else{
   Connection::checkInput();
 }

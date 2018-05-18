@@ -59,8 +59,6 @@ class Connection{
         $data = $userInfo->fetch();
         $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
         $_SESSION['USER'] = $USER;
-        var_dump($data['nom']);
-        var_dump($_SESSION['USER']);
       }
       else{
         $toReturn = 'pasword';
