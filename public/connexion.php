@@ -1,5 +1,4 @@
 <?php
-
 require '../src/autoload.php';
 
 use Service\Form;
@@ -18,10 +17,9 @@ $foot = Style::includeExternalFoot();
 //external resources
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
-//input values
 
 
-
+//authentication check
 if(Connection::authenticated()){
   var_dump($_SESSION['timeout']);
   header('Location: /index.php');
@@ -35,10 +33,9 @@ if(isset($_POST['password'])){
   header('Location: /connexion.php');
 }
 
-
+//input values
 $emailInput = $_SESSION['emailInput'];
-
 $navStatus = Connection::navConnexion();
 
-
+//open page
 require '../view/connexion-view.php';
