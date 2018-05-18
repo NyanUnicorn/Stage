@@ -5,11 +5,10 @@ namespace Entity;
 
 
 //peut-être ortir la fonction age d'ici
-use Service\ClassTools as Tool; //change
+use Service\Bb; //change
 
 
 class User{
-  private $id;
   private $nom;
   private $pre;
   private $email;
@@ -23,7 +22,6 @@ class User{
   private $ville;
   private $profession;
   private $motif;
-  private $civilite;
 
   private $role;
   private $status;
@@ -55,6 +53,8 @@ class User{
     $this->ville = $_ville;
     $this->profession = $_prof;
     $this->motif = $_motif;
+
+    $this->age = age($this->date_nais);
     $this->age = Tool::age($this->date_nais);
   }
 
@@ -157,5 +157,12 @@ class User{
   }
 
 
+
+
+  private function age($_date_nais){
+    $ajd = date("Y-m-d");
+    $diff = date_diff(date_create($_date_nais), date_create($ajd));
+    return $diff->format('%y');
+  }
 
 }

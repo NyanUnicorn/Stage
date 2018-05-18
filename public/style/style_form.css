@@ -122,3 +122,31 @@ display: inline;
   background-color: #008081;
   border: 1px double white;
 }
+
+.lbl{
+
+  width: 100%;
+  margin: 7%;
+
+}
+.span{
+
+  color: black;
+}
+.inscription{
+
+  display:block;
+  text-align: justify;
+}
+
+input[type=text],[type=textarea] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+input[type=tel],[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}

@@ -12,11 +12,18 @@ class Rdv{
   private $date_rdv;
   private $heure_rdv;
   private $duree_min_rdv;
-  private $accompte_verse;
   private $user_id;
 
-  public function __construct($date_rdv, $heure_rdv){
-
+  public function __construct($_id,$_date_crea,$_adresse,$_cd_postale,$_ville,$date_rdv, $heure_rdv,$_duree_min_rdv,$_user_id){
+    $this->id = $_id;
+    $this->date_crea = $_date_crea;
+    $this->adresse = $_adresse;
+    $this->cd_postale = $_cd_postale;
+    $this->ville = $_ville;
+    $this->date_rdv = $_date_rdv;
+    $this->heure_rdv = $_heure_rdv;
+    $this->duree_min_rdv = $_duree_min_rdv;
+    $this->user_id = $user_id;
 
   }
 
@@ -98,18 +105,6 @@ class Rdv{
   public setDureeMinRdv($_duree_min_rdv){
 
     $this->duree_min_rdv = $_duree_min_rdv;
-
-  }
-
-
-  public getAccompteVerse(){
-
-      return $this->accompte_verse;
-  }
-
-  public setAccompteVerse($_accompte_verse){
-
-    $this->accompte_verse = $_accompte_verse;
 
   }
 
