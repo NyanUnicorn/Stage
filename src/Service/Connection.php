@@ -25,7 +25,7 @@ class Connection{
     if(isset($_SESSION['timeout'])){
       if($_SESSION['timeout'] >= time()){
         $connected = True;
-        resetTimeout();
+        self::resetTimeout();
       }
     }
     return $connected;
@@ -34,6 +34,9 @@ class Connection{
   public static function resetTimeout(){
     $_SESSION['timeout'] = strtotime('+1 minutes');
   }
+
+
+
   public static function checkInput(){
 
   }
@@ -59,6 +62,7 @@ class Connection{
         $data = $userInfo->fetch();
         $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
         $_SESSION['USER'] = $USER;
+        self::resetTimeout();
       }
       else{
         $toReturn = 'pasword';

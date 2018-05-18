@@ -21,28 +21,16 @@ $image['logoVelo'] = Image::displayImage('logoVelo.png');
 //input values
 $emailInput = Form::resetUserInput('email');
 //
-$errors = Connection::checkLoginInput();
-<<<<<<< HEAD
-$errors = Connection::logIn($errors);
-=======
-$errors = Connection::authentication($errors);
-
->>>>>>> c25c14bc5ebea607d645bcf87d8fca00c31e4e96
-
-var_dump($_SESSION['USER']->getNom());
 
 $navStatus = Connection::navConnexion();
 
 
-<<<<<<< HEAD
-if (Connection::authenticated()){
-  
-=======
 if(Connection::authenticated()){
-
->>>>>>> c25c14bc5ebea607d645bcf87d8fca00c31e4e96
+  var_dump($_SESSION['timeout']);
 }else{
-  Connection::checkInput();
+  $errors = Connection::checkLoginInput();
+  $errors = Connection::authentication($errors);
+  //Connection::checkInput();
 }
 
 
