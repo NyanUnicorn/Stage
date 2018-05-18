@@ -16,7 +16,7 @@ $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
 $navStatus = Connection::navConnexion();
 
-require '../view/inscription-view.php';
+require '../view/inscription-view2.php';
 
 
 ?>
