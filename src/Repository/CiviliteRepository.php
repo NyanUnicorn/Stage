@@ -9,5 +9,4 @@ class CiviliteRepository {
     $query = new DB();
     return $query->query("SELECT labelle FROM Civilite WHERE id = $_civilite");
   }
-
 }
