@@ -6,6 +6,7 @@ namespace Entity;
 
 //peut-être ortir la fonction age d'ici
 use Service\Bb; //change
+use Service\ClassTools as Tool;
 
 
 class User{

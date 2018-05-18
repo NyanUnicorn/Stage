@@ -22,9 +22,6 @@
 
 <main>
 
-	<div class="encart">
-		<?php require 'side-nav-view.php'; ?>
-	</div>
 
 	<h4>Veuillez entrez vos identifiants et mot de passe:</h4>
 <div class="container">
@@ -48,10 +45,10 @@
 				<fieldset class="fieldset-form">
 
 						<legend>Vos identifiants</legend>
-						<div class="form">
+						<div class="form" action="inscription.php"  method="post">
 								<div class="flex-input">
 									<label for="email">Email :</label>
-									<input type="email" name="email" placeholder="Ex: exemple@email.fr" <?php echo $emailInput; ?> id="email" required>
+									<input type="email" name="email" placeholder="Ex: exemple@email.fr" <?php echo 'value="' . $emailInput . '"'; ?> id="email" required>
 								</div>
 
 								<div class="flex-input">

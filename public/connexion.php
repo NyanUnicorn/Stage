@@ -19,19 +19,26 @@ $foot = Style::includeExternalFoot();
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 //input values
-$emailInput = Form::resetUserInput('email');
-//
 
-$navStatus = Connection::navConnexion();
 
 
 if(Connection::authenticated()){
   var_dump($_SESSION['timeout']);
+  header('Location: /index.php');
 }else{
   $errors = Connection::checkLoginInput();
   $errors = Connection::authentication($errors);
-  //Connection::checkInput();
 }
+//supprimer le mot de passe
+if(isset($_POST['password'])){
+  $_POST['password'] = NULL;
+  header('Location: /connexion.php');
+}
+
+
+$emailInput = $_SESSION['emailInput'];
+
+$navStatus = Connection::navConnexion();
 
 
 require '../view/connexion-view.php';

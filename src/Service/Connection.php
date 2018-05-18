@@ -26,6 +26,7 @@ class Connection{
       if($_SESSION['timeout'] >= time()){
         $connected = True;
         self::resetTimeout();
+        //var_dump($_SESSION['timeout']);
       }
     }
     return $connected;
@@ -57,16 +58,21 @@ class Connection{
   public static function authentication($_errors){
     $toReturn = '';
     if(!(count($_errors) > 0)){
+      $_SESSION['emailInput'] = Form::getInputPost('email');
+      var_dump($_POST['email']);
       $userInfo = UserRep::loginUser($_POST['email'], $_POST['password']);
-      if($userInfo){
-        $data = $userInfo->fetch();
+      $data = $userInfo->fetch();
+      if($data){
         $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
         $_SESSION['USER'] = $USER;
         self::resetTimeout();
+        $_SESSION['emailInput'] = NULL;
+        var_dump($_SESSION['timeout']);
       }
       else{
-        $toReturn = 'pasword';
+        $toReturn = 'password';
       }
+
     }
     return $toReturn;
   }
