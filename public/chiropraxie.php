@@ -9,13 +9,13 @@ session_start();
 
 
 $head = Style::includeExternalHead();
-$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_menu');
+$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_menu') . Style::getStylesheet('navbar');
 $foot = Style::includeExternalFoot();
 
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
-
+$uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
 

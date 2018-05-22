@@ -18,7 +18,7 @@ $image['logoVelo'] = Image::displayImage('logoVelo.png');
 $image['bande'] = Image::displayImage('fond0.png');
 
 
-
+$uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
 require '../view/wcbt-view.php';

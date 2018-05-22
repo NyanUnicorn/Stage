@@ -57,7 +57,7 @@ header{
 
 }
 
-
+/*
 .containerNav{
 
 	width : 1100px;
@@ -77,14 +77,8 @@ header{
 	border-color : #008081;
 
 }
-.btnCo {
-	margin: 15px;
-}
 
-/*permet de laisser fixé la navBar*/
-.fixed{
-	position: fixed;
-}
+
 
 
 .NavBar{
@@ -100,7 +94,7 @@ header{
 .itemDeroulants:hover{
 
 	background-color: #008081;
-	/*background-color: #ED7E39;*/
+	background-color: #ED7E39;
 
 }
 
@@ -142,12 +136,20 @@ div .dropdown-divider{
 	padding: 2px;
 }
 
+.navbar-default {
+	background-color: blue;
+		border-color: green;
+}
 
+.navbar-default .nav-item  a{
+	color: red;
+}
 
 .NavForm{
 
 	text-align: center;
 }
+*/
 
 /* main a partir d'ici */
 div.affix + .img_alexandre_velo{

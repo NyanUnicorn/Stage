@@ -57,5 +57,5 @@
 
 
 
-    <?php   require 'navbar-view.php';  ?>
+    <?php   require 'navbar-view1.php';  ?>
 </header>

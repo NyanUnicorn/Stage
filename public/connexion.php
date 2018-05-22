@@ -11,7 +11,7 @@ session_start();
 
 //Webpage formatting
 $head = Style::includeExternalHead();
-$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_form') . Style::getStylesheet('style_menu');
+$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_form') . Style::getStylesheet('style_menu') . Style::getStylesheet('navbar');
 $foot = Style::includeExternalFoot();
 
 //external resources
@@ -34,6 +34,7 @@ if(isset($_POST['password'])){
 
 //input values
 $emailInput = $_SESSION['emailInput'];
+$uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
 //open page

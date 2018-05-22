@@ -1,11 +1,4 @@
-
-<div class="nav-wrapper">
-<li class="menuNavItem nav-item">
-<a class="itemDeroulants NavForm nav-link" href="#">Agenda</a>
-</li>
-
-
-<li class="menuNavItem nav-item dropdown">
+<li class="menuNavItem nav-item dropdown ">
 <a class="itemDeroulants NavForm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <?php echo $_SESSION['USER']->getNom(); ?>
 </a>
@@ -15,4 +8,3 @@
   <a class="itemDeroulants dropdown-item" href="#">Déconnecter</a>
 </div>
 </li>
-</div>

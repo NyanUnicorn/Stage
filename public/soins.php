@@ -19,7 +19,7 @@ $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
 
-
+$uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
 require '../view/soins-view.php';
