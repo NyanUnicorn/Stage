@@ -10,7 +10,7 @@ use Service\Image;
 session_start();
 
 $head = Style::includeExternalHead();
-$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_form') . Style::getStylesheet('style_menu');
+$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_form') . Style::getStylesheet('style_menu') . Style::getStylesheet('navbar');
 $foot = Style::includeExternalFoot();
 
 $image['logoTable'] = Image::displayImage('logoTable.png');

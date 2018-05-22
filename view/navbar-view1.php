@@ -23,7 +23,7 @@
             </div>
           </li>
           <li class="menuNavItem nav-item dropdown <?php echo strpos($uri, "soins") ? 'active' : ''  ?>">
-            <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle disabled" href="soins.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle" href="soins.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Les Soins Chiropratiques
           </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -35,7 +35,7 @@
               <a class="itemDeroulants dropdown-item" href="soins.php#Mutuelles_remboursant_les_soins">Mutuelles remboursant les soins </a>
             </div>
           </li>
-          <li class="menuNavItem nav-item dropdown">
+          <li class="menuNavItem nav-item dropdown <?php echo strpos($uri, "chiropracteur") ? 'active' : ''  ?>">
             <a class="itemDeroulants NavForm nav-link dropdown-toggle" href="chiropracteur.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Votre Chiropracteur
           </a>
@@ -48,7 +48,7 @@
               <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Contacts">Contacts</a>
             </div>
           </li>
-          <li class="menuNavItem nav-item">
+          <li class="menuNavItem nav-item  <?php echo strpos($uri, "wcbt") ? 'active' : ''  ?>">
             <a class="itemDeroulants NavForm nav-link" href="wcbt.php">Le World Chiropractic Bike Tour</a>
           </li>
           <?php require $navStatus; ?>

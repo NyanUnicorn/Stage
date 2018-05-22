@@ -1,6 +1,4 @@
-
-<div class="nav-wrapper">
-<li class="menuNavItem nav-item">
+<li class="menuNavItem nav-item <?php echo strpos($uri, "agenda") ? 'active' : ''  ?>">
 <a class="itemDeroulants NavForm nav-link" href="#">Agenda</a>
 </li>
 
@@ -15,4 +13,3 @@
   <a class="itemDeroulants dropdown-item" href="#">Déconnecter</a>
 </div>
 </li>
-</div>
