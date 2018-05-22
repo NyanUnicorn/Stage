@@ -51,9 +51,7 @@
       <li class="menuNavItem nav-item">
           <a class="itemDeroulants NavForm nav-link" href="wcbt.php">Le World Chiropractic Bike Tour</a>
       </li>
-      <li class="menuNavItem nav-item">
-          <?php require $navStatus; ?>
-      </li>
+      <?php require $navStatus; ?>
      </ul>
     </div>
 
