@@ -66,7 +66,7 @@ class Connection{
         $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
         $_SESSION['USER'] = $USER;
         self::resetTimeout();
-        $_SESSION['emailInput'] = NULL;
+        //$_SESSION['emailInput'] = NULL;
         var_dump($_SESSION['timeout']);
       }
       else{

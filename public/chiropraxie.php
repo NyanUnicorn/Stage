@@ -1,9 +1,22 @@
 <?php
-session_start();
 require '../src/autoload.php';
 
-require '../models/style.php';
-require '../models/connections.php';
-require '../models/image.php';
+use Service\Style;
+use Service\Connection;
+use Service\Image;
+
+session_start();
+
+
+$head = Style::includeExternalHead();
+$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_menu');
+$foot = Style::includeExternalFoot();
+
+$image['logoTable'] = Image::displayImage('logoTable.png');
+$image['logoVelo'] = Image::displayImage('logoVelo.png');
+
+
+$navStatus = Connection::navConnexion();
+
 
 require '../view/chiropraxie-view.php';

@@ -21,7 +21,6 @@ $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
 //authentication check
 if(Connection::authenticated()){
-  var_dump($_SESSION['timeout']);
   header('Location: /index.php');
 }else{
   $errors = Connection::checkLoginInput();

@@ -21,4 +21,4 @@ $image['bande'] = Image::displayImage('fond0.png');
 
 $navStatus = Connection::navConnexion();
 
-require '../view/index-view2.php';
+require '../view/chiropracteur-view.php';

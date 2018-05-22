@@ -14,11 +14,7 @@
 
 <body>
 
-<?php
-
-	require 'header-view.php';
-
- ?>
+<?php	require 'header-view.php'; ?>
 
 <main>
 

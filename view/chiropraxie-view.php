@@ -7,10 +7,10 @@
 	<meta charset="utf-8">
 
 	<?php
-	includeExternalHead();
-	echo getStylesheet('style');
-	echo getStylesheet('style_menu');
-	?>
+			echo $head;
+			echo $stylesheet;
+	 ?>
+
 </head>
 <body>
 	<?php	require 'header-view.php'; ?>
@@ -140,7 +140,7 @@
 	<?php
 
 		require 'footer-view.php';
-		includeExternalFoot();
+		echo $foot;
 	 ?>
-
+</body>
 </html>

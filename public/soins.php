@@ -1,4 +1,6 @@
 <?php
+
+
 require '../src/autoload.php';
 
 
@@ -15,10 +17,9 @@ $foot = Style::includeExternalFoot();
 
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
-$image['bande'] = Image::displayImage('fond0.png');
 
 
 
 $navStatus = Connection::navConnexion();
 
-require '../view/index-view2.php';
+require '../view/soins-view.php';

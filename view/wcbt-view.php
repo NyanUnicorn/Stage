@@ -7,10 +7,8 @@
 	<meta charset="utf-8">
 
 	<?php
-			includeExternalHead();
-			echo getStylesheet('style');
-			echo getStylesheet('style_form');
-			echo getStylesheet('style_menu');
+			echo $head;
+			echo $stylesheet;
 	 ?>
 
 </head>
@@ -66,7 +64,7 @@ C’est une lettre que votre chiropracteur préparera régulièrement pour vous 
 	<?php
 
 		require 'footer-view.php';
-		includeExternalFoot();
+		echo $foot;
 
 	 ?>
 

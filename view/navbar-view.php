@@ -23,33 +23,33 @@
           </div>
       </li>
       <li class="menuNavItem nav-item dropdown">
-          <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="dropdown itemDeroulants NavForm nav-link dropdown-toggle disabled" href="soins.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Les Soins Chiropratiques
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="itemDeroulants dropdown-item" href="soins.html#Pour_Qui">Pour Qui ? </a>
-            <a class="itemDeroulants dropdown-item" href="soins.html#Les_symptomes_pour_consulter">Les symptômes pour consulter</a>
+            <a class="itemDeroulants dropdown-item" href="soins.php#Pour_Qui">Pour Qui ? </a>
+            <a class="itemDeroulants dropdown-item" href="soins.php#Les_symptomes_pour_consulter">Les symptômes pour consulter</a>
             <div class="dropdown-divider"></div>
-            <a class="itemDeroulants dropdown-item" href="soins.html#Deroulement_d'une_séance">Déroulement d’une séance </a>
-            <a class="itemDeroulants dropdown-item" href="soins.html#Tarifs">Tarifs</a>
-            <a class="itemDeroulants dropdown-item" href="soins.html#Mutuelles_remboursant_les_soins">Mutuelles remboursant les soins </a>
+            <a class="itemDeroulants dropdown-item" href="soins.php#Deroulement_d'une_séance">Déroulement d’une séance </a>
+            <a class="itemDeroulants dropdown-item" href="soins.php#Tarifs">Tarifs</a>
+            <a class="itemDeroulants dropdown-item" href="soins.php#Mutuelles_remboursant_les_soins">Mutuelles remboursant les soins </a>
           </div>
       </li>
       <li class="menuNavItem nav-item dropdown">
-          <a class="itemDeroulants NavForm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="itemDeroulants NavForm nav-link dropdown-toggle" href="chiropracteur.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Votre Chiropracteur
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Son_parcours">Son parcours </a>
-            <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Seance_a_domicile_a_velo">Séance à domicile à vélo </a>
-            <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Techniques_de_soins_utilisees">Techniques de soins utilisées</a>
-            <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Equipement_lors_des_deplacements">Equipement lors des déplacements</a>
+            <a class="itemDeroulants dropdown-item" href="chiropracteur.php#Son_parcours">Son parcours </a>
+            <a class="itemDeroulants dropdown-item" href="chiropracteur.php#Seance_a_domicile_a_velo">Séance à domicile à vélo </a>
+            <a class="itemDeroulants dropdown-item" href="chiropracteur.php#Techniques_de_soins_utilisees">Techniques de soins utilisées</a>
+            <a class="itemDeroulants dropdown-item" href="chiropracteur.php#Equipement_lors_des_deplacements">Equipement lors des déplacements</a>
             <div class="dropdown-divider"></div>
             <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Contacts">Contacts</a>
           </div>
       </li>
       <li class="menuNavItem nav-item">
-          <a class="itemDeroulants NavForm nav-link" href="wcbt.html">Le World Chiropractic Bike Tour</a>
+          <a class="itemDeroulants NavForm nav-link" href="wcbt.php">Le World Chiropractic Bike Tour</a>
       </li>
       <li class="menuNavItem nav-item">
           <?php require $navStatus; ?>
