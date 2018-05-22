@@ -380,3 +380,17 @@ padding: 20px 0;
   text-align: center;
   padding:20px;
 }
+
+.reactive-container{
+	display: flex;
+}
+
+.reactive-container .side-section{
+	background-color: red;
+	min-height: 100px;
+}
+
+.reactive-container .main-section{
+	background-color: blue;
+	min-height: 100px;
+}

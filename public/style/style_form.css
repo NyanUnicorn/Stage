@@ -3,22 +3,12 @@
   background-color: red;
 
 }*/
+
+
 h4{
   text-align: center;
   margin: 70px 0 30px;
 
-}
-
-
-fieldset.fieldset-form{
-
-    padding: 5px;
-    border: solid 1px #008081;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    text-align: center;
-    background-color: #E6F2F2;
-    box-shadow:  0px -13px 20px 0px #E6F2F2;
 }
 
 
@@ -72,25 +62,6 @@ fieldset.fieldset-form{
   border: 1px double white;
 }
 
-.checkboxArea{
-
-display: inline;
-
-
-
-}
-
-.checkboxArea *{
-
-    padding: 3px;
-    margin: 0px 8px;
-}
-
-.checkbox{
-
-  margin: 0px;
-
-}
 
 .clearfix{
     display: table;
@@ -105,23 +76,6 @@ display: inline;
 
 }
 
-.CreateAcc{
-
-  color : #008081;
-  background-color: #E6F2F2;
-  border-radius: 30px;
-  border: 1px solid #008081;
-  padding : 5px 12px;
-  font-size: 15px;
-
-}
-
-.CreateAcc:hover{
-
-  color: white;
-  background-color: #008081;
-  border: 1px double white;
-}
 
 .lbl{
 
@@ -147,6 +101,69 @@ input[type=text],[type=textarea] {
 
 input[type=tel],[type=password]{
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+}
+
+/*
+
+
+
+
+nouvelle version à partir d'ici
+
+
+
+
+*/
+
+.content{
+  width 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.content>fieldset.fieldset-form{
+  padding: 5px 15px;
+  border: solid 1px #008081;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #E6F2F2;
+  box-shadow:  0px -13px 20px 0px #E6F2F2;
+  width: 100%;
+}
+
+.content fieldset > *{
+  margin: 5px 0 20px;
+}
+
+.content fieldset label{
+  width: 29%;
+  min-width: 107px;
+  text-align: left;
+}
+.content fieldset input{
+  width: calc(71% - 5px);
+}
+.content input.connectionButton, .content input.createAcc{
+  color : #008081;
+  background-color: #E6F2F2;
+  border-radius: 30px;
+  border: 1px solid #008081;
+  padding : 5px 12px;
+  font-size: 15px;
+  min-width: 117px;
+  margin-right: 20px;
+}
+.content input.connectionButton:hover, .content input.createAcc:hover{
+  color: white;
+  background-color: #008081;
+  border: 1px double white;
+}
+
+.content .stayConnected{
+  display: inline-block;
+  width: calc(100% - 142px);
+}
+.content p{
+  margin: 30px 0 20px;
 }
