@@ -94,7 +94,5 @@
     	require 'footer-view.php';
     	echo $foot;
      ?>
-
-
   </body>
 </html>
