@@ -18,7 +18,7 @@
 
 <main>
 
-	<div class="row">
+	<div class="row no-pad">
 		<div class="col-xs-1 col-lg-0"></div>
 		<div class="col-xs-10 col-lg-12">
 			<div class="row">
