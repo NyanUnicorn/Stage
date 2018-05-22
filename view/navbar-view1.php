@@ -1,5 +1,5 @@
 <div class="nav-wrapper">
-  <nav id="custom-menu" class="navbar navbar-default navbar-expand-lg navbar-light bg-light" role="navigation" data-spy="affix" data-offset-top="165">
+  <nav id="custom-menu" class="navbar navbar-default navbar-expand-lg " role="navigation" data-spy="affix" data-offset-top="165">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

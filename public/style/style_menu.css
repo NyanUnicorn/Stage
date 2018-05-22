@@ -91,12 +91,3 @@ div.affix-top .col-lg-12.phoneNumber{
 .encart{
 
 }
-
-
-
-
-nav.affix {
-      top: 0;
-      width: 100%;
-      z-index: 9999 !important;
-}
