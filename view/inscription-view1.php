@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <?php
     		echo $head;
     		echo $stylesheet;
@@ -10,20 +9,14 @@
     <title>page d'inscription</title>
   </head>
   <body>
-    <?php
-      require 'header-view.php';
-     ?>
-
+    <?php require 'header-view.php'; ?>
     <main>
-
     	<div class="row no-pad">
     		<div class="col-xs-1 col-lg-0"></div>
     		<div class="col-xs-10 col-lg-12">
     			<div class="row">
     				<div class="col-xs-0 col-lg-2"></div>
     				<div class="col-xs-12 col-lg-8">
-
-
               <div class="content large-content">
                 <h4>Inscription:</h4>
               </div>
@@ -32,17 +25,17 @@
                   <fieldset>
                     <legend>Informations Personnelles</legend>
                     <label for="prenom">Prenom : </label>
-                    <input type="text" name="prenom" id="" value="" required>
+                    <input type="text" name="prenom" id="prenom" value="" required>
                     <label for="nom">Nom : </label>
-                    <input type="text" name="nom" id="" value="" required>
+                    <input type="text" name="nom" id="nom" value="" required>
                     <div class="radio-set">
                       <label class="name">Civilité : </label>
                       <div class="radio-set-2">
-                        <input type="radio" name="civ" id="" id="femme" value="">
+                        <input type="radio" name="civ" id="femme" value="">
                         <label for="femme">Femme</label>
                       </div>
                       <div class="radio-set-2">
-                        <input type="radio" name="civ" id="" id="homme" value="">
+                        <input type="radio" name="civ" id="homme" value="">
                         <label for="homme">Homme</label>
                       </div>
                     </div>
@@ -51,40 +44,39 @@
                       <input type="date" name="ddn" id="" value="">
                     </div>
                     <label for="ville">Ville : </label>
-                    <input type="text" name="ville" id="" value="">
+                    <input type="text" name="ville" id="ville" value="">
                     <label for="cp">Code Postale : </label>
-                    <input type="text" name="cp" id="" value="">
+                    <input type="text" name="cp" id="cp" value="">
                     <label for="adresse">Adresse : </label>
-                    <input type="text" name="adresse" id="" value="">
+                    <input type="text" name="adresse" id="adresse" value="">
                     <label for="cadresse">Complément d'adresse : </label>
-                    <input type="text" name="cadresse" id="" value="">
+                    <input type="text" name="cadresse" id="cadresse" value="">
                     <label for="phone">Numéro de téléphone : </label>
-                    <input type="tel" name="phone" id="" value="">
+                    <input type="tel" name="phone" id="phone" value="">
                     <label for="profession">Profession : </label>
-                    <input type="text" name="profession" id="" value="">
-
+                    <input type="text" name="profession" id="profession" value="">
                   </fieldset>
                 </div>
                 <div class="content large-content">
                 <fieldset>
                   <legend>Compte</legend>
-                    <label for="email">Email : </label>
-                    <input type="email" name="email" id="email" value="">
-                    <label for="confirmEmail">Confirmation Email : </label>
-                    <input type="email" name="confirmEmail" id="confirmEmail" value="">
-                    <label for="pswd">Mot de Passe : </label>
-                    <input type="password" name="pswd" id="pswd" value="">
-                    <label for="confirmPswd">Confiration mot de passe : </label>
-                    <input type="password" name="confirmPswd" id="confirmPswd" value="">
-                    <label for="motif">Motif : </label>
-                    <div class="input-container">
-                      <select class="" name="motif">
-                        <option value="valeurDefault" selected>Choisir</option>
-                        <option value="valeur2">Bouche-à-oreille</option>
-                        <option value="valeur3">BDD</option>
-                        <option value="valeur4">Autre</option>
-                      </select>
-                    </div>
+                  <label for="email">Email : </label>
+                  <input type="email" name="email" id="email" value="">
+                  <label for="confirmEmail">Confirmation Email : </label>
+                  <input type="email" name="confirmEmail" id="confirmEmail" value="">
+                  <label for="pswd">Mot de Passe : </label>
+                  <input type="password" name="pswd" id="pswd" value="">
+                  <label for="confirmPswd">Confiration mot de passe : </label>
+                  <input type="password" name="confirmPswd" id="confirmPswd" value="">
+                  <label for="motif">Motif : </label>
+                  <div class="input-container">
+                    <select class="" name="motif">
+                      <option value="valeurDefault" selected>Choisir</option>
+                      <option value="valeur2">Bouche-à-oreille</option>
+                      <option value="valeur3">BDD</option>
+                      <option value="valeur4">Autre</option>
+                    </select>
+                  </div>
                 </fieldset>
                 </div>
                 <div class="content medium-content">
@@ -97,9 +89,6 @@
     		</div>
     		<div class="col-xs-1 col-lg-0"></div>
     	</div>
-
-
-
     </main>
     <?php
     	require 'footer-view.php';

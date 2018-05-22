@@ -5,11 +5,7 @@
 }*/
 
 
-h4{
-  text-align: center;
-  margin: 70px 0 30px;
 
-}
 
 
 
@@ -116,7 +112,6 @@ nouvelle version à partir d'ici
   width 100%;
   margin: 0 auto;
 }
-
 .small-content{
   max-width: 400px;
 }
@@ -126,7 +121,10 @@ nouvelle version à partir d'ici
 .large-content{
   max-width: 900px;
 }
-
+.content > h4{
+    text-align: center;
+    margin: 70px 0 30px;
+}
 .content>fieldset>legend{
   border: 0;
 }
