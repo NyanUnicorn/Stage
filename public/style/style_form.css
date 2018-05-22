@@ -92,12 +92,12 @@ h4{
   display:block;
   text-align: justify;
 }
-
+/*
 input[type=text],[type=textarea] {
     width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
-}
+}*/
 
 input[type=tel],[type=password]{
     width: 100%;
@@ -117,11 +117,21 @@ nouvelle version à partir d'ici
 
 .content{
   width 100%;
-  max-width: 400px;
   margin: 0 auto;
 }
 
-.content>fieldset.fieldset-form{
+.small-content{
+  max-width: 400px
+}
+
+.medium-content{
+  max-width: 600px
+}
+
+.content>fieldset>legend{
+  border: 0;
+}
+.content>fieldset{
   padding: 5px 15px;
   border: solid 1px #008081;
   margin-bottom: 20px;
@@ -131,12 +141,16 @@ nouvelle version à partir d'ici
   box-shadow:  0px -13px 20px 0px #E6F2F2;
   width: 100%;
 }
-
 .content fieldset > *{
   margin: 5px 0 20px;
+  float: left;
 }
-
-.content fieldset label{
+.content fieldset > div.radio{
+  width: 100%;
+  align-items:flex-start;
+}
+.content fieldset label,
+.content fieldset > div.radio-set > label.name{
   width: 29%;
   min-width: 107px;
   text-align: left;
@@ -144,7 +158,7 @@ nouvelle version à partir d'ici
 .content fieldset input{
   width: calc(71% - 5px);
 }
-.content input.connectionButton, .content input.createAcc{
+.content fieldset input.connectionButton, .content fieldset input.createAcc{
   color : #008081;
   background-color: #E6F2F2;
   border-radius: 30px;
@@ -159,11 +173,34 @@ nouvelle version à partir d'ici
   background-color: #008081;
   border: 1px double white;
 }
-
 .content .stayConnected{
   display: inline-block;
   width: calc(100% - 142px);
 }
 .content p{
   margin: 30px 0 20px;
+}
+.content fieldset > div.radio-set{
+  width: 100%;
+  display: inline-block;
+}
+.content fieldset > div.radio-set > div.radio-set-2{
+  width: calc(71% / 2);
+  float: right;
+}
+.content fieldset > div.radio-set > div.radio-set-2 > input{
+  width: 20px;
+}
+.content fieldset > div.radio-set > div.radio-set-2 > label{
+  width: calc(100% - 25px);
+}
+.content fieldset > input[type=date]{
+  float right;
+  width: calc(70% / 2);
+}
+.content fieldset > input[type=date]:after{
+  content: "gggggggggggggg";
+  display: inline-block;
+  float right;
+  width: 100px;
 }

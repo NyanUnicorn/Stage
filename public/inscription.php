@@ -19,7 +19,7 @@ $image['logoVelo'] = Image::displayImage('logoVelo.png');
 $uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
-require '../view/inscription-view.php';
+require '../view/inscription-view1.php';
 
 
 ?>

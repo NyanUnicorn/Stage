@@ -33,7 +33,10 @@ if(isset($_POST['password'])){
 }
 
 //input values
-$emailInput = $_SESSION['emailInput'];
+$emailInput = '';
+if(isset($_SESSION['emailInput'])){
+  $emailInput = $_SESSION['emailInput'];
+}
 $uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
