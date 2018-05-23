@@ -15,14 +15,14 @@ public static function getInputArray($name){
 
 public static function testPasswordConfirm($name1, $name2){
   $toReturn = 0;
-  if(getInputPost($name1) == getInputPost($name2)){
+  if(self::getInputPost($name1) === self::getInputPost($name2)){
     $toReturn = 1;
   }
   return $toReturn;
 }
 
 public static function resetUserInput($_name){
-    return 'value="' .  htmlentities(getInputPost($_name)) . '"';
+    return 'value="' .  htmlentities(self::getInputPost($_name)) . '"';
 }
 
 

@@ -45,7 +45,7 @@
               <a class="itemDeroulants dropdown-item" href="chiropracteur.php#Techniques_de_soins_utilisees">Techniques de soins utilisées</a>
               <a class="itemDeroulants dropdown-item" href="chiropracteur.php#Equipement_lors_des_deplacements">Equipement lors des déplacements</a>
               <div class="dropdown-divider"></div>
-              <a class="itemDeroulants dropdown-item" href="chiropracteur.html#Contacts">Contacts</a>
+              <a class="itemDeroulants dropdown-item" href="chiropracteur.php#Contacts">Contacts</a>
             </div>
           </li>
           <li class="menuNavItem nav-item  <?php echo strpos($uri, "wcbt") ? 'active' : ''  ?>">

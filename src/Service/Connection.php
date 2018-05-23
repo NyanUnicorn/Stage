@@ -76,4 +76,30 @@ class Connection{
     }
     return $toReturn;
   }
+
+  public static function checkInscription($pre, $nom, $civ, $ddn, $vil, $cp, $adr, $tel, $pro, $eml, $ceml, $pwd, $cpwd, $mot){
+    $errors = [];
+    if(strlen($pre) <= 1){$errors[] = 'veuillez entrer votre prénom';}
+    if(strlen($nom) <= 1){$errors[] = 'veuillez entrer votre nom';}
+    if(strlen($civ) <= 1){$errors[] = 'veuillez préciser votre civitité';}
+    if(strlen($ddn) <= 1){$errors[] = 'veuillez entrer votre date de naissance';}
+    if(strlen($vil) <= 2){$errors[] = 'veuillez préciser la ville dans laquel vous habitez';}
+    if(strlen($cp) <= 1){$errors[] = 'veuillez préciser votre code postale';}
+    if(strlen($adr) <= 1){$errors[] = 'veuillez préciser votre adresse';}
+    if(strlen($tel) <= 10){$errors[] = 'veuillez ajouter un numéro de télephone';}
+    if(strlen($pro) <= 1){$errors[] = 'veuillez préciser votre profession';}
+    if(strlen($eml) <= 3){$errors[] = 'veuillez ajouter une adresse e-mail';}
+    if(strlen($ceml) <= 1){$errors[] = 'veuillez confirmer votre e-mail';}else{
+      if(Form::public static function testPasswordConfirm($eml, $ceml)){ $errors[] = 'Votre confirmation de e-mail ne coincide pas';}
+    }
+    if(strlen($pwd) <= 1){$errors[]= 'veuillez entrez un mot de passe';}else if(strlen($pwd) <= 6){$errors[]= 'votre mot de passe est trop court';}
+    if(strlen($cpwd) <= 1){$errors[]= 'veuillez confirmer votre mot de passe';}else{
+      if(Form::public static function testPasswordConfirm($pwd, $cpwd)){ $errors[] = 'Votre confirmation de mod de passe ne coincide pas';}
+    }
+    if(strlen($mot) <= 1){$errors[]= 'veuillez indiquer comment vous nous avez connue';}
+    return $errors[];
+  }
+
+
+
 }

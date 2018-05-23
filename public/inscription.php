@@ -16,6 +16,9 @@ $foot = Style::includeExternalFoot();
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
+var_dump(Form::getInputPost('newsletter'));
+
+
 $uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
