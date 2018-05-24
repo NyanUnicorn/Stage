@@ -6,6 +6,7 @@ use Service\Form;
 use Entity\User;
 use Repository\UserRepository as UserRep;
 use Enumeration\Roles;
+use Enumeration\Status;
 
 
 class Connection{
@@ -103,6 +104,8 @@ class Connection{
   }
 
   public static function createAccount(){
+    $status = Status::Active;
+    $role = Roles::User;
     $errors = [];
     $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
@@ -112,11 +115,12 @@ class Connection{
     $cadresse = $_POST['cadresse'];
     $ville = $_POST['ville'];
     $cp = $_POST['cp'];
-    $tel = $_POST['phone'];
+    $phone = $_POST['phone'];
     $profession = $_POST['profession'];
     $email = $_POST['email'];
     $password = $_POST['pswd'];
     $motif = '';
+    $dcc = date("Y-m-d H:i:s");
     if($_POST['motif'] === 'Autre'){
       $motif = $_POST['autremotif'];
     }else{
@@ -127,7 +131,7 @@ class Connection{
       $newsletter = 1;
     }
     if(!UserRep::userExist($email)){
-      $User = new User( 0 , $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif);
+      $User = new User( $role , $status, $civilite, $nom, $prenom, $email, $ddn, $dcc, $phone, $adresse, $cadresse, $cp, $ville, $professions, $modif, $newsletter);
     }
     return $errors;
   }
