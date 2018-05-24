@@ -77,27 +77,60 @@ class Connection{
     return $toReturn;
   }
 
-  public static function checkInscription($pre, $nom, $civ, $ddn, $vil, $cp, $adr, $tel, $pro, $eml, $ceml, $pwd, $cpwd, $mot){
+  public static function checkInscription(){
     $errors = [];
-    if(strlen($pre) <= 1){$errors[] = 'veuillez entrer votre prénom';}
-    if(strlen($nom) <= 1){$errors[] = 'veuillez entrer votre nom';}
-    if(strlen($civ) <= 1){$errors[] = 'veuillez préciser votre civitité';}
-    if(strlen($ddn) <= 1){$errors[] = 'veuillez entrer votre date de naissance';}
-    if(strlen($vil) <= 2){$errors[] = 'veuillez préciser la ville dans laquel vous habitez';}
-    if(strlen($cp) <= 1){$errors[] = 'veuillez préciser votre code postale';}
-    if(strlen($adr) <= 1){$errors[] = 'veuillez préciser votre adresse';}
-    if(strlen($tel) <= 10){$errors[] = 'veuillez ajouter un numéro de télephone';}
-    if(strlen($pro) <= 1){$errors[] = 'veuillez préciser votre profession';}
-    if(strlen($eml) <= 3){$errors[] = 'veuillez ajouter une adresse e-mail';}
-    if(strlen($ceml) <= 1){$errors[] = 'veuillez confirmer votre e-mail';}else{
-      if(Form::public static function testPasswordConfirm($eml, $ceml)){ $errors[] = 'Votre confirmation de e-mail ne coincide pas';}
+    if(strlen($_POST['prenom']) <= 1){$errors[] = 'veuillez entrer votre prénom';}
+    if(strlen($_POST['nom']) <= 1){$errors[] = 'veuillez entrer votre nom';}
+    if(!isset($_POST['civ'])){$errors[] = 'veuillez préciser votre civitité';}
+    if(strlen($_POST['ddn']) <= 1){$errors[] = 'veuillez entrer votre date de naissance';}
+    if(strlen($_POST['ville']) <= 2){$errors[] = 'veuillez préciser la ville dans laquel vous habitez';}
+    if(strlen($_POST['cp']) <= 1){$errors[] = 'veuillez préciser votre code postale';}
+    if(strlen($_POST['adresse']) <= 1){$errors[] = 'veuillez préciser votre adresse';}
+    if(strlen($_POST['phone']) <= 10){$errors[] = 'veuillez ajouter un numéro de télephone';}
+    if(strlen($_POST['profession']) <= 1){$errors[] = 'veuillez préciser votre profession';}
+    if(strlen($_POST['email']) <= 3){$errors[] = 'veuillez ajouter une adresse e-mail';}else{
+    if(strlen($_POST['confirmEmail']) <= 1){$errors[] = 'veuillez confirmer votre e-mail';}else{
+      if(Form::testPasswordConfirm($_POST['email'], $_POST['confirmEmail'])){ $errors[] = 'Votre confirmation de e-mail ne coincide pas';}
+    }}
+    if(strlen($_POST['pswd']) <= 1){$errors[]= 'veuillez entrez un mot de passe';}else if(strlen($_POST['pswd']) <= 6){$errors[]= 'votre mot de passe est trop court';}else{
+    if(strlen($_POST['confirmPswd']) <= 1){$errors[]= 'veuillez confirmer votre mot de passe';}else{
+      if(Form::testPasswordConfirm($_POST['pswd'], $_POST['confirmPswd'])){ $errors[] = 'Votre confirmation de mod de passe ne coincide pas';}
+    }}
+    if(strlen($_POST['motif']) <= 1){$errors[]= 'veuillez indiquer comment vous nous avez connue';
+    }else if($_POST['motif'] === 'Autre'){if(strlen($motif = $_POST['autremotif']) <= 1){$errors[]= 'veuillez indiquer comment vous nous avez connue';}}
+    return $errors;
+  }
+
+  public static function createAccount(){
+    $errors = [];
+    $prenom = $_POST['prenom'];
+    $nom = $_POST['nom'];
+    $civilite = $_POST['civ'];
+    $ddn = $_POST['ddn'];
+    $adresse = $_POST['adresse'];
+    $cadresse = $_POST['cadresse'];
+    $ville = $_POST['ville'];
+    $cp = $_POST['cp'];
+    $tel = $_POST['phone'];
+    $profession = $_POST['profession'];
+    $email = $_POST['email'];
+    $password = $_POST['pswd'];
+    $motif = '';
+    if($_POST['motif'] === 'Autre'){
+      $motif = $_POST['autremotif'];
+    }else{
+      $motif = $_POST['motif'];
     }
-    if(strlen($pwd) <= 1){$errors[]= 'veuillez entrez un mot de passe';}else if(strlen($pwd) <= 6){$errors[]= 'votre mot de passe est trop court';}
-    if(strlen($cpwd) <= 1){$errors[]= 'veuillez confirmer votre mot de passe';}else{
-      if(Form::public static function testPasswordConfirm($pwd, $cpwd)){ $errors[] = 'Votre confirmation de mod de passe ne coincide pas';}
+    $newsletter = 0;
+    if(isset($_POST['motif'])){
+      $newsletter = 1;
     }
-    if(strlen($mot) <= 1){$errors[]= 'veuillez indiquer comment vous nous avez connue';}
-    return $errors[];
+    var_dump($newsletter);
+    if(UserRep::userExist('rr')){
+      echo 'hi';
+    }
+
+    return $errors;
   }
 
 
