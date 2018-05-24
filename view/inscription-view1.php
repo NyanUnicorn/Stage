@@ -35,22 +35,16 @@
                     <div class="radio-set">
                       <label class="name">Civilité : </label>
                       <?php
-                      foreach(){
+                      foreach($civilites as $civilite){
+                        $check = '';
+                        if (isset($_POST['civ'])){if($_POST['civ'] == $civilite['id']){$check = 'checked';}}
                         $radioSet = '<div class="radio-set-' . $civCount . '">';
-                        $radioSet += '<input type="radio" name="civ" id="' . $id . '" value="' . $id . '" >';
-                        $radioSet += '<label for="' . $id . '">' . $libelle . '</label>';
-                        $radioSet += '</div>';
+                        $radioSet = $radioSet . '<input type="radio" name="civ" id="' . $civilite['id'] . '" value="' . $civilite['id'] . '" ' . $check . ' >';
+                        $radioSet = $radioSet . '<label for="' . $civilite['id'] . '">' . $civilite['libelle'] . '</label>';
+                        $radioSet = $radioSet . '</div>';
                         echo $radioSet;
                       }
-                       ?>
-                      <div class="radio-set-2">
-                        <input type="radio" name="civ" id="femme" value="femme" >
-                        <label for="femme">Femme</label>
-                      </div>
-                      <div class="radio-set-2">
-                        <input type="radio" name="civ" id="homme" value="homme" >
-                        <label for="homme">Homme</label>
-                      </div>
+                      ?>
                     </div>
                     <label for="ddn">Date de Naissance</label>
                     <div class="input-container">

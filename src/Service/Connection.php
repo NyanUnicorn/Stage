@@ -5,6 +5,7 @@ use Service\DB;
 use Service\Form;
 use Entity\User;
 use Repository\UserRepository as UserRep;
+use Enumeration\Roles;
 
 
 class Connection{
@@ -122,14 +123,12 @@ class Connection{
       $motif = $_POST['motif'];
     }
     $newsletter = 0;
-    if(isset($_POST['motif'])){
+    if(isset($_POST['newsletter'])){
       $newsletter = 1;
     }
-    var_dump($newsletter);
-    if(UserRep::userExist('rr')){
-      echo 'hi';
+    if(!UserRep::userExist($email)){
+      $User = new User( 0 , $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif);
     }
-
     return $errors;
   }
 

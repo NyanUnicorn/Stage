@@ -7,6 +7,9 @@ use Service\Connection;
 use Service\Image;
 use Entity\User;
 
+
+
+
 session_start();
 
 //Webpage formatting

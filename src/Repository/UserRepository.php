@@ -15,7 +15,7 @@ class UserRepository {
     $return = $query->query("SELECT email FROM User WHERE email = '$_email'");
 
     $result = $return->fetchAll();
-    if(count($result) == 0){
+    if(count($return) == 0){
       $exists = FALSE;
     }
     return $exists;
