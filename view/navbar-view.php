@@ -1,6 +1,6 @@
 <div class="nav-wrapper">
 <nav class="NavBar navbar navbar-expand-lg navbar-light bg-light" data-spy="affix" data-offset-top="165">
-<div class="containerNav">
+  <div class="containerNav">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,7 +55,7 @@
      </ul>
     </div>
 
-</div>
+  </div>
 </nav>
 
 </div>

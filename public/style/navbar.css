@@ -1,6 +1,7 @@
 .nav-wrapper{
 	min-height: 50px;
 }
+
 #custom-menu.navbar-default{
   font-size: 16px;
   background-color: rgba(230, 210, 196, 1);
@@ -29,7 +30,7 @@
 #custom-menu.navbar-default .navbar-nav>.active>a:hover,
 #custom-menu.navbar-default .navbar-nav>.active>a:focus {
   color: rgba(0, 0, 0, 1);
-  background-color: rgba(0, 128, 129, 1);
+  background-color: #e01010;
   background: -webkit-linear-gradient(top, rgba(237, 126, 57, 1) 0%, rgba(0, 128, 129, 1) 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(0, 128, 129, 1) 100%);
 }
@@ -51,4 +52,9 @@
       top: 0;
       width: 100%;
       z-index: 9999 !important;
+}
+
+#custom-item{
+ /*margin: 0px 25px;*/
+ margin: 0em 1.5em;
 }
