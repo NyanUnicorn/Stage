@@ -111,7 +111,8 @@ class Connection{
     $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
     $civilite = $_POST['civ'];
-    $ddn = $_POST['ddn'];
+    $oddn = $_POST['ddn'];
+    $ddn = date("Y-m-d", strtotime($oddn));
     $adresse = $_POST['adresse'];
     $cadresse = $_POST['cadresse'];
     $ville = $_POST['ville'];
