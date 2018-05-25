@@ -2,8 +2,10 @@
 
 namespace Entity;
 
+//creationd de l'objet Rdv
 class Rdv{
 
+  //parametres de l'objet
   private $id;
   private $date_crea;
   private $adresse;
@@ -14,6 +16,7 @@ class Rdv{
   private $duree_min_rdv;
   private $user_id;
 
+  //constructeur
   public function __construct($_id,$_date_crea,$_adresse,$_cd_postale,$_ville,$date_rdv, $heure_rdv,$_duree_min_rdv,$_user_id){
     $this->id = $_id;
     $this->date_crea = $_date_crea;

@@ -2,8 +2,10 @@
 
   namespace Entity;
 
+// creation de l'objet DefaultUser (utilisateur lambda)
   class DefaultUser{
 
+    //creation de ses parametres
     private $id;
     private $nom;
     private $prenom;
@@ -15,6 +17,7 @@
     private $role;
     private $status;
 
+    //constructeur
     public function __construct(){
 
 

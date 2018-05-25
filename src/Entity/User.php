@@ -4,12 +4,14 @@ namespace Entity;
 
 
 
-//peut-être ortir la fonction age d'ici
-use Service\Bb; //change
+
+use Service\Bb;
 use Service\ClassTools as Tool;
 
-
+//creation de l'objet User (Utilisateur)
 class User{
+
+  //parametres de l'objet
   private $nom;
   private $pre;
   private $email;
@@ -27,6 +29,7 @@ class User{
   private $role;
   private $status;
 
+  //constructeur utilisant deux fonctions
   function __construct() {
         $argv = func_get_args();
         switch( func_num_args() ) {
@@ -40,6 +43,7 @@ class User{
          }
     }
 
+  //fonction n°1 utilisé par le constructeur
   public function __construct1($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif){
     $this->role = $_role;
     $this->status = $_status;
@@ -59,6 +63,7 @@ class User{
     $this->age = Tool::age($this->date_nais);
   }
 
+  //fonction n°2 utilisé par le constructeur
   public function __construct2($_id, $_role, $_status, $_nom, $_pre, $_email, $_date_nais, $_ville, $_civilite){
     $this->id = $_id;
     $this->role = $_role;

@@ -2,15 +2,17 @@
 
 namespace Entity;
 
+// creation de l'objet Conge
 class Conge{
 
+  //creation de ses parametres
   private $id;
   private $date_deb;
   private $date_fin;
   private $comment;
   private $user_id;
 
-
+//constructeur
   public function __construct($_id, $_date_deb, $_date_fin, $_comment, $_user_id){
     $this->id = $_id;
     $this->date_deb = $_date_deb;

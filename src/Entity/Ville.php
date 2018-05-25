@@ -2,12 +2,15 @@
 
 namespace Entity;
 
+//creation de l'objet Ville
 class Ville{
 
+  //parametres de l'objet Ville
   private $id;
   private $libelle;
   private $duree_min_add;
 
+  //constructeur
   public function __construct($_id,$_libelle,$_duree_min_add){
     $this->id = $_id;
     $this->libelle = $_libelle;

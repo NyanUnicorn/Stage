@@ -2,11 +2,14 @@
 
 namespace Entity;
 
+//creation de l'objet Motif
 class Motif{
 
+//parametres de l'objet
   private $id;
   private $motif;
 
+  //contructeur
   public function __construct($_id,$_motif){
     $this->id = $_id;
     $this->motif = $_motif;
