@@ -9,8 +9,29 @@ use Service\Form;
 use Service\Style;
 use Service\Connection;
 use Service\Image;
+use Repository\MotifRepository as MotifRep;
+use Repository\UserRepository as UserRep;
+use Repository\CiviliteRepository as CivRep;
 
 session_start();
+
+$errors = [];
+if(isset($_POST['prenom'])){
+  $errors = Connection::checkInscription();
+  if(count($errors)<=0){
+    var_dump(count($errors));
+    $errors = array_merge($errors, Connection::createAccount());
+  }
+}
+var_dump(count($errors));
+//$errors = array_merge($errors, Connection::createAccount());
+
+
+
+
+
+
+
 
 /* $head est utilisé pour appeler le header*/
 $head = Style::includeExternalHead();
@@ -25,7 +46,15 @@ utilisé ici pour récuperer les logos
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
+<<<<<<< HEAD
 /* $uri est la variable servant a recuperer le nom de la page */
+=======
+
+
+$civilites = CivRep::listCivilite()->fetchAll();
+$civCount = count($civilites);
+$motifs = MotifRep::getMotifs()->fetchAll();
+>>>>>>> 94214fedb52ed848e4dde6e736c8b3896466b562
 $uri = $_SERVER['REQUEST_URI'];
 /* $navStatus determine l'affichage de la navbar selon si l'utilisateur est connecté ou non */
 $navStatus = Connection::navConnexion();

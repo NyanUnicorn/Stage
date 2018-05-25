@@ -1,113 +1,3 @@
-/*:required {
-
-  background-color: red;
-
-}*/
-
-
-
-
-
-
-.flex-container{
-
-  display : flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form{
-
-    width: 100%;
-
-}
-
-.flex-input{
-
-  display: flex;
-  justify-content: space-between;
-  padding: 7px;
-
-}
-
-.flex-input *{
-
-    padding: 3px;
-    margin: 0px 5px;
-}
-
-.ConnectionBouton{
-
-  display: inline;
-  color : #008081;
-  background-color: #E6F2F2;
-  border-radius: 30px;
-  border: 1px solid #008081;
-  padding : 5px 12px;
-  margin-right: 60px;
-  font-size: 15px;
-
-}
-
-.ConnectionBouton:hover{
-
-  color: white;
-  background-color: #008081;
-  border: 1px double white;
-}
-
-
-.clearfix{
-    display: table;
-    clear: both;
-
-}
-
-.linkInscription{
-
-  margin-top : 50px;
-  text-align: center;
-
-}
-
-
-.lbl{
-
-  width: 100%;
-  margin: 7%;
-
-}
-.span{
-
-  color: black;
-}
-.inscription{
-
-  display:block;
-  text-align: justify;
-}
-/*
-input[type=text],[type=textarea] {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px 0;
-}*/
-
-
-/*
-
-
-
-
-nouvelle version à partir d'ici
-
-
-
-
-*/
-
 .content{
   width 100%;
   margin: 0 auto;
@@ -174,6 +64,10 @@ nouvelle version à partir d'ici
   display: inline-block;
   width: calc(100% - 142px);
 }
+.content > div.newsLetter-check{
+  float: right;
+  width: calc(100% - 142px);
+}
 .content p{
   margin: 30px 0 20px;
 }
@@ -183,6 +77,14 @@ nouvelle version à partir d'ici
 }
 .content fieldset > div.radio-set > div.radio-set-2{
   width: calc(71% / 2);
+  float: right;
+}
+.content fieldset > div.radio-set > div.radio-set-3{
+  width: calc(71% / 3);
+  float: right;
+}
+.content fieldset > div.radio-set > div.radio-set-4{
+  width: calc(71% / 4);
   float: right;
 }
 .content fieldset > div.input-container{
@@ -196,9 +98,13 @@ nouvelle version à partir d'ici
   float: left;
   max-width: 611px;
 }
-.content fieldset > div.radio-set > div.radio-set-2 > input{
+.content fieldset > div.radio-set > div.radio-set-2 > input,
+.content fieldset > div.radio-set > div.radio-set-3 > input,
+.content fieldset > div.radio-set > div.radio-set-4 > input{
   width: 20px;
 }
-.content fieldset > div.radio-set > div.radio-set-2 > label{
+.content fieldset > div.radio-set > div.radio-set-2 > label,
+.content fieldset > div.radio-set > div.radio-set-3 > label,
+.content fieldset > div.radio-set > div.radio-set-4 > label{
   width: calc(100% - 25px);
 }

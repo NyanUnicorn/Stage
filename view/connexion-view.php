@@ -6,7 +6,7 @@
 				echo $stylesheet;
 		 ?>
 		<meta charset="utf-8">
-		<title>page de connection</title>
+		<title>Connexion</title>
 
 	</head>
 
@@ -27,7 +27,7 @@
 									<fieldset class="fieldset-form">
 										<legend>Vos identifiants</legend>
 										<label  for="email">Email :</label>
-										<input type="email" name="email" placeholder="Ex: exemple@email.fr" <?php echo 'value="' . $emailInput . '"'; ?> id="email" required>
+										<input type="email" name="email" placeholder="Ex: exemple@email.fr" <?php echo 'value="' . htmlentities($emailInput) . '"'; ?> id="email" required>
 										<label  for="password">Mot de passe :</label>
 										<input type="password" name="password" id="password" required>
 									</fieldset>

@@ -13,53 +13,55 @@ class User{
 
   //parametres de l'objet
   private $nom;
-  private $pre;
+  private $prenom;
   private $email;
   private $date_nais;
   private $date_crea;
   private $age;
   private $phone;
   private $adresse;
-  private $comp_adr;
+  private $cadresse;
   private $cd_postale;
   private $ville;
   private $profession;
   private $motif;
-
+  private $newsletter;
   private $role;
   private $status;
+  private $civilite;
 
   //constructeur utilisant deux fonctions
   function __construct() {
         $argv = func_get_args();
         switch( func_num_args() ) {
-            case 15:
+            case 16:
                 self::__construct1($argv[0], $argv[1], $argv[2], $argv[3], $argv[4],
-                 $argv[5], $argv[6], $argv[7], $argv[8], $argv[9], $argv[10], $argv[11], $argv[12], $argv[13], $argv[14]);
+                 $argv[5], $argv[6], $argv[7], $argv[8], $argv[9], $argv[10], $argv[11], $argv[12], $argv[13], $argv[14], $argv[15]);
                 break;
             case 9:
                 self::__construct2($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8]);
                 break;
          }
     }
-
   //fonction n°1 utilisé par le constructeur
-  public function __construct1($id, $_role, $_status, $_nom, $_pre, $_email, $_dat_nais, $_date_crea, $_phone, $_adresse, $_comp_adr, $_cd_postale, $_ville, $_prof, $_modif){
+  public function __construct1($_role , $_status, $_civilite, $_nom, $_prenom, $_email, $_ddn, $_dcc, $_phone, $_adresse, $_cadresse, $_cp, $_ville, $_profession, $_motif, $_newsletter){
     $this->role = $_role;
     $this->status = $_status;
+    $this->civilite = Tool::civilite($_civilite);
     $this->nom = $_nom;
+    $this->prenom = $_prenom;
     $this->email = $_email;
-    $this->date_nais = $_date_nais;
-    $this->date_crea = $_date_crea;
+    $this->date_nais = $_ddn;
+    $this->date_crea = $_dcc;
     $this->phone = $_phone;
     $this->adresse = $_adresse;
-    $this->comp_adr = $_comp_adr;
-    $this->cd_postale = $_cd_postale;
+    $this->cadresse = $_cadresse;
+    $this->cd_postale = $_cp;
     $this->ville = $_ville;
-    $this->profession = $_prof;
+    $this->profession = $_profession;
     $this->motif = $_motif;
+    $this->newsletter = $_newsletter;
 
-    $this->age = age($this->date_nais);
     $this->age = Tool::age($this->date_nais);
   }
 
@@ -85,10 +87,10 @@ class User{
   }
 
   public function getPre(){
-    return $this->pre;
+    return $this->prenom;
   }
   public function setPre($input){
-    $this->pre = $input;
+    $this->prenom = $input;
   }
 
   public function getEmail(){
@@ -128,10 +130,10 @@ class User{
   }
 
   public function getCompAdresse(){
-    return $this->comp_adr;
+    return $this->cadresse;
   }
   public function setCompAdresse($input){
-    $this->comp_adr = $input;
+    $this->cadresse = $input;
   }
 
   public function getCodePostale(){
@@ -162,8 +164,23 @@ class User{
     $this->motif = $input;
   }
 
+  public function getCivilite(){
+    return $this->civilite;
+  }
 
 
+  public function getRole(){
+    return $this->role;
+  }
+
+
+  public function getStatus(){
+    return $this->status;
+  }
+
+  public function getNewsletter(){
+    return $this->newsletter;
+  }
 
   private function age($_date_nais){
     $ajd = date("Y-m-d");

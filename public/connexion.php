@@ -12,6 +12,9 @@ use Service\Image;
 /* Recuperation de la classe User*/
 use Entity\User;
 
+
+
+
 session_start();
 
 /* $head est utilisé pour appeler le header*/
