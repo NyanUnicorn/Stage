@@ -17,11 +17,11 @@ if(isset($_POST['prenom'])){
   $errors = Connection::checkInscription();
   if(count($errors)<=0){
     var_dump(count($errors));
-    //$errors = array_merge($errors, Connection::createAccount());
+    $errors = array_merge($errors, Connection::createAccount());
   }
 }
 var_dump(count($errors));
-$errors = array_merge($errors, Connection::createAccount());
+//$errors = array_merge($errors, Connection::createAccount());
 
 
 
