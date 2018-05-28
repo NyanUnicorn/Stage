@@ -22,10 +22,13 @@
 			<?php require 'side-nav-view1.php'; ?>
 		</div>
 
-		<div class="container">
+		<div class="main">
 
-			<div>
 
+			<div class="clear-area"></div>
+
+			<div class="content-area">
+				<h2 class="presentation">Présentation</h2>
 				<h2 class="Parties">La Chiropraxie</h2>
 
 				<h3  class="SousParties"><a name="Histoire_et_définition">Histoire et définition</a></h3>
@@ -130,6 +133,20 @@
 				<p>Aux Etats-Unis, le Journal of the American Medical Association recommande aux patients de consulter un chiropracteur en première intention pour le soin des lombalgies.</p>
 
 				<p>Source : AFC</p>
+
+				<h2 class="temoignages">Témoignages</h2>
+
+				<h2 class="actualites">Actualités</h2>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div>
+
+
 
 			</div>
 

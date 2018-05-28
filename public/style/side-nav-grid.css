@@ -3,10 +3,12 @@ div.nav-info{
   align-items: center;
   display: grid;
   grid-template-columns: auto 268px auto;
+  background-color: #008081;
 }
 div.encart{
   min-height: 114px;
   padding: 5px 0;
+  background-color: #008081;
 }
 div.affix.Bandeau {
   top: 53px;
@@ -15,7 +17,7 @@ div.affix.Bandeau {
   margin: 0;
   width: 100%;
 }
-div.affix.Bandeau > .nav-info{
+div.affix > .nav-info{
   background-color: RGBA(230,242,242,0.4);
   display: none;
 }
@@ -33,6 +35,7 @@ div.nav-info-content{
   grid-template-areas:
     "phone"
     "button";
+  margin: 0 auto;
 }
 div div.nav-info-content .phone-grid{
   grid-area: phone;
@@ -110,7 +113,7 @@ div div.affix div.nav-info-content .phoneNumber{
   div.affix.Bandeau  > .nav-info{
     display: block;
   }
-  div.Bandeau div.nav-info-content .phone-grid{
+  div.affix div.nav-info-content .phone-grid{
     border: 1px solid #008081;
   }
 }
@@ -147,7 +150,7 @@ div div.affix div.nav-info-content .phoneNumber{
       "label number";
     padding: 5px 0;
   }
-  div div.affix div.nav-info{
+  div.affix div.nav-info{
     max-width: 318px;
   }
 }

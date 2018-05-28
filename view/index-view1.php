@@ -22,12 +22,18 @@
 
 
 
-  		<div class="encart">
-  			<?php require 'side-nav-view1.php'; ?>
-  		</div>
-  		<div class="AlexandreVelo">
-  			<img class="img_alexandre_velo"  <?php  echo $image['bande']; ?>/>
-  		</div>
+		<div class="encart">
+			<?php require 'side-nav-view1.php'; ?>
+		</div>
+
+
+		<div class="main">
+
+			<div class="image-tete_de_page">
+				<img class="img_alexandre_velo"  <?php  echo $image['bande']; ?>/>
+			</div>
+			
+			<div class="clear-area"></div>
 
 			<div class="content-area">
 				<h2 class="presentation">Présentation</h2>
@@ -43,13 +49,7 @@
 
 			</div>
 
-
-
-
-
-
-
-
+		</div>
 
  </div>
 
