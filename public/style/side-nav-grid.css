@@ -4,6 +4,23 @@ div.nav-info{
   display: grid;
   grid-template-columns: auto 268px auto;
 }
+div.affix.Bandeau {
+  top: 53px;
+  z-index: 9999 !important;
+	background-color: RGBA(230,242,242,0.4);
+  padding: 10px 0;
+  margin: 0;
+	width: 15%;
+}
+div.affix.Bandeau{
+  display: none;
+}
+div.affix-top.Bandeau{
+  display: block;
+}
+div.affix-top.Bandeau{
+  display: block;
+}
 div.nav-info-content{
   grid-column: 2;
   align-items: stretch;
@@ -16,20 +33,39 @@ div.nav-info-content{
     "phone"
     "button";
 }
-div.affix-top fieldset.fieldset-side{
+div div.nav-info-content .phone-grid{
   grid-area: phone;
+  display: grid;
+}
+
+div.affix-top div.nav-info-content .phone-grid{
   align-items: stretch;
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  border: 1px solid white;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "label"
     "number";
 }
-div.affix-top fieldset.fieldset-side .phoneLabel{
+div div.affix-top div.nav-info-content .phoneLabel{
   grid-area: label;
 }
-div.affix-top fieldset.fieldset-side .phoneNumber{
+div div.affix-top div.nav-info-content .phoneNumber{
   grid-area: number;
+}
+div div.affix-top div.nav-info-content .RdvBandeau{
+	color: white;
+	background-color: #008081;
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	border : 2px solid #008081;
+}
+
+div div.affix-top div.nav-info-content .RdvBandeau:hover{
+	border : 2px ridge #E88340;
+}
+@media screen and (min-width: 600px){
+  div.affix.Bandeau{
+    display: block;
+  }
 }
