@@ -12,7 +12,8 @@ use Enumeration\Status;
 
 class Connection{
 
-
+/*fonction permetant de determiner l'affichage
+selon si l'utilisateur est connecté ou non*/
   public static function navConnexion(){
     $toReturn;
     if(Connection::authenticated()){
@@ -23,6 +24,7 @@ class Connection{
     return $toReturn;
   }
 
+//fonction qui determine quand déconnecté un utilisateur
   public static function authenticated(){
     $connected = False;
     if(isset($_SESSION['timeout'])){
@@ -35,6 +37,7 @@ class Connection{
     return $connected;
   }
 
+//fonction déterminant le temps de timeout
   public static function resetTimeout(){
     $_SESSION['timeout'] = strtotime('+1 minutes');
   }
@@ -46,7 +49,7 @@ class Connection{
   }
 
 
-
+//fonction vérifiant l'email et le mdp
   public static function checkLoginInput(){
     $toReturn = [];
     if(!isset($_POST['email'])){
@@ -80,6 +83,8 @@ class Connection{
     return $toReturn;
   }
 
+//fonction vérifiant que tous les champs obligatoires soient rempli
+//affiche un message d'erreur sinon
   public static function checkInscription(){
     $errors = [];
     if(strlen($_POST['prenom']) <= 1){$errors[] = 'veuillez entrer votre prénom';}
@@ -104,6 +109,7 @@ class Connection{
     return $errors;
   }
 
+//permet de créé un compte et de garder les données du nouvel utilisateur
   public static function createAccount(){
     $status = Status::Active;
     $role = Roles::User;
@@ -134,10 +140,12 @@ class Connection{
       $newsletter = 1;
     }
 
+//Verifie que l'email de l'utilisateur qui s'inscrit n'est pas deja utilisé
     if(UserRep::userExist($email)){
       $errors[] = 'Ce mail est déja utilisé';
     }else{
       var_dump(!UserRep::userExist($email));
+    //Insert les données dans la BDD
       $User = new User( $role , $status, $civilite, $nom, $prenom, $email, $ddn, $dcc, $phone, $adresse, $cadresse, $cp, $ville, $profession, $motif, $newsletter);
       UserRep::createUser($User, $password);
     }

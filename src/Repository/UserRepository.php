@@ -24,6 +24,8 @@ class UserRepository {
     }
     return $exists;
   }
+
+  //fonction qui permet de créer un utilisateur
   public static function createUser($user, $password){
     $nom = $user->getNom();
     $prenom = $user->getPre();
@@ -46,6 +48,7 @@ class UserRepository {
     $execute = new DB();
     //$sql = "INSERT INTO `user` (`nom`, `prenom`, `date_nais`, `date_crea`, `adresse`, `complement`, `cd_postale`, `ville`, `email`, `telephone`, `profession`, `role`, `motif`, `mdp`, `status`, `Civilite_id`, `newsletter`)
     //VALUES ('$nom', '$prenom', '$date_nais', '$date_crea', '$adresse', '$complement', '$cd_postale', '$ville', '$email', '$telephone', '$profession', '$role', '$motif', '$mdp', '$status', '$Civilite_id', '$newsletter');";
+    //permet d'integer les données du nouvel utilisateur a la BDD
     $stmt = $execute->prepare("INSERT INTO `user` (`nom`, `prenom`, `date_nais`, `date_crea`, `adresse`, `complement`, `cd_postale`, `ville`, `email`, `telephone`, `profession`, `role`, `motif`, `mdp`, `status`, `Civilite_id`, `newsletter`)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
     $stmt->execute(array($nom, $prenom, $date_nais, $date_crea, $adresse, $complement, $cd_postale, $ville, $email, $telephone, $profession, $role, $motif, $mdp, $status, $Civilite_id, $newsletter));
