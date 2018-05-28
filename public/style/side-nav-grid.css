@@ -1,0 +1,35 @@
+div.nav-info{
+  align-items: stretch;
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto 268px auto;
+}
+div.nav-info-content{
+  grid-column: 2;
+  align-items: stretch;
+  align-items: center;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "phone"
+    "button";
+}
+div.affix-top fieldset.fieldset-side{
+  grid-area: phone;
+  align-items: stretch;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "label"
+    "number";
+}
+div.affix-top fieldset.fieldset-side .phoneLabel{
+  grid-area: label;
+}
+div.affix-top fieldset.fieldset-side .phoneNumber{
+  grid-area: number;
+}

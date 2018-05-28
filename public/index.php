@@ -14,7 +14,7 @@ session_start();
 /* $head est utilisé pour appeler le header*/
 $head = Style::includeExternalHead();
 /* $stylesheet est utilisé pour appeler les pages de style*/
-$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('style_menu') . Style::getStylesheet('navbar');
+$stylesheet = Style::getStylesheet('style') /*. Style::getStylesheet('style_menu')*/ . Style::getStylesheet('navbar') . Style::getStylesheet('header-grid') .  Style::getStylesheet('side-nav-grid');
 /* $foot est utilisé pour appeler le footer*/
 $foot = Style::includeExternalFoot();
 
@@ -23,7 +23,7 @@ utilisé ici pour récuperer les logos et le beandeau de la page d'acceuil
 */
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
-$image['bande'] = Image::displayImage('fond1.png');
+$image['bande'] = Image::displayImage('fond1.1.png');
 
 
 
