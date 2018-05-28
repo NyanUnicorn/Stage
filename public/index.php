@@ -14,7 +14,7 @@ session_start();
 /* $head est utilisé pour appeler le header*/
 $head = Style::includeExternalHead();
 /* $stylesheet est utilisé pour appeler les pages de style*/
-$stylesheet = Style::getStylesheet('style') /*. Style::getStylesheet('style_menu')*/ . Style::getStylesheet('navbar') . Style::getStylesheet('header-grid') .  Style::getStylesheet('side-nav-grid');
+$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('navbar') . Style::getStylesheet('header-grid') . Style::getStylesheet('side-nav-grid');
 /* $foot est utilisé pour appeler le footer*/
 $foot = Style::includeExternalFoot();
 
@@ -34,4 +34,4 @@ $uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
 /*ouverture de la page*/
-require '../view/index-view2.php';
+require '../view/index-view1.php';

@@ -22,7 +22,7 @@
 	<main>
 
 		<div class="encart">
-			<?php require 'side-nav-view.php'; ?>
+			<?php require 'side-nav-view1.php'; ?>
 		</div>
 
 		<div class="container">

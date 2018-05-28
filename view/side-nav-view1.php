@@ -6,7 +6,7 @@
 
       <div class="phone-grid">
       <div class="phoneLabel">
-          <span>Telephone:</span>
+          <span>Telephone :</span>
       </div>
       <div class="phoneNumber">
           <span>07 68 48 10 02</span>

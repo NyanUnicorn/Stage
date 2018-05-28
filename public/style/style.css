@@ -143,15 +143,7 @@ div.affix + .img_alexandre_velo{
 	border : 2px ridge white;
 	color: white;
 }
-*/
-.encart{
-	min-height: 58px;
-	/*background-color:  #008081;*/
-	background:  -webkit-linear-gradient(top, rgba(0,127,128,1) 0%, rgba(0,127,128,1) 14%, rgba(0,163,163,1) 100%);
-	padding: 5px;
-	text-align: center;
-	color: white;
-}
+
 
 
 .no-pad{
@@ -169,7 +161,7 @@ div.affix + .img_alexandre_velo{
 
 .Bandeau span{
 
-	margin: 30px;
+
 }
 
 .content{

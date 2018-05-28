@@ -76,17 +76,16 @@ Taille de l'écan dépasse 600px
   }
   header .header-content .LogoTable img{
     display: inline-block;
-  	width: 200px;
-  	height: 150px;
-  	margin-top: 10px;
+  	width: 100px;
+  	height: 75px;
   }
   header .header-content .LogoVelo img{
     display: inline-block;
-  	width: 300px;
-  	height: 140px;
+  	width: 130px;
+  	height: 70px;
   }
   header h1{
-  	font-size: 300%;
+  	font-size: 250%;
   }
 }
 
@@ -101,5 +100,19 @@ Taille de l'écan dépasse 1000px
   }
   header .header{
     grid-template-columns: auto 1000px auto;
+  }
+	header .header-content .LogoTable img{
+    display: inline-block;
+  	width: 200px;
+  	height: 150px;
+  	margin-top: 10px;
+  }
+  header .header-content .LogoVelo img{
+    display: inline-block;
+  	width: 300px;
+  	height: 140px;
+  }
+	header h1{
+  	font-size: 300%;
   }
 }
