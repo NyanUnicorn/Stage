@@ -28,7 +28,6 @@
 			<div class="clear-area"></div>
 
 			<div class="content-area">
-				<h2 class="presentation">Présentation</h2>
 				<h2 class="Parties">La Chiropraxie</h2>
 
 				<h3  class="SousParties"><a name="Histoire_et_définition">Histoire et définition</a></h3>
@@ -134,9 +133,6 @@
 
 				<p>Source : AFC</p>
 
-				<h2 class="temoignages">Témoignages</h2>
-
-				<h2 class="actualites">Actualités</h2>
 
 			</div>
 

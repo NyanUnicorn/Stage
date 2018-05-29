@@ -25,10 +25,12 @@
 			<?php require 'side-nav-view1.php'; ?>
 		</div>
 
-		<div class="container">
+		<div class="main">
 
-			<div>
 
+			<div class="clear-area"></div>
+
+			<div class="content-area">
 				<h2 class="Parties">Votre Chiropracteur</h2>
 
 				<h3 class="SousParties"><a name="Son_parcours"></a>Son parcours</h3>
@@ -89,6 +91,7 @@
 				<li>Numéro de téléphone : 07.68.48.10.02</li>
 				<li>Mail : <a href="mailto:lechiroquiroule@gmail.com">lechiroquiroule@gmail.com</a></li>
 			</ul>
+
 
 
 			</div>

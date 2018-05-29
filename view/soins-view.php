@@ -25,11 +25,12 @@
 		<div class="encart">
 			<?php require 'side-nav-view1.php'; ?>
 		</div>
+		<div class="main">
 
-		<div class="container">
 
-			<div>
+			<div class="clear-area"></div>
 
+			<div class="content-area">
 				<h2 class="Parties">Les Soins Chiropratiques</h2>
 
 				<h3 class="SousParties"><a name="Pour_Qui">Pour Qui ?</a></h3>
@@ -138,9 +139,11 @@
 
 				<p><a href="http://www.chiropraxie.com/mutuelles/">http://www.chiropraxie.com/mutuelles/</a></p>
 
+
 			</div>
 
 		</div>
+
 
 	</main>
 
