@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html  lang="fr" dir="ltr">
 	<head>
 		<?php
 				echo $head;

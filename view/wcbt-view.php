@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr" dir="ltr">
 <head>
 
 	<title>Le Chiro Qui Roule</title>
