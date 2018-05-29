@@ -31,7 +31,7 @@
 				<h2 class="presentation">Présentation</h2>
 				<h2 class="Parties">La Chiropraxie</h2>
 
-				<h3  class="SousParties"><a name="Histoire_et_définition">Histoire et définition</a></h3>
+				<h3 class="SousParties"><a name="Histoire_et_définition">Histoire et définition</a></h3>
 
 
 				<p>Chiropratique ou chiropraxie vient du grec « kheir » qui signifie la main et « praxis » l’action. Il s’agit d’une profession de santé manuelle qui vise à améliorer les fonctions du corps. Même si l’approche chiropratique est globale, le chiropracteur vise à détecter, soulager et prévenir les troubles neuro musculo squelettiques (Concernant les articulations, le système nerveux périphérique et les muscles). Le Chiropracteur réalise des manipulations spécifiques appelées « ajustements chiropratiques » lui permettant de rendre la mobilité à l’articulation visée et/ou soulager certaines douleurs.</p>

@@ -20,102 +20,6 @@ h1{
 	margin : auto;
 }
 
-
-
-/*
-.containerNav{
-
-	width : 1100px;
-	margin: 0 auto;
-	align-items: center;
-}
-
-.nav-wrapper{
-	min-height: 50px;
-}
-
-.ConnexionButton button[type="button"]{
-
-	position:relative;
-	left:90%;
-	background-color: #008081;
-	border-color : #008081;
-
-}
-
-
-
-
-.NavBar{
-
-	box-shadow: 0px 1px 5px grey;
-	border-bottom: 2px solid #ED7E39;
-	padding : 0px;
-	margin-bottom: 0;
-}
-
-
-
-.itemDeroulants:hover{
-
-	background-color: #008081;
-	background-color: #ED7E39;
-
-}
-
-.itemDeroulants {
-
-	color : black;
-}
-
-.itemDeroulant a {
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-menu li:hover .sub-menu {
-  visibility: visible;
-
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-
-}
-
-
-.menuNavItem{
-
-	margin : 0px 10px 0px 10px;
-}
-
-div .dropdown-menu{
-
-	padding : 0px;
-}
-
-div .dropdown-divider{
-
-	margin : 0px;
-	padding: 2px;
-}
-
-.navbar-default {
-	background-color: blue;
-		border-color: green;
-}
-
-.navbar-default .nav-item  a{
-	color: red;
-}
-
-.NavForm{
-
-	text-align: center;
-}
-*/
-
 /* main a partir d'ici */
 div.affix + .img_alexandre_velo{
 
@@ -127,65 +31,19 @@ div.affix + .img_alexandre_velo{
 	width : 100%;
 }
 
-/*
-
-.RdvBandeau{
-	color: white;
-	background-color: #ED7E39;
-	box-shadow: 3px 3px 5px rgba(85,85,85,1);
-	border : 2px solid #ED7E39;
-
+.contactlien{
+	margin-left: 20px;
+	margin-bottom: 20px;
+	color : #3E7F7C;
+	text-decoration: none;
 
 }
 
-.RdvBandeau:hover{
-
-	border : 2px ridge white;
-	color: white;
-}
-
-
-
-.no-pad{
-	width: 100%;
-}
-
-.no-pad>*{
-	padding: 0;
-}
-
-.Bandeau{
-	display: flow-root;
-	margin: 5px;
-}
-
-.Bandeau span{
-
+.contactlien:hover{
+	color : #006A7F;
+	text-decoration: none;
 
 }
-
-.content{
-
-	margin: 25px;
-}
-
-.Parties{
-
-	text-align: center;
-	margin: 40px;
-}
-
-.SousParties{
-
-	margin: 30px;
-}
-
-.Presentation{
-	margin: 40px;
-}
-
-
-
 /* page soins*/
 
 .effetsTherapeutiques{
@@ -194,13 +52,6 @@ div.affix + .img_alexandre_velo{
 
 }
 /*page wcbt*/
-
-.lienReseauxSociaux{
-
-
-}
-
-
 
 .effetsTherapeutiques span{
 
@@ -249,11 +100,39 @@ display: block;
 }
 
 .telephone{
+	color :#008081;
+	padding : 5px 10px;
+	transform: rotateZ(90deg);
+	/*transform: scale(1,-1);*/
+}
+
+.lien{
+
+	margin: 10px;
+	color : white;
+	padding : 5px 10px;
+	font-size: smaller;
+
+}
+
+.icones{
+
 	padding : 5px 10px;
 	color :#008081;
 
-	transform: rotateZ(90deg);
-	/*transform: scale(1,-1);*/
+}
+
+
+.lien:hover{
+
+	color :#008081;
+	text-decoration: none;
+}
+
+.lien:focus{
+	color: white;
+	text-decoration: none;
+
 }
 
 .Liens{
@@ -315,7 +194,9 @@ padding: 20px 0;
 
 .RDVButton a[role="button"]:hover{
 
-	border : 1px solid #E88340;
+	margin: 8px 18px 8px 18px;
+	border : 3px solid #E88340;
+	color: white;
 }
 
 .RDV:after{
@@ -325,7 +206,7 @@ padding: 20px 0;
   width: 50px;
   background-color: #008081;
   margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .RDVtxt{

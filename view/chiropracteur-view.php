@@ -49,7 +49,7 @@
 
 			<h3 class="SousParties"><a name="Seance_a_domicile_a_velo"></a>Séance à domicile à vélo </h3>
 
-			<p>Pour pouvoir recevoir une séance à domicile, n’oubliez pas de préparer un peu de place pour Alexandre et sa table de soins. <i class="far fa-spin fa-smile"></i></p>
+			<p>Pour pouvoir recevoir une séance à domicile, n’oubliez pas de préparer un peu de place pour Alexandre et sa table de soins. <i class="far fa-smile"></i></p>
 
 			<p>Vous pouvez choisir de regrouper plusieurs séances pour plusieurs personnes à la suite dans un même lieu (Pour un groupe d’amis par exemple), afin d’éviter de nombreux déplacements. Dans ce cas-là, merci de me prévenir à l’avance par téléphone. Aussi, si vous le souhaitez, je peux dispenser une petite présentation sur un sujet donnée (tel que l’arthrose par exemple) et fera l’objet d’une discussion.</p>
 
@@ -78,7 +78,7 @@
 			<p>Le vélo est un vélo de voyage fait sur mesure par Cycle Hall Aventure basé en Normandie, grâce à cette monture j’ai réalisé un voyage conséquent en Europe sans avoir de gros soucis. Je recommande chaudement.</p>
 			<p>La remorque utilisée est une remorque Y Frame de l’entreprise Carry Freedom, j’y ai adapté un coffre pour y déposer ma table de soins.</p>
 			<p>Les sacoches utilisées pour transporter d’autres éléments sont de la marque Crosso.</p>
-			<p>Pour toute demande de sponsoring, veuillez me contacter par mail: <a href="mailto:lechiroquiroule@gmail.com"> lechiroquiroule@gmail.com<a/></p>
+			<p>Pour toute demande de sponsoring, veuillez me contacter par mail: <a class="contactlien" href="mailto:lechiroquiroule@gmail.com"> lechiroquiroule@gmail.com<a/></p>
 			<p>La table de soins est une table de massage, modèle Aero, pliante et légère de marque Habys. La table est très confortable et se déplie facilement. Elle est donc parfaite lors d’une utilisation pour des soins à domicile.</p>
 
 			<h3 class="SousParties"><a name="Contacts">Contacts</a></h3>
@@ -86,8 +86,8 @@
 			Alexandre Chassagne, docteur en chiropraxie à domicile, éco responsable. </p>
 
 			<ul>
-				<li>Numéro de téléphone : 07.68.48.10.02</li>
-				<li>Mail : <a href="mailto:lechiroquiroule@gmail.com">lechiroquiroule@gmail.com</a></li>
+				<li>Numéro de téléphone :<a class="contactlien" href="tel: 07.68.48.10.02"> 07.68.48.10.02</a></li>
+				<li>Mail : <a class="contactlien" href="mailto:lechiroquiroule@gmail.com"> lechiroquiroule@gmail.com</a></li>
 			</ul>
 
 
