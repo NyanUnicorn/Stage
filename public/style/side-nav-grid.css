@@ -59,6 +59,9 @@ div div.affix-top div.nav-info-content .phoneLabel{
 div div.affix-top div.nav-info-content .phoneNumber{
   grid-area: number;
 }
+div div.affix-top div.nav-info-content span{
+  color: white;
+}
 div div.bandeau div.nav-info-content .Rdvbandeau{
 	color: white;
 	background-color: #008081;
