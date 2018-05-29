@@ -1,0 +1,160 @@
+div.nav-info{
+  align-items: stretch;
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto 268px auto;
+  background-color: #008081;
+}
+div.encart{
+  min-height: 114px;
+  padding: 5px 0;
+  background-color: #008081;
+}
+div.affix.Bandeau {
+  top: 53px;
+  z-index: 9999 !important;
+
+  margin: 0;
+  width: 100%;
+}
+div.affix > .nav-info{
+  background-color: RGBA(230,242,242,0.4);
+  display: none;
+}
+div.affix-top.Bandeau  > .nav-info{
+  display: block;
+}
+div.nav-info-content{
+  grid-column: 2;
+  align-items: stretch;
+  align-items: center;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "phone"
+    "button";
+  margin: 0 auto;
+}
+div div.nav-info-content .phone-grid{
+  grid-area: phone;
+  display: grid;
+}
+
+div.affix-top div.nav-info-content .phone-grid{
+  align-items: stretch;
+  align-items: center;
+  border: 1px solid white;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "label"
+    "number";
+}
+div div.affix-top div.nav-info-content .phoneLabel{
+  grid-area: label;
+}
+div div.affix-top div.nav-info-content .phoneNumber{
+  grid-area: number;
+}
+div div.Bandeau div.nav-info-content .RdvBandeau{
+	color: white;
+	background-color: #008081;
+	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
+	border : 2px solid #008081;
+  max-width: 300px;
+}
+div div.Bandeau div.nav-info-content .RdvBandeau:hover{
+	border : 2px ridge #E88340;
+}
+div div.affix .nav-info{
+  background-color: RGBA(230,242,242,0.4);
+  width: 100%;
+}
+div div.affix .nav-info div.nav-info-content{
+  width: 100%;
+  padding: 7px 0;
+}
+div div.affix div.nav-info-content .phoneLabel,
+div div.affix div.nav-info-content .phoneNumber{
+  color: #008081;
+}
+@media screen and (min-width: 340px){
+  div.Bandeau div.nav-info-content .phone-grid{
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "label number";
+    padding: 5px 0;
+    margin-bottom: 3px;
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 400px){
+  div.Bandeau div.nav-info{
+    grid-template-columns: auto 268px auto;
+  }
+  div.Bandeau div.nav-info-content{
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "phone button";
+    grid-column-gap: 10px;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  div.Bandeau div.nav-info{
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  div.encart{
+    min-height: 57px;
+  }
+}
+@media screen and (min-width: 600px){
+  div.affix.Bandeau  > .nav-info{
+    display: block;
+  }
+  div.affix div.nav-info-content .phone-grid{
+    border: 1px solid #008081;
+  }
+}
+@media screen and (min-width: 1000px){
+  div.affix.Bandeau {
+    top: 53px;
+    width: 20%;
+  }
+  div div.affix .nav-info div.nav-info-content{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "phone"
+      "button";
+    grid-column-gap: 10px;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 0 7px;
+  }
+  div.affix div.nav-info-content .phone-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "label"
+      "number";
+    margin: 10px 0;
+  }
+}
+@media screen and (min-width: 1290px){
+  div.affix div.nav-info-content .phone-grid{
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "label number";
+    padding: 5px 0;
+  }
+  div.affix div.nav-info{
+    max-width: 318px;
+  }
+}

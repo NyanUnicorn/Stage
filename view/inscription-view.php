@@ -19,7 +19,7 @@
     <main>
 
       <div class="encart">
-  			<?php require 'side-nav-view.php'; ?>
+  			<?php require 'side-nav-view1.php'; ?>
   		</div>
 
       <h4>Inscription:</h4>
