@@ -105,6 +105,10 @@ div div.affix div.nav-info-content .phoneNumber{
     margin: 0 auto;
     padding: 0;
   }
+  div.Bandeau div.nav-info{
+    max-width: 460px;
+    margin: 0 auto;
+  }
   div.encart{
     min-height: 57px;
   }
