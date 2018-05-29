@@ -18,5 +18,5 @@
 
 </div>
 
-    <?php   require 'navbar-view2.php';  ?>
+    <?php   require 'navbar-view.php';  ?>
 </header>

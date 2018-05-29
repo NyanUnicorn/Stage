@@ -34,4 +34,4 @@ $uri = $_SERVER['REQUEST_URI'];
 $navStatus = Connection::navConnexion();
 
 /*ouverture de la page*/
-require '../view/index-view1.php';
+require '../view/index-view.php';

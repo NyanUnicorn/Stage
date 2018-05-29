@@ -32,7 +32,7 @@
 			<div class="image-tete_de_page">
 				<img class="img_alexandre_velo"  <?php  echo $image['bande']; ?>/>
 			</div>
-			
+
 			<div class="clear-area"></div>
 
 			<div class="content-area">
