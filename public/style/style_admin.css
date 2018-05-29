@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+.menu {
+
+    margin-bottom: 40px;
+
+}
+
+.menu a{
+  text-decoration: none;
+  color: black;
+  margin: 7 15px ;
+}
+
+.multi-menu {
+    width: 30%;
+    margin-left: 5px;
+}
+
+.multi-menu a{
+  text-decoration: none;
+  color: black;
+}
+
+.gererTmgg{
+  width: 70%;
+}
+
+.decoh3::after{
+
+  content:'';
+  display: block;
+  height: 3px;
+  width: 50px;
+  background-color: #008081;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
