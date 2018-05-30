@@ -1,6 +1,6 @@
 <div class="nav-wrapper">
   <nav id="custom-menu" class="nav_bar" role="navigation" data-spy="affix" data-offset-top="165">
-    <span class="hamburger"><i id="hamburger" class="fas fa-bars"></i></span>
+    <span id="hamburger" class="hamburger" ng-click="toggleMenu();"><i class="fas fa-bars"></i></span>
     <ul class="nav_items">
       <?php
       use Service\Content;

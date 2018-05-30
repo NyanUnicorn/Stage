@@ -8,7 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>-->
-<script src="D:\wamp64\www\Stage\public\assets\js\angular.min.js" type="text/javascript"></script>
-<script src="../public/assets/js/angular-route.min.js" type="text/javascript"></script>
-<script src="../public/assets/js/module/module.lcqr.js" type="text/javascript"></script>
-<script src="../public/assets/js/controller/navbar.collapse.controller.js" type="text/javascript"></script>
+<!--<script src="D:\wamp64\www\Stage\public\assets\js\angular.min.js" type="text/javascript"></script>-->
+<script src="http://le-chiro-qui-roule.assets/js/angular.min.js" type="text/javascript"></script>
+<script src="http://le-chiro-qui-roule.assets/js/angular-route.min.js" type="text/javascript"></script>
+<script src="http://le-chiro-qui-roule.assets/js/module/lcqr.module.js" type="text/javascript"></script>
+<script src="http://le-chiro-qui-roule.assets/js/controller/navbar.collapse.controller.js" type="text/javascript"></script>
