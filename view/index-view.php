@@ -14,7 +14,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body ng-app="lechiroquiroule">
 	<?php	require 'header-view.php'; ?>
 
 
