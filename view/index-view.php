@@ -15,6 +15,8 @@
 </head>
 
 <body ng-app="lechiroquiroule">
+	<div ng-controller="menuCollapse">
+
 	<?php	require 'header-view.php'; ?>
 
 
@@ -51,7 +53,7 @@
 
 		</div>
 
- </div>
+
 
 
 	</main>
@@ -60,7 +62,7 @@
 	require 'footer-view.php';
 	echo $foot;
 	?>
-
+</div>
 </body>
 
 </html>

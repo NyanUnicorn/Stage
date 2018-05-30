@@ -109,8 +109,8 @@
 		height: 0px;
 		visibility:collapse;
 	}
-	#custom-menu ul.nav_items > li > a{
-		font-size: 0;
+	#custom-menu ul.nav_items > li.nav_item > a{
+		font-size: 0px;
 	}
 	#custom-menu.nav_bar > span.hamburger{
 		visibility: visible;
