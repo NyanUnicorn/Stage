@@ -1,6 +1,6 @@
 <!--  -->
 
-<li class="menuNavItem nav-item <?php echo strpos($uri, "agenda") ? 'active' : ''  ?>">
+<li class="nav_item <?php echo strpos($uri, "agenda") ? 'active' : ''  ?>">
 <a class="itemDeroulants NavForm nav-link" href="#">Agenda</a>
 </li>
 
