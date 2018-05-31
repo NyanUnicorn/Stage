@@ -150,25 +150,43 @@ main > div.mobile_menu{
 	body{
 		position: absolute;
 		width: 100%;
-		left: -400px;
-
+		height: 100%;
 		overflow: hidden;
-
 	}
 	body #page{
-		width: calc(100% + 400px);
-		overflow: hidden;
-		display: grid;
-		grid-template-columns: auto auto auto;
-		grid-template-rows: 1fr;
-		grid-template-areas: "menu_item page_item clear_space";
+			width: 100%;
 	}
+	body #page .page_block{
+		width: 100%;
+		height: inherit;
+		overflow:hidden;
+		display: block;
+	}
+	body #page .page_wrapper{
+		width: 100%;
+		position: absolute;
+		left: -400px;
+		height: inherit;
+		transition: .2s;
+		display: grid;
+		grid-template-columns: 400px auto;
+		grid-template-rows: 1fr;
+		grid-template-areas: "menu_item page_item";
+	}
+
 	body #mobile_menu{
+		height: auto;
 		grid-area: menu_item;
 		padding-left: 0px;
 		transition: .3s;
 		width: 400px;
 		visibility: hidden;
+	}
+	body #body{
+		height: inherit;
+		grid-area: page_item;
+		display: block;
+		width: calc(100% + 400px);
 	}
 	body #clear_space{
 		grid-area: clear_space;
@@ -176,21 +194,19 @@ main > div.mobile_menu{
 		width: 0px;
 		visibility: hidden;
 	}
-	body #body{
-		grid-area: page_item;
-		display: block;
-		width: 100%;
-	}
 	body #mobile_menu.toggled{
-		padding-left: 400px;
-		width: 800px;
+
 		visibility: visible;
 	}
 	body #body.menu{
 
 	}
 	body #clear_space.toggled{
-		width: 0px;
+
+	}
+	body #page .page_wrapper.toggled{
+		left: 0px;
+
 	}
 }
 #custom-menu.menu_bar > ul.menu_items{

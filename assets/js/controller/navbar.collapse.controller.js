@@ -1,15 +1,15 @@
 app.controller('menuCollapse', function($scope){
   var toggle = "toggled";
-  var bd = "";
+  var bd = " ";
   var h = document.getElementById("hamburger");
   var menu = document.getElementById("mobile_menu");
   var body = document.getElementById("body");
-  var clearSpace = document.getElementById("clear_space");
+  var pw = document.getElementById("page_wrapper");
 
   h.classList = "hamburger " + toggle;
   body.classList = "menu";
   menu.classList = toggle;
-  clearSpace.classList = toggle;
+  pw.classList = "page_wrapper " + toggle;
 
   console.log($scope);
   $scope.toggleMenu = function(){
@@ -20,9 +20,9 @@ app.controller('menuCollapse', function($scope){
       toggle = "untoggled";
       bd = ""
     }
+    pw.classList = "page_wrapper " + toggle;
     h.classList = "hamburger " + toggle;
     body.classList = bd;
     menu.classList = toggle;
-    clearSpace.classList = toggle;
   }
 });
