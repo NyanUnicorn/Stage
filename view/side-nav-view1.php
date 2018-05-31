@@ -1,5 +1,5 @@
 
-<div class="Bandeau nav nav-pills nav-stacked" data-spy="affix" data-offset-top="180">
+<div class="bandeau" data-spy="affix" data-offset-top="180">
   <div class="nav-info">
     <div class="nav-info-content">
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  lang="fr" dir="ltr">
 <head>
 
 	<title>Le Chiro Qui Roule</title>
@@ -25,10 +25,12 @@
 			<?php require 'side-nav-view1.php'; ?>
 		</div>
 
-		<div class="container">
+		<div class="main">
 
-			<div>
 
+			<div class="clear-area"></div>
+
+			<div class="content-area">
 				<h2 class="Parties">Votre Chiropracteur</h2>
 
 				<h3 class="SousParties"><a name="Son_parcours"></a>Son parcours</h3>
@@ -89,6 +91,7 @@
 				<li>Numéro de téléphone :<a class="contactlien" href="tel: 07.68.48.10.02"> 07.68.48.10.02</a></li>
 				<li>Mail : <a class="contactlien" href="mailto:lechiroquiroule@gmail.com"> lechiroquiroule@gmail.com</a></li>
 			</ul>
+
 
 
 			</div>

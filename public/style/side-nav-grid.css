@@ -10,10 +10,11 @@ div.encart{
   padding: 5px 0;
   background-color: #008081;
 }
-div.affix.Bandeau {
+div.affix.bandeau {
   top: 53px;
-  z-index: 9999 !important;
-
+  z-index: 1;
+  left: 0;
+  align-items: left;
   margin: 0;
   width: 100%;
 }
@@ -21,7 +22,7 @@ div.affix > .nav-info{
   background-color: RGBA(230,242,242,0.4);
   display: none;
 }
-div.affix-top.Bandeau  > .nav-info{
+div.affix-top.bandeau  > .nav-info{
   display: block;
 }
 div.nav-info-content{
@@ -58,14 +59,17 @@ div div.affix-top div.nav-info-content .phoneLabel{
 div div.affix-top div.nav-info-content .phoneNumber{
   grid-area: number;
 }
-div div.Bandeau div.nav-info-content .RdvBandeau{
+div div.affix-top div.nav-info-content span{
+  color: white;
+}
+div div.bandeau div.nav-info-content .Rdvbandeau{
 	color: white;
 	background-color: #008081;
 	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
 	border : 2px solid #008081;
   max-width: 300px;
 }
-div div.Bandeau div.nav-info-content .RdvBandeau:hover{
+div div.bandeau div.nav-info-content .Rdvbandeau:hover{
 	border : 2px ridge #E88340;
 }
 div div.affix .nav-info{
@@ -81,7 +85,7 @@ div div.affix div.nav-info-content .phoneNumber{
   color: #008081;
 }
 @media screen and (min-width: 340px){
-  div.Bandeau div.nav-info-content .phone-grid{
+  div.bandeau div.nav-info-content .phone-grid{
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas:
@@ -92,10 +96,10 @@ div div.affix div.nav-info-content .phoneNumber{
   }
 }
 @media screen and (min-width: 400px){
-  div.Bandeau div.nav-info{
+  div.bandeau div.nav-info{
     grid-template-columns: auto 268px auto;
   }
-  div.Bandeau div.nav-info-content{
+  div.bandeau div.nav-info-content{
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
@@ -105,7 +109,7 @@ div div.affix div.nav-info-content .phoneNumber{
     margin: 0 auto;
     padding: 0;
   }
-  div.Bandeau div.nav-info{
+  div.bandeau div.nav-info{
     max-width: 460px;
     margin: 0 auto;
   }
@@ -114,7 +118,7 @@ div div.affix div.nav-info-content .phoneNumber{
   }
 }
 @media screen and (min-width: 600px){
-  div.affix.Bandeau  > .nav-info{
+  div.affix.bandeau  > .nav-info{
     display: block;
   }
   div.affix div.nav-info-content .phone-grid{
@@ -122,7 +126,7 @@ div div.affix div.nav-info-content .phoneNumber{
   }
 }
 @media screen and (min-width: 1000px){
-  div.affix.Bandeau {
+  div.affix.bandeau {
     top: 53px;
     width: 20%;
   }
@@ -155,6 +159,9 @@ div div.affix div.nav-info-content .phoneNumber{
     padding: 5px 0;
   }
   div.affix div.nav-info{
+    max-width: 318px;
+  }
+  div.affix.bandeau {
     max-width: 318px;
   }
 }
