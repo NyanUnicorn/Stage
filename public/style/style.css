@@ -44,6 +44,34 @@ div.affix + .img_alexandre_velo{
 	text-decoration: none;
 
 }
+.BandeauCompteur{
+	display: flex;
+	justify-content: center;
+	color: black;
+
+
+}
+.Compteurs{
+
+	margin: auto;
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	display: block;
+	border-radius: 50%;
+	border: 1px solid #3E7F7C;
+	background-color: #3E7F7C;
+
+}
+
+.compteur{
+
+
+}
+.pneu{
+
+	width: 90px;
+}
 /* page soins*/
 
 .effetsTherapeutiques{

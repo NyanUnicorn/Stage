@@ -24,6 +24,10 @@ utilisé ici pour récuperer les logos et le beandeau de la page d'acceuil
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 $image['bande'] = Image::displayImage('fond1.1.png');
+$image['iconhand'] = Image::displayImage('hand.png');
+$image['iconglobe'] = Image::displayImage('globe.png');
+$image['icontable'] = Image::displayImage('table.png');
+$image['iconspine'] = Image::displayImage('spine.png');
 
 
 

@@ -16,6 +16,11 @@ $stylesheet = Style::getStylesheet('style') . Style::getStylesheet('header-grid'
 /* $foot est utilisé pour appeler le footer*/
 $foot = Style::includeExternalFoot();
 
+$km = $input;
+$air = 0.271*$km;
+$pneu = $input;
+
+/* $image est utilisé pour récuperer les images*/
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 /* $uri est la variable servant a recuperer le nom de la page */

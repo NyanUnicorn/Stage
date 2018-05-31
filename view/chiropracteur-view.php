@@ -55,6 +55,32 @@
 
 			<p>Vous pouvez choisir de regrouper plusieurs séances pour plusieurs personnes à la suite dans un même lieu (Pour un groupe d’amis par exemple), afin d’éviter de nombreux déplacements. Dans ce cas-là, merci de me prévenir à l’avance par téléphone. Aussi, si vous le souhaitez, je peux dispenser une petite présentation sur un sujet donnée (tel que l’arthrose par exemple) et fera l’objet d’une discussion.</p>
 
+			<div class="BandeauCompteur">
+
+				<div class="Compteurs">
+
+					<i class="fas fa-bicycle fa-5x"></i>
+					<p class="compteur"><?php //echo $km ?>7.543</p>
+					<p>Kilometres Parcourus</p>
+
+				</div>
+				<div class="Compteurs">
+
+					<i class="fas fa-cloud fa-5x"></i>
+					<p class="compteur"><?php //echo $air ?>1.652</p>
+					<p>Kg de CO₂ économisés</p>
+
+				</div>
+				<div class="Compteurs">
+
+					<img class="pneu" <?php echo $image['iconwheel']; ?>>
+					<p class="compteur"><?php // echo $pneu ?></p>
+					<p>Pneus Crevés</p>
+
+				</div>
+
+			</div>
+
 			<h3 class="SousParties"><a name="Techniques_de_soins_utilisees">Techniques de soins utilisées</a></h3>
 
 			<p>Dans le monde de la chiropraxie, il existe un grand nombre de techniques de soins qui peuvent être utilisées dans le but d’être encore plus polyvalent dans l’approche des soins manuelles.
