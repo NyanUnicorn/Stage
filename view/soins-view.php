@@ -136,7 +136,7 @@
 
 				<p>Vous pouvez visualiser la liste des mutuelles acceptant un remboursement sur le site de l’Association Française en Chiropraxie :</p>
 
-				<p><a href="http://www.chiropraxie.com/mutuelles/">http://www.chiropraxie.com/mutuelles/</a></p>
+				<p><a href="http://www.chiropraxie.com/mutuelles/" target="_bank">http://www.chiropraxie.com/mutuelles/</a></p>
 
 			</div>
 
