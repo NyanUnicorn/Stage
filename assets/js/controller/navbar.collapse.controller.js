@@ -1,5 +1,5 @@
 app.controller('menuCollapse', function($scope){
-  var toggle = "toggled";
+  var toggle = "untoggled";
   var select = " selected";
   var bd = " ";
   var h = document.getElementById("hamburger");
@@ -7,12 +7,10 @@ app.controller('menuCollapse', function($scope){
   var selcetedUl = undefined;
   var ul_items = [];
 
-  h.classList = "hamburger " + toggle;
 
-  menu.classList = toggle;
-  console.log($scope);
   $scope.toggleMenu = function(){
     if(toggle === "untoggled"){
+      resetMenu();
       toggle = "toggled";
       refreshUl();
     }else{
@@ -38,9 +36,7 @@ app.controller('menuCollapse', function($scope){
   $scope.selectSub = function(_ul){
     var ul_item = document.getElementById(_ul);
     if(selcetedUl !== undefined){
-
       if(ul_item != selcetedUl){
-        console.log(selcetedUl.classList[1] === "selected");
         if(selcetedUl.classList[1] === "selected"){
           selcetedUl.classList = "nav_dropdown ";
         }
@@ -49,16 +45,16 @@ app.controller('menuCollapse', function($scope){
       }
     }else{selcetedUl = ul_item;
     selcetedUl.classList = "nav_dropdown " + select;}
-
-
-
-    //selcetedUl.classList = "nav_dropdown " + select;
-    //selcetedUl = ul_item;
-    //ul_items.push(ul_item);
-    //console.log(ul_item.classList[1] == "selected");
-    //console.log(ul_items);
-    //refreshToggle();
-    //ul_item.classList = "nav_dropdown " + select;
-
+  }
+  $scope.goToSubmenu = function(){
+    var ulmenu = document.getElementById("menu_items");
+    ulmenu.classList = "menu_items sub_menu";
+  }
+  $scope.goToMainmenu = function(){
+    resetMenu();
+  }
+  function resetMenu(){
+    var ulmenu = document.getElementById("menu_items");
+    ulmenu.classList = "menu_items";
   }
 });
