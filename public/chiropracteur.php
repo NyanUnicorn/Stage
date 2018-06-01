@@ -7,6 +7,7 @@ connection et les images dans l'explorateur de fichier */
 use Service\Style;
 use Service\Connection;
 use Service\Image;
+use Repository\CompteurRepository as ComptRep;
 
 session_start();
 
@@ -28,6 +29,11 @@ $image['iconglobe'] = Image::displayImage('globe.png');
 $image['icontable'] = Image::displayImage('table.png');
 $image['iconspine'] = Image::displayImage('spine.png');
 $image['iconwheel'] = Image::displayImage('roueCrevee.png');
+
+
+$resultat = ComptRep::infoCompteur()->fetchAll();
+
+
 
 /* $uri est la variable servant a recuperer le nom de la page */
 $uri = $_SERVER['REQUEST_URI'];

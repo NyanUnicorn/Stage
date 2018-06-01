@@ -57,6 +57,18 @@
 
 			<div class="BandeauCompteur">
 
+				<?php
+				use Service\Image;
+				foreach($resultat as $compteur) {
+						$disp = '<div class="Compteurs">';
+						$disp = $disp . '<img ' . Image::displayImage($compteur['image']) . ' />';
+						$disp = $disp . '<p class="compteur">' . $compteur['valeure'] . '</p>';
+						$disp = $disp . '<p>' . $compteur['description'] . '</p>';
+						$disp = $disp .'</div>';
+					echo $disp;
+				}
+				?>
+
 				<div class="Compteurs">
 
 					<i class="fas fa-bicycle fa-5x"></i>

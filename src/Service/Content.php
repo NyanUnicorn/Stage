@@ -3,6 +3,7 @@ namespace Service;
 
 use Repository\PageRepository as PageRep;
 use Enumeration\NavItem;
+use Repository\CompteurRepository as ComptRep;
 
 Class Content{
   public static function navElements(){
@@ -22,5 +23,10 @@ Class Content{
       $navElms[$page['id']] = $page;
     }
     return $navElms;
+  }
+
+  public static function GetCompteur(){
+
+    
   }
 }

@@ -47,13 +47,11 @@ $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
 
-/* $uri est la variable servant a recuperer le nom de la page */
-
-
-
 $civilites = CivRep::listCivilite()->fetchAll();
 $civCount = count($civilites);
 $motifs = MotifRep::getMotifs()->fetchAll();
+
+/* $uri est la variable servant a recuperer le nom de la page */
 
 $uri = $_SERVER['REQUEST_URI'];
 /* $navStatus determine l'affichage de la navbar selon si l'utilisateur est connecté ou non */

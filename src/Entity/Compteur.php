@@ -7,28 +7,28 @@ class Compteur{
 
   //Création de ses parametres
   private $id;
-  private $libelle;
+  private $description;
   private $valeure;
   private $img;
 
   //constructeur
-  public function __construct($id, $libelle, $valeure, $img){
+  public function __construct($_id, $_description, $_valeure, $_img){
 
     $this->id = $_id;
-    $this->libelle = $_libelle;
+    $this->description = $_description;
     $this->valeure = $_valeure;
     $this->img = $_img;
 
   }
 
-  public GetLibelle(){
+  public SetDescription(){
 
-    return $this->libelle;
+    return $this->description;
   }
 
-  public SetLibelle(){
+  public SetDescription(){
 
-    $this->libelle = $_libelle;
+    $this->description = $_description;
   }
 
   public GetValeure(){
@@ -50,7 +50,7 @@ class Compteur{
 
     $this->img = $_img;
   }
-  
+
 }
 
  ?>

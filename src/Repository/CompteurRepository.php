@@ -9,19 +9,20 @@ use Enumeration\Status;
 
 class CompteurRepository{
 
-  public static function infoCompteur($_id, $_libelle){
+  public static function infoCompteur(){
 
     $query = new DB();
 
-    return $query->query("SELECT libelle, valeure, img FROM Compteur");
+    return $query->query("SELECT description, valeure, image FROM Compteurs");
 
   }
 
   public static function userExist($_email){
     $exists = TRUE;
     $query = new DB();
-    $return = $query->query("SELECT email FROM User WHERE email = '$_email'");
+    $return = $query->query("SELECT description FROM Compteur WHERE description = 'description'");
     $result = $return->fetchAll();
+  }
 
 }
 
