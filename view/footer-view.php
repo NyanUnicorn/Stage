@@ -1,4 +1,4 @@
-<footer>
+<footer ng-click="untoggleMenu();">
 <div class="row no-pad">
   <div class="col-xs-0 col-lg-2">
 

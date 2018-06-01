@@ -11,6 +11,6 @@ class PageRepository {
   }
   public static function getParagraphTitles($_id){
     $query = new DB();
-    return $query->query("SELECT title, position, link_label FROM Page_content WHERE page_id = $_id ORDER BY position ASC");
+    return $query->query("SELECT id, title, position, link_label FROM Page_content WHERE page_id = $_id ORDER BY position ASC");
   }
 }

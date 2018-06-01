@@ -1,6 +1,6 @@
 <header>
 
-<div class="header">
+<div class="header" ng-click="untoggleMenu();">
   <div class="header-content">
 
 
