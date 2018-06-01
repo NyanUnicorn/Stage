@@ -9,15 +9,20 @@
     <meta charset="utf-8">
     <title>page d'inscription</title>
   </head>
-  <body>
-    <?php require 'header-view.php'; ?>
-    <main>
-    	<div class="row no-pad">
-    		<div class="col-xs-1 col-lg-0"></div>
-    		<div class="col-xs-10 col-lg-12">
-    			<div class="row">
-    				<div class="col-xs-0 col-lg-2"></div>
-    				<div class="col-xs-12 col-lg-8">
+  <body ng-app="lechiroquiroule">
+  	<div id="page" ng-controller="menuCollapse">
+  			<div id="page_wrapper" class="page_wrapper">
+  				<div id="menu_wrapper" class="menu_wrapper">
+  				<?php  require 'menu-view.php';  ?>
+  				</div>
+  				<div id="body" >
+  					<?php	require 'header-view.php'; ?>
+  					<main ng-click="untoggleMenu();">
+  						<div class="encart">
+  							<?php require 'side-nav-view1.php'; ?>
+  						</div>
+  						<div class="main">
+  							<div class="content-area">
               <div class="content large-content">
                 <h4>Inscription:</h4>
               </div>
@@ -97,16 +102,15 @@
                   </div>
                 </div>
               </form>
-    				</div>
-    				<div class="col-xs-0 col-lg-2"></div>
-    			</div>
-    		</div>
-    		<div class="col-xs-1 col-lg-0"></div>
-    	</div>
-    </main>
-    <?php
-    	require 'footer-view.php';
-    	echo $foot;
-     ?>
-  </body>
+            </div>
+</div>
+</main>
+<?php
+require 'footer-view.php';
+echo $foot;
+?>
+</div>
+</div>
+</div>
+</body>
 </html>

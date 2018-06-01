@@ -10,27 +10,20 @@
 			echo $stylesheet;
 	 ?>
 </head>
-<body>
-
-	<?php
-
-		require 'header-view.php';
-
-	 ?>
-
-
-	<main>
-
-		<div class="encart">
-			<?php require 'side-nav-view1.php'; ?>
-		</div>
-
-		<div class="main">
-
-
-			<div class="clear-area"></div>
-
-			<div class="content-area">
+<body ng-app="lechiroquiroule">
+	<div id="page" ng-controller="menuCollapse">
+			<div id="page_wrapper" class="page_wrapper">
+				<div id="menu_wrapper" class="menu_wrapper">
+				<?php  require 'menu-view.php';  ?>
+				</div>
+				<div id="body" >
+					<?php	require 'header-view.php'; ?>
+					<main ng-click="untoggleMenu();">
+						<div class="encart">
+							<?php require 'side-nav-view1.php'; ?>
+						</div>
+						<div class="main">
+							<div class="content-area">
 				<h2 class="Parties">Votre Chiropracteur</h2>
 
 				<h3 class="SousParties"><a name="Son_parcours"></a>Son parcours</h3>
@@ -92,21 +85,15 @@
 				<li>Mail : <a class="contactlien" href="mailto:lechiroquiroule@gmail.com"> lechiroquiroule@gmail.com</a></li>
 			</ul>
 
-
-
-			</div>
-
 		</div>
-
-	</main>
-
-
-	<?php
-
-		require 'footer-view.php';
-		echo $foot;
-	 ?>
-
-	</body>
-
+</div>
+</main>
+<?php
+require 'footer-view.php';
+echo $foot;
+?>
+</div>
+</div>
+</div>
+</body>
 	</html>

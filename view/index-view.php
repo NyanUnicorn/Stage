@@ -41,7 +41,6 @@
 								<h2 class="actualites">Actualités</h2>
 							</div>
 						</div>
-					</div>
 				</main>
 				<?php
 				require 'footer-view.php';

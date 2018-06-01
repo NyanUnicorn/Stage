@@ -124,6 +124,7 @@ main > div.mobile_menu{
 #menu_wrapper{
 	display: block;
 	background-color: #132e44;
+
 	height: 100%;
 	width: 400px;
 	left: -400px;
@@ -160,7 +161,7 @@ main > div.mobile_menu{
 	display: block;
 	width: 800px;
 	padding-left: 30px;
-	transition: .2s;
+	transition: .4s;
 }
 #menu_wrapper .menu_bar > div > ul.menu_items{
 	position: absolute;
@@ -169,7 +170,7 @@ main > div.mobile_menu{
 	display: grid;
 	width: 400px;
 	padding-left: 30px;
-	transition: .2s;
+	transition: .4s;
 	grid-template-columns: "mainLink";
 	grid-template-rows: repeat(auto-fit, 80px);
 

@@ -27,11 +27,6 @@
     }
     echo $items;
     require $navStatus;
-    $item = '';
-    for($i = 0; $i < 10; $i++){
-          $item = $item . '<li></li>';
-    }
-    echo $item;
     ?>
   </ul>
   </div>
