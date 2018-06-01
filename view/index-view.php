@@ -15,15 +15,11 @@
 </head>
 
 <body ng-app="lechiroquiroule">
-
 	<div id="page" ng-controller="menuCollapse">
 			<div id="page_wrapper" class="page_wrapper">
-					<div id="menu_wrapper" class="menu_wrapper">
-					<?php  require 'menu-view.php';  ?>
-					</div>
-
-
-
+				<div id="menu_wrapper" class="menu_wrapper">
+				<?php  require 'menu-view.php';  ?>
+				</div>
 				<div id="body" >
 					<?php	require 'header-view.php'; ?>
 					<main ng-click="untoggleMenu();">
@@ -31,7 +27,6 @@
 							<?php require 'side-nav-view1.php'; ?>
 						</div>
 						<div class="main">
-
 							<div class="image-tete_de_page">
 								<img class="img_alexandre_velo"  <?php  echo $image['bande']; ?>/>
 							</div>
@@ -46,20 +41,13 @@
 								<h2 class="actualites">Actualités</h2>
 							</div>
 						</div>
-
-
-				<h2 class="actualites">Actualités</h2>
-
+					</div>
+				</main>
+				<?php
+				require 'footer-view.php';
+				?>
 			</div>
-
-					</main>
-
-					<?php
-					require 'footer-view.php';
-
-					?>
-				</div>
-			</div>
+		</div>
 	</div>
 </body>
 

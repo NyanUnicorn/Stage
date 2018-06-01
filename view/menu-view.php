@@ -1,6 +1,7 @@
 
 <nav id="mobile-menu" class="menu_bar" >
-  <ul id="menu_items" class="menu_items">
+  <div id="menu_items" class="">
+  <ul  class="menu_items">
     <?php
     use Service\Content;
     $elms = Content::navElements();
@@ -33,4 +34,5 @@
     echo $item;
     ?>
   </ul>
+  </div>
 </nav>

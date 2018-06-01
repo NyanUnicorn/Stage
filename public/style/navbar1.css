@@ -70,7 +70,7 @@ main > div.mobile_menu{
 #custom-menu ul.nav_items > li > a{
 	font-size: 16px;
 	color: Black;
-	height: 50px;
+	height: 49px;
 }
 
 #custom-menu ul.nav_items li.nav_item{
@@ -141,7 +141,7 @@ main > div.mobile_menu{
 }
 #menu_wrapper li a,
 #menu_wrapper li i{
-	z-index: 21;
+	z-index: 42;
 	color: #E88340;
 	border-bottom: 1px solid #307CB9;
 }
@@ -153,31 +153,41 @@ main > div.mobile_menu{
 	left: 0px;
 	box-shadow: 1px 0px 115px 2px rgba(0,0,0,0.75);
 }
-#menu_wrapper .menu_bar > ul.menu_items{
+#menu_wrapper .menu_bar > div{
 	position: absolute;
 	left: 0px;
 	top: 80px;
-	display: grid;
+	display: block;
 	width: 800px;
+	padding-left: 30px;
+	transition: .2s;
+}
+#menu_wrapper .menu_bar > div > ul.menu_items{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: grid;
+	width: 400px;
 	padding-left: 30px;
 	transition: .2s;
 	grid-template-columns: "mainLink";
 	grid-template-rows: repeat(auto-fit, 80px);
 
 }
-#menu_wrapper .menu_bar > ul.menu_items.sub_menu{
+#menu_wrapper .menu_bar > div.sub_menu{
 	left: -401px;
 }
-#menu_wrapper .menu_bar > ul.menu_items > li{
+#menu_wrapper .menu_bar > div > ul.menu_items > li{
 	grid-column: mainLink;
 	height: 80px;
 	display: grid;
 	overflow:visible;
-	grid-template-columns: 300px 70px 400px;
+	width: 400px;
+	grid-template-columns: 300px 70px;
 	grid-template-rows: 1fr;
-	grid-template-areas: "link caret subLink";
+	grid-template-areas: "link caret";
 }
-#menu_wrapper .menu_bar > ul.menu_items > li > a{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > a{
 	font-size: 24px;
 	grid-area: link;
 	padding: 23px 0;
@@ -186,7 +196,7 @@ main > div.mobile_menu{
 	overflow:hidden;
 	display: block;
 }
-#menu_wrapper .menu_bar > ul.menu_items > li > i{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > i{
 	font-size: 24px;
 	grid-area: caret;
 	padding: 23px 0;
@@ -196,37 +206,39 @@ main > div.mobile_menu{
 	overflow:hidden;
 	display: block;
 }
-#menu_wrapper .menu_bar > ul.menu_items > li > i.fas{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > i.fas{
 
 }
 
-#menu_wrapper .menu_bar > ul.menu_items > li > ul{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > ul{
 	grid-area: subLink;
 	height: 0px;
 	visibility: hidden;
 	display: grid;
 	padding-left: 30px;
+	width: 0px;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(auto-fit, 80px);
 }
-#menu_wrapper .menu_bar > ul.menu_items > li > ul.selected{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > ul.selected{
 	position: absolute;
 	left: 400px;
 	height: 100%;
-	height: 100%;
+	width: 400px;
 	visibility: visible;
 }
-#menu_wrapper .menu_bar > ul.menu_items > li > ul > li{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > ul > li{
+	width: 0px;
 	height: 0px;
 }
-#menu_wrapper .menu_bar > ul.menu_items > li > ul.selected li{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > ul.selected li{
 	height: 50px;
 	display: block;
 	background-color: yellow;
 	height: 0px;
 	visibility: visible;
 }
-#menu_wrapper .menu_bar > ul.menu_items > li > ul a{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > ul a{
 	font-size: 24px;
 	grid-area: link;
 	padding: 23px 0;
@@ -235,7 +247,7 @@ main > div.mobile_menu{
 	overflow:hidden;
 	display: block;
 }
-#menu_wrapper .menu_bar > ul.menu_items > li > ul i{
+#menu_wrapper .menu_bar > div > ul.menu_items > li > ul i{
 	border: none;
 	padding-right: 10px;
 	padding-left: 10px;
