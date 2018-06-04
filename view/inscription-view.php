@@ -26,164 +26,277 @@
 
       <h4>Inscription:</h4>
 
-      <div class="row">
+      <div class="container">
 
-        <div class="col-lg-2">
+        <div class="row">
 
-        </div>
+          <div class="col-lg-2">
 
-        <div class="col-lg-8">
+          </div>
 
-
-
-
-          <form method="post" action="inscription.php">
-
-            <fieldset>
-
-              <legend>Informations Personnelles :</legend>
-
-              <div class="form">
-
-                <div class="inscription">
-
-                  <div class="lbl">
-
-                    <label for="Prenom">Prenom : </label>
-                    <input type="text" name="Prenom" value="" required>
-
-                  </div>
-
-                  <div class="lbl">
-
-                    <label for="Nom">Nom :</label>
-                    <input type="text" name="Nom" value="" required>
+          <div class="col-lg-8">
 
 
-                  </div>
 
-                  <div class="lbl">
-                    <span class="lbl">Civilité :</span>
-                    <input name="civ" type="radio" id="civ_f" />
-                    <label for="civ_f">Femme</label>
-                    <input name="civ" type="radio" id="civ_h" />
-                    <label for="civ_h">Homme</label>
-                  </div>
 
-                  <div class="lbl">
+            <form method="post" action="inscription.php">
 
-                    <label for="DDN">Date de naissance :</label>
-                    <input type="date" name="DDN" required>
+              <fieldset>
 
-                  </div>
+                <legend>Informations Personnelles :</legend>
 
-                  <div class="lbl">
+                <div class="form">
 
-                    <label for="Ville">Ville :</label>
-                    <input type="text" name="Ville" value="" required>
+                  <div class="inscription">
 
-                  </div>
+                    <div class="lbl">
+                      <div class="row">
 
-                  <div class="lbl">
+                        <div class="col-lg-6">
+                          <label class="labels" for="Prenom">Prenom : </label>
+                        </div>
+                        <div class="col-lg-6">
+                          <input type="text" name="Prenom" value="" required>
+                        </div>
 
-                    <label for="CP">Code postale :</label>
-                    <input type="text" name="CP" value="" required>
+                      </div>
 
-                  </div>
 
-                  <div class="lbl">
+                    </div>
 
-                    <label for="Adresse">Adresse :</label>
-                    <input type="text" name="Adresse" value="" required>
+                    <div class="lbl">
 
-                  </div>
+                      <div class="row">
 
-                  <div class="lbl">
+                        <div class="col-lg-6">
 
-                    <label for="ComplémentA">Complément d'adresse :</label>
-                    <input type="textarea" name="ComplémentA" value="">
+                          <label class="labels" for="Nom">Nom :</label>
 
-                  </div>
+                        </div>
 
-                  <div class="lbl">
+                        <div class="col-lg-6">
 
-                    <label for="tel">Numéro de téléphone :</label>
-                    <input type="tel" name="tel" placeholder="ex: 06 07 58 50 21" required>
+                          <input type="text" name="Nom" value="" required>
 
-                  </div>
+                        </div>
 
-                  <div class="lbl">
+                      </div>
 
-                    <label for="Profession">Profession :</label>
-                    <input type="text" name="Profession" value="" required>
+                    </div>
+
+                    <div class="lbl">
+                      <div class="row">
+
+                        <div class="col-lg-6">
+                          <span class="bite" class="lbl">Civilité :</span>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <input name="civ" type="radio" id="civ_f" />
+                          <label class="font-weight" for="civ_f">Femme</label>
+                          <input name="civ" type="radio" id="civ_h" />
+                          <label class="font-weight" for="civ_h">Homme</label>
+                        </div>
+
+                      </div>
+
+
+                    </div>
+
+                    <div class="lbl">
+                      <div class="row">
+
+                        <div class="col-lg-6">
+
+                          <label class="labels" for="DDN">Date de naissance :</label>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                          <input type="date" name="DDN" required>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="lbl">
+                      <div class="row">
+
+                        <div class="col-lg-6">
+                          <label class="labels" for="Ville">Ville :</label>
+                        </div>
+                        <div class="col-lg-6">
+                          <input type="text" name="Ville" value="" required>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="lbl">
+                      <div class="row">
+
+                        <div class="col-lg-6">
+
+                          <label class="labels" for="CP">Code postale :</label>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                          <input type="text" name="CP" value="" required>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="lbl">
+                      <div class="row">
+
+                        <div class="col-lg-6">
+
+                          <label class="labels" for="Adresse">Adresse :</label>
+
+                        </div>
+                        <div class="col-lg-6">
+
+                          <input type="text" name="Adresse" value="" required>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="lbl">
+                      <div class="row">
+
+                        <div class="col-lg-6">
+
+                          <label class="labels" for="ComplémentA">Complément d'adresse :</label>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                          <input type="textarea" name="ComplémentA" value="">
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="lbl">
+                      <div class="row">
+
+                        <div class="col-lg-6">
+
+                          <label class="labels" for="tel">Numéro de téléphone :</label>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                          <input type="tel" name="tel" placeholder="ex: 06 07 58 50 21" required>
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="lbl">
+
+                      <div class="row">
+
+                        <div class="col-lg-6">
+
+                          <label class="labels" for="Profession">Profession :</label>
+
+                        </div>
+
+                        <div class="col-lg-6">
+
+                          <input type="text" name="Profession" value="" required>
+
+                        </div>
+
+                      </div>
+
+                    </div>
 
                   </div>
 
                 </div>
 
-              </div>
+              </fieldset>
 
-            </fieldset>
+              <fieldset>
 
-            <fieldset>
+                <legend>Compte:</legend>
 
-              <legend>Compte:</legend>
+                <div class="form">
 
-              <div class="form">
+                  <div class="inscription">
 
-                <div class="inscription">
+                    <div class="lbl">
 
-                  <div class="lbl">
+                      <label for="">Adresse mail</label>
+                      <input type="email" name="email" placeholder="Ex: exemple@email.fr" id="email" required>
 
-                    <label for="">Adresse mail</label>
-                    <input type="email" name="email" placeholder="Ex: exemple@email.fr" id="email" required>
+                    </div>
+
+                    <div class="lbl">
+
+                      <label for="">Entrez un mot de passe</label>
+                      <input type="password" name="pwd" required>
+
+                    </div>
+
+                    <div class="lbl">
+
+                      <label for="">Comparez votre mot de passe</label>
+                      <input type="password" name="confirmationPwd" required>
+
+                    </div>
+
+                    <div class="lbl">
+
+                      <label for="motif">Indiquer comment vous avez connu ce site</label>
+                      <select class="" name="motif">
+
+                        <option value="valeurDefault" selected>Choisir</option>
+
+                        <option value="valeur2">Bouche-à-oreille</option>
+
+                        <option value="valeur3">BDD</option>
+
+                        <option value="valeur4">Autre</option>
+                        <!-- Ne pas oublier que si l'utilisateur choisi "autre" une textarea doit pop -->
+
+                      </select>
+
+                    </div>
+
+
+                      <input class="ConnectionBouton" type="submit" value="Submit">
 
                   </div>
-
-                  <div class="lbl">
-
-                    <label for="">Entrez un mot de passe</label>
-                    <input type="password" name="pwd" required>
-
-                  </div>
-
-                  <div class="lbl">
-
-                    <label for="">Comparez votre mot de passe</label>
-                    <input type="password" name="confirmationPwd" required>
-
-                  </div>
-
-                  <div class="lbl">
-
-                    <label for="motif">Indiquer comment vous avez connu ce site</label>
-                    <select class="" name="motif">
-
-                      <option value="valeurDefault" selected>Choisir</option>
-
-                      <option value="valeur2">Bouche-à-oreille</option>
-
-                      <option value="valeur3">BDD</option>
-
-                      <option value="valeur4">Autre</option>
-                      <!-- Ne pas oublier que si l'utilisateur choisi "autre" une textarea doit pop -->
-
-                    </select>
-
-                  </div>
-
-
-                    <input class="ConnectionBouton" type="submit" value="Submit">
 
                 </div>
 
-              </div>
+              </fieldset>
 
-            </fieldset>
+            </form>
+          </div>
+          <div class="col-lg-2">
+          </div>
 
-          </form>
-        </div>
-        <div class="col-lg-2">
         </div>
 
       </div>
