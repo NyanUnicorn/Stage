@@ -31,12 +31,12 @@
 								$content = PageRep::getParagraphs(str_replace('/', '', str_replace('.php', '', $uri)))->fetchAll();
 								$pars = '';
 								foreach($content as $cont){
-									$pars .= '<h2 id="'.$cont['link_label'].'">'.$cont['title'].'</h2>';
+									$pars .= '<h2 class="'.$cont['link_label'].'">'.$cont['title'].'</h2>';
 									$pars .= $cont['paragraph'];
 								}
 								echo $pars;
 								 ?>
-			</div>
+							 </div>
 							</div>
 						</div>
 					</main>
