@@ -18,9 +18,16 @@
     </div>
     <div class="contact">
       <h5 class="Contact">Contact</h5>
-      <a class="lien tel" href="tel:01234567890"><i class="telephone fas fa-phone" data-fa-transform="flip-v flip-h" ></i>07 68 48 10 02</a>
-      <a class="lien" href="https://www.facebook.com/Lechiroquiroule/" target="_blank"><i class="icones fab fa-facebook"></i> Le Chiro qui roule</a>
-      <a class="lien" href="https://www.instagram.com/lechiroquiroule/?hl=fr" target="_blank"><i class="icones fab fa-instagram"></i> Lechiroquiroule</a>
+      <div class="">
+        <a class="lien tel" href="tel:01234567890"><i class="telephone fas fa-phone" data-fa-transform="flip-v flip-h" ></i>07 68 48 10 02</a>
+      </div>
+
+      <div class="">
+        <a class="lien" href="https://www.facebook.com/Lechiroquiroule/" target="_blank"><i class="icones fab fa-facebook"></i> Le Chiro qui roule</a>
+      </div>
+      <div class="">
+         <a class="lien" href="https://www.instagram.com/lechiroquiroule/?hl=fr" target="_blank"><i class="icones fab fa-instagram"></i> Lechiroquiroule</a>
+      </div>
         <h5 class="RDV">RDV</h5>
         <div class="RDVButton">
           <a href="agenda.php" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Prendre rendez-vous</a>

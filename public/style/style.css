@@ -53,7 +53,7 @@ div.affix + .img_alexandre_velo{
 
 .BandeauCompteur img{
 
-	width: 50px;
+	width: 90px;
 }
 .Compteurs{
 
@@ -65,6 +65,7 @@ div.affix + .img_alexandre_velo{
 	border-radius: 50%;
 	border: 1px solid #3E7F7C;
 	background-color: #3E7F7C;
+	overflow: hidden;
 
 }
 
