@@ -4,9 +4,6 @@ body{
 	left: 10x;
 	width: auto;
 }
-main > div.mobile_menu{
-	display: none;
-}
 .nav-wrapper{
 	min-height: 50px;
 	top: 50px;
