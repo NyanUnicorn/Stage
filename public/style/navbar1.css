@@ -64,6 +64,7 @@ body{
 	width: auto;
 }
 #custom-menu ul.nav_items > li > a{
+	text-decoration: none;
 	font-size: 16px;
 	color: Black;
 	height: 49px;
@@ -112,8 +113,12 @@ body{
 	background: linear-gradient(to bottom, rgba(0,128,129,1) 0%, rgba(191,245,245,1) 40%, rgba(191,245,245,1) 62%, rgba(0,128,129,1) 100%);
 }
 #custom-menu ul.nav_items li.nav_item ul.nav_dropdown > li > a{
-	color: #333;
+	color: #FFF;
+	text-decoration: none;
 	white-space: nowrap;
+}
+#custom-menu ul.nav_items li.nav_item ul.nav_dropdown > li:hover > a{
+	color: #333;
 }
 
 
