@@ -28,7 +28,7 @@ selon si l'utilisateur est connecté ou non*/
     if(Connection::authenticated()){
       $toReturn = '../models/pieces/menu_profile_drop.php';
     }else{
-      $toReturn = '../models/pieces/nav_conn_btn.php';
+      $toReturn = '../models/pieces/menu_conn_btn.php';
     }
     return $toReturn;
   }

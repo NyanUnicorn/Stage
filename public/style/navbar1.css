@@ -143,6 +143,9 @@ body{
 	color: #E88340;
 	border-bottom: 1px solid #307CB9;
 }
+#menu_wrapper li a.backButton{
+	border-bottom: 1px solid #E88340;
+}
 #custom-menu.nav_bar > span.hamburger.toggled i.fa-bars{
 	margin-left: 400px;
 	color: #E88340;
@@ -184,6 +187,7 @@ body{
 	grid-template-columns: 300px 70px;
 	grid-template-rows: 1fr;
 	grid-template-areas: "link caret";
+	visibility: hidden;
 }
 #menu_wrapper .menu_bar > div > ul.menu_items > li > a{
 	font-size: 24px;
@@ -223,7 +227,7 @@ body{
 	left: 400px;
 	height: 100%;
 	width: 400px;
-	visibility: visible;
+	visibility: hidden;
 }
 #menu_wrapper .menu_bar > div > ul.menu_items > li > ul > li{
 	width: 0px;
@@ -234,7 +238,7 @@ body{
 	display: block;
 	background-color: yellow;
 	height: 0px;
-	visibility: visible;
+	visibility: hidden;
 }
 #menu_wrapper .menu_bar > div > ul.menu_items > li > ul a{
 	font-size: 24px;
@@ -279,6 +283,15 @@ body{
 		background: linear-gradient(to right, rgba(232,131,64,1) 0%, rgba(255,241,206,1) 3%, rgba(255,241,206,1) 30%, rgba(255,241,206,0) 100% );
 	}
 	#menu_wrapper{
+		visibility: visible;
+	}
+	#menu_wrapper .menu_bar > div > ul.menu_items > li > ul.selected{
+		visibility: visible;
+	}
+	#menu_wrapper .menu_bar > div > ul.menu_items > li > ul.selected li{
+		visibility: visible;
+	}
+	#menu_wrapper .menu_bar > div > ul.menu_items > li{
 		visibility: visible;
 	}
 }

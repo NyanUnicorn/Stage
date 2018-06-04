@@ -13,7 +13,7 @@
         $q = "'";
         $item = $item . '<i class="fas fa-caret-right" ng-click="selectSub('.$q. $elm['linkName'].(string)$elm['id'].$q .');goToSubmenu();"></i>';
         $item = $item . '<ul id="'. $elm['linkName'].(string)$elm['id'] .'" class="nav_dropdown">';
-        $item = $item . '<li ng-click="goToMainmenu();"><a href=""><i class="fas fa-caret-left"> </i> Retour</a></li>';
+        $item = $item . '<li ng-click="goToMainmenu();"><a class="backButton"><i class="fas fa-caret-left"> </i> Retour</a></li>';
         foreach($elm['paragraphs'] as $par){
           $item = $item . '<li> <a href="' . $elm['linkName'] . '#' . $par['link_label']  . '">' . $par['title'] . '</a></li>';
           //var_dump($par['link_label']);
