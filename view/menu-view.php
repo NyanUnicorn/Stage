@@ -26,7 +26,7 @@
       $items = $items . $item;
     }
     echo $items;
-    require $navStatus;
+    require $menuStatus;
     ?>
   </ul>
   </div>

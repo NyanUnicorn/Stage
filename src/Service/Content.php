@@ -8,6 +8,7 @@ Class Content{
   public static function navElements(){
     $btn = NavItem::Button;
     $drp = NavItem::Dropdown;
+    $udrp = NavItem::UDropdown;
     //create array for:
     $navElms;
     //get page titles and type

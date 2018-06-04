@@ -47,11 +47,7 @@ $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
 
-<<<<<<< HEAD
 /* $uri est la variable servant a recuperer le nom de la page */
-=======
-require '../view/inscription-view2.php';
->>>>>>> m_dev
 
 
 

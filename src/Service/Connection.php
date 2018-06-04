@@ -23,6 +23,15 @@ selon si l'utilisateur est connecté ou non*/
     }
     return $toReturn;
   }
+  public static function menuConnexion(){
+    $toReturn;
+    if(Connection::authenticated()){
+      $toReturn = '../models/pieces/menu_profile_drop.php';
+    }else{
+      $toReturn = '../models/pieces/nav_conn_btn.php';
+    }
+    return $toReturn;
+  }
 
 //fonction qui determine quand déconnecté un utilisateur
   public static function authenticated(){
@@ -67,13 +76,15 @@ selon si l'utilisateur est connecté ou non*/
       $_SESSION['emailInput'] = Form::getInputPost('email');
       var_dump($_POST['email']);
       $userInfo = UserRep::loginUser($_POST['email'], $_POST['password']);
-      $data = $userInfo->fetch();
-      if($data){
-        $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
-        $_SESSION['USER'] = $USER;
-        self::resetTimeout();
-        //$_SESSION['emailInput'] = NULL;
-        var_dump($_SESSION['timeout']);
+      if($userInfo != 'no_login'){
+        $data = $userInfo->fetch();
+        if($data){
+          $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
+          $_SESSION['USER'] = $USER;
+          self::resetTimeout();
+          //$_SESSION['emailInput'] = NULL;
+          var_dump($_SESSION['timeout']);
+        }
       }
       else{
         $toReturn = 'password';

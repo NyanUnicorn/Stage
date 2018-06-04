@@ -1,6 +1,6 @@
 <!--  -->
 
-<li class="nav_item <?php echo strpos($uri, "agenda") ? 'active' : ''  ?>">
+<li class="menu_item <?php echo strpos($uri, "agenda") ? 'active' : ''  ?>">
 <a class="" href="#">Agenda</a>
 </li>
 
@@ -11,9 +11,11 @@ Si l'utilisateur est connecté affiche son nom et un menu déroulant afin qu'il 
 
 -->
 
-<li class="nav_item">
+<li class="menu_item">
   <a class="" href="#"><?php echo $_SESSION['USER']->getNom(); ?></a>
-  <ul class="nav_dropdown">
+  <i class="fas fa-caret-right" ng-click=<?php $q = "'"; echo '"selectSub('.$q.'profile'.$_SESSION['USER']->getSessionId().$q.');goToSubmenu();"' ?>></i>
+  <ul id=<?php echo '"profile'.$_SESSION['USER']->getSessionId().'"' ?> class="nav_dropdown">
+    <li ng-click="goToMainmenu();"><a href=""><i class="fas fa-caret-left"> </i> Retour</a></li>
     <li><a href="#">Profile</a></li>
     <li><a href="#">Agenda</a></li>
     <li><a href="#">Déconnecter</a></li>

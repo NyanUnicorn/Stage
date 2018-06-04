@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .content{
   width 100%;
   margin: 0 auto;
@@ -13,28 +12,6 @@
   max-width: 900px;
 }
 .content > h4{
-=======
-/*:required {
-
-  background-color: red;
-
-}*/
-
-
-h4{
-  text-align: center;
-  margin: 70px 0 30px;
-
-}
-
-
-fieldset.fieldset-form{
-
-    padding: 5px;
-    border: solid 1px #008081;
-    margin-bottom: 20px;
-    margin-top: 20px;
->>>>>>> m_dev
     text-align: center;
     margin: 70px 0 30px;
 }

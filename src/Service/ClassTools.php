@@ -19,6 +19,15 @@ class ClassTools{
   public static function civiliteId($_input){
     return CivRep::getCiviliteId($_input);
   }
+  public static function generateRandomString($length) { //thanks to https://stackoverflow.com/questions/4356289/php-random-string-generator
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 
 
 }

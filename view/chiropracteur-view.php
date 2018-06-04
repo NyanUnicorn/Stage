@@ -96,4 +96,4 @@ echo $foot;
 </div>
 </div>
 </body>
-	</html>
+</html>
