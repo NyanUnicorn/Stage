@@ -55,9 +55,11 @@ require '../view/inscription-view2.php';
 
 
 
+=======
 $civilites = CivRep::listCivilite()->fetchAll();
 $civCount = count($civilites);
 $motifs = MotifRep::getMotifs()->fetchAll();
+
 
 $uri = $_SERVER['REQUEST_URI'];
 /* $navStatus determine l'affichage de la navbar selon si l'utilisateur est connecté ou non */

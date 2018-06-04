@@ -9,7 +9,7 @@
       $items = '';
       foreach($elms as $elm){
         $item = '<li class="nav_item" ' . ($uri== '/' . $elm['linkName'] . '.php' | $uri=='' ? 'active' : '') .'>';
-        $item = $item . '<a href="' . $elm['linkName'] . '">' . $elm['name'] . '</a>';
+        $item = $item . '<a href="' . $elm['linkName'] . '.php">' . $elm['name'] .'</a>';
         if (isset($elm['paragraphs'])){
           $item = $item . '<ul class="nav_dropdown">';
           foreach($elm['paragraphs'] as $par){

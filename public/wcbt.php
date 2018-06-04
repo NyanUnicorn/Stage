@@ -25,6 +25,10 @@ et le bandeau de la page d'acceuil
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 $image['bande'] = Image::displayImage('fond0.png');
+$image['iconhand'] = Image::displayImage('hand.png');
+$image['iconglobe'] = Image::displayImage('globe.png');
+$image['icontable'] = Image::displayImage('table.png');
+$image['iconspine'] = Image::displayImage('spine.png');
 
 
 /* $uri est la variable servant a recuperer le nom de la page */

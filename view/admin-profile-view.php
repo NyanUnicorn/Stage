@@ -32,6 +32,8 @@
     <main>
 
 
+    <div class="container">
+
 
       <div class="multi-menu">
         <h3 class="decoh3">Notifications :</h3>
@@ -52,17 +54,31 @@
       </div>
 
       <div class="gererTmgg">
-        <h3 class="decoh3">Gérer les Témoignages :</h3>
+        <h3 class="decoh3">Gérer les compteurs :</h3>
 
-        <form class="temoignages" action="index.html" method="post">
+        <form class="formulaireCompteurs" action="admin.php" method="post">
 
-          <textarea name="textarea" rows="8" cols="80" placeholder="Texte.."></textarea>
+          <p class="gererCompt">Compteur des Kilometres :</p>
+          <input type="text" name="km" placeholder="<?php echo $km ?>">
+
+          <p class="gererCompt">Compteur des Kg de CO₂ économisés :</p>
+          <p><?php echo $air ?></p>
+
+          <p class="gererCompt">Compteur des Pneus crevés :</p>
+          <input class="Pneus" type="text" name="Pneus_Crevés" placeholder="<?php echo $pneu ?>">
+
+          <div class="FormButtonDiv">
+            <button class="FormButton" type="submit" name="button">Sauvegarder les changements <i class="fab fa-angellist"></i></button>
+          </div>
+
 
         </form>
 
+
+
       </div>
 
-
+      </div>
     </main>
 
 

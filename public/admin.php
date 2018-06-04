@@ -7,6 +7,7 @@ connection et les images dans l'explorateur de fichier */
 use Service\Style;
 use Service\Connection;
 use Service\Image;
+use Repository\CompteurRepository as ComptRep;
 session_start();
 
 /* $head est utilisé pour appeler le header*/
@@ -16,6 +17,14 @@ $stylesheet = Style::getStylesheet('style') . Style::getStylesheet('header-grid'
 /* $foot est utilisé pour appeler le footer*/
 $foot = Style::includeExternalFoot();
 
+
+$resultat = ComptRep::infoCompteur()->fetchAll();
+$km = $resultat[0]['valeure'];
+$air = 0.271*$km;
+$result =ComptRep::infoCompteur()->fetchAll();
+$pneu = $result[1]['valeure'];
+
+/* $image est utilisé pour récuperer les images*/
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 /* $uri est la variable servant a recuperer le nom de la page */
