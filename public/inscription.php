@@ -58,6 +58,7 @@ $motifs = MotifRep::getMotifs()->fetchAll();
 $uri = $_SERVER['REQUEST_URI'];
 /* $navStatus determine l'affichage de la navbar selon si l'utilisateur est connecté ou non */
 $navStatus = Connection::navConnexion();
+$menuStatus = Connection::menuConnexion();
 
 /*ouverture de la page*/
 require '../view/inscription-view1.php';
