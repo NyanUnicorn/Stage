@@ -69,27 +69,7 @@
 				}
 				?>
 
-				<div class="Compteurs">
-
-					<i class="fas fa-bicycle fa-5x"></i>
-					<p class="compteur"><?php //echo $km ?>7.543</p>
-					<p>Kilometres Parcourus</p>
-
-				</div>
-				<div class="Compteurs">
-
-					<i class="fas fa-cloud fa-5x"></i>
-					<p class="compteur"><?php //echo $air ?>1.652</p>
-					<p>Kg de CO₂ économisés</p>
-
-				</div>
-				<div class="Compteurs">
-
-					<img class="pneu" <?php echo $image['iconwheel']; ?>>
-					<p class="compteur"><?php // echo $pneu ?></p>
-					<p>Pneus Crevés</p>
-
-				</div>
+		
 
 			</div>
 

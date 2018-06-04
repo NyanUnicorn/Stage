@@ -48,8 +48,11 @@ div.affix + .img_alexandre_velo{
 	display: flex;
 	justify-content: center;
 	color: black;
+}
 
+.BandeauCompteur img{
 
+	width: 50px;
 }
 .Compteurs{
 
