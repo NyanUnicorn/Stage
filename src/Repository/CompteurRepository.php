@@ -17,6 +17,13 @@ class CompteurRepository{
 
   }
 
+  public static function recupPneu(){
+
+    $query = new DB();
+
+    return $query->query("SELECT description, valeure, image FROM Compteurs WHERE description = 'pneu'");
+  }
+
   public static function userExist($_email){
     $exists = TRUE;
     $query = new DB();

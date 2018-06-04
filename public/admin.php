@@ -21,7 +21,8 @@ $foot = Style::includeExternalFoot();
 $resultat = ComptRep::infoCompteur()->fetchAll();
 $km = $resultat[0]['valeure'];
 $air = 0.271*$km;
-$pneu =($_POST['Pneus_Crevés']);
+$result =ComptRep::infoCompteur()->fetchAll();
+$pneu = $result[1]['valeure'];
 
 /* $image est utilisé pour récuperer les images*/
 $image['logoTable'] = Image::displayImage('logoTable.png');
