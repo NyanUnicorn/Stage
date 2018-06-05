@@ -65,6 +65,7 @@ body{
 }
 #custom-menu ul.nav_items > li > a{
 	text-decoration: none;
+	text-align: center;
 	font-size: 16px;
 	color: Black;
 	height: 49px;
@@ -76,7 +77,7 @@ body{
 }
 #custom-menu ul.nav_items li.nav_item a{
 	grid-column: 1;
-	padding: 10px 0 19px 20px;
+	padding: 10px 0 19px;
 	overflow: hidden;
 }
 #custom-menu ul.nav_items li.nav_item:hover{

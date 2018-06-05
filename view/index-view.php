@@ -32,17 +32,12 @@
 							</div>
 							<div class="content-area">
 								<?php
-								use Repository\PageRepository as PageRep;
-								$content = PageRep::getParagraphs(str_replace('/', '', str_replace('.php', '', $uri)))->fetchAll();
-								$pars = '';
-								foreach($content as $cont){
-									$pars .= '<h2 class="'.$cont['link_label'].'">'.$cont['title'].'</h2>';
-									$pars .= $cont['paragraph'];
-								}
-								echo $pars;
+								use Service\Content;
+								echo Content::generateParagraphs($uri);
+								//Content::getReviews();
 								 ?>
 								<h2 class="temoignages">Témoignages</h2>
-
+								<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcyril.khatin%2Fposts%2F10156585284184363%3A0&width=500" width="500" height="374" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 							</div>
 						</div>
 				</main>

@@ -27,16 +27,10 @@
 						<div class="main">
 							<div class="content-area">
 								<?php
-								use Repository\PageRepository as PageRep;
-								$content = PageRep::getParagraphs(str_replace('/', '', str_replace('.php', '', $uri)))->fetchAll();
-								$pars = '';
-								foreach($content as $cont){
-									$pars .= '<h2 class="'.$cont['link_label'].'">'.$cont['title'].'</h2>';
-									$pars .= $cont['paragraph'];
-								}
-								echo $pars;
+								use Service\Content;
+								echo Content::generateParagraphs($uri);
 								 ?>
-								 
+
 							<h2 class="Parties">Le World Chiropractic Bike Tour</h2>
 
 							<h3 class="SousParties">Description du projet humanitaire</h3>
