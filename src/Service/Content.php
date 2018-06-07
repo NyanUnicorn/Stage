@@ -38,14 +38,16 @@ Class Content{
 
   public static function getReviews(){
     $reviews = PageRep::getReviews()->fetchall();
-    $section = '<div class="review_wrapper" ng-controller="carousel"><div class="scroll_left"><i class="fas fa-caret-left"></i></div><div class="fbreviews">';
+    $section = '<div class="review_wrapper" ng-controller="carousel"><div class="scroll_left" ng-click="nextSlide();"><i class="fas fa-caret-left"></i></div><div class="fbreviews">';
     $section .= '<div  class="fbrev_wrap">';
+    $i = 0;
     foreach($reviews as $review){
-      $section .= '<div ng-attr-id="{{generateRandomeId();}}" class="fbrev">';
+      $i = $i + 1;
+      $section .= '<div class="fbrev">';
       $section .= $review['embedded'];
       $section .= '</div>';
     }
-    $section .= '</div></div><div class="scroll_right"><i class="fas fa-caret-right"></i></div></div>';
+    $section .= '</div></div><div class="scroll_right" ng-click="prevSlide();"><i class="fas fa-caret-right"></i></div></div>';
     return $section;
   }
   public static function cropString($string, $start, $end){

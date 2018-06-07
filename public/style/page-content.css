@@ -155,7 +155,8 @@ footer .footer_wrapper .rdv{
 }
 .review_wrapper .fbreviews .fbrev_wrap .fbrev{
   display: inline-block;
-  position: relative;
+  position: absolute;
+  transition: .9s;
   width: 498px;
   background-color: blue;
 }

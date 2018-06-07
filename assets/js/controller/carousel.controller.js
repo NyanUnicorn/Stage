@@ -1,11 +1,44 @@
-app.controller('carousel', function($scope){
+app.controller('carousel', function($scope, $interval){
   var id_list = [];
+  var rev_list = [];
+  /**
+   *compte les témoignages et leirs donne une id
+   */
   countReviews();
 
-  $scope.generateRandomeId = function(){
-    id_list.push(makeId('', id_list));
-    console.log(id_list);
+  $scope.nextSlide = function(){
+    //rev_list['1'].style.position = "absolute";
+    i=0;
+    while(i <= 300){
+      $interval(function(){
+      i++;
+      rev_list['1'].style.left = "-"+i+"px";
+      //setDelay(1000);
+      console.log(i);
+        }, 1000);
+    };
+    //rev_list['1'].style.left = "-300px";
+    console.log("zbreeeeeh");
   }
+  $scope.prevSlide = function(){
+
+  }
+/*
+  function setDelay(_i) {
+  $interval(function(){
+    console.log(_i);
+  }, 1000);
+  }
+*/
+
+  function generateRandomeId(){
+    var entry = makeId('', id_list);
+    id_list.push(entry);
+    //console.log(id_list);
+    console.log(entry);
+    return entry;
+  }
+
 
   function idExists(text, _text, list){
     var exists = false;
@@ -17,10 +50,10 @@ app.controller('carousel', function($scope){
     return exists;
   }
 
-  function makeId(_text, list) {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+  function makeId(_text, list) {
+    var text = 'fbrev-';
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     for (var i = 0; i < 5; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
     if(idExists(text, _text, list)){
@@ -29,10 +62,13 @@ app.controller('carousel', function($scope){
     return text;
   }
 
+
   function countReviews(){
     console.log(document.getElementsByClassName('fbrev'));
     var elms = document.getElementsByClassName('fbrev');
     angular.forEach(elms, function(value, key){
+      value.id = generateRandomeId();
+      rev_list.push(value);
       console.log('this is ' + value.className + '    ' + key);
     });
   }
