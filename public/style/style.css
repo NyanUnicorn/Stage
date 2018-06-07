@@ -14,7 +14,14 @@ h1{
 
 */
 
-
+.flaticon-world,
+.flaticon-bones,
+.flaticon-help,
+.flaticon-massage{
+	display: inline;
+	text-decoration: none;
+	padding-right: 10px; 
+}
 
 .container{
 	width: 900px;

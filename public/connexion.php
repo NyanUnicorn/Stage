@@ -20,7 +20,7 @@ session_start();
 /* $head est utilisé pour appeler le header*/
 $head = Style::includeExternalHead();
 /* $stylesheet est utilisé pour appeler les pages de style*/
-$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('header-grid') . Style::getStylesheet('side-nav-grid')  . Style::getStylesheet('style_form') .  Style::getStylesheet('navbar1') .  Style::getStylesheet('side-nav-grid') . Style::getStylesheet('page-content')  ;
+$stylesheet = Style::getStylesheet('style') . Style::getStylesheet('header-grid') . Style::getStylesheet('side-nav-grid')  . Style::getStylesheet('style_form') .  Style::getStylesheet('navbar1') .  Style::getStylesheet('side-nav-grid') . Style::getStylesheet('page-content') . Style::getStylesheet('font/flaticon');
 /* $foot est utilisé pour appeler le footer*/
 $foot = Style::includeExternalFoot();
 
