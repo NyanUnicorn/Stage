@@ -50,6 +50,30 @@ Class Content{
     $section .= '</div></div><div class="scroll_right" ng-click="prevSlide();"><i class="fas fa-caret-right"></i></div></div>';
     return $section;
   }
+  public static function getBTReviews(){
+    $reviews = PageRep::getReviews()->fetchall();
+    $section = '';
+    $i = 0;
+    foreach($reviews as $review){
+      if($i == 0){
+        $section .= '<div class="item active">';
+      }else{
+        $section .= '<div class="item">';
+      }
+      $section .= $review['embedded'];
+      $section .= '</div>';
+      $i = $i + 1;
+    }
+    //   <img src="img_chania.jpg" alt="Chania">
+    //   <div class="carousel-caption">
+    //     <h3>Chania</h3>
+    //     <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+    //   </div>
+    // </div>
+    return $section;
+  }
+
+
   public static function cropString($string, $start, $end){
     $string = ' ' . $string;
     $ini = strpos($string, $start);

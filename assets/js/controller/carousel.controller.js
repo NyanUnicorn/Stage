@@ -10,12 +10,12 @@ app.controller('carousel', function($scope, $interval){
     //rev_list['1'].style.position = "absolute";
     i=0;
     while(i <= 300){
-      $interval(function(){
+
       i++;
       rev_list['1'].style.left = "-"+i+"px";
       //setDelay(1000);
-      console.log(i);
-        }, 1000);
+      setTimeout(this.nextSlide, 2000);
+
     };
     //rev_list['1'].style.left = "-300px";
     console.log("zbreeeeeh");

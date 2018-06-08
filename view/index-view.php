@@ -38,8 +38,12 @@
 								 ?>
 								<h2 class="temoignages">Témoignages</h2>
 								<?php
-									echo Content::getReviews();
+									//echo Content::getReviews();
+
+									require 'bootstrap-carousel.php';
 								 ?>
+
+
 							</div>
 						</div>
 				</main>
