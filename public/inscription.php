@@ -50,9 +50,6 @@ $image['logoVelo'] = Image::displayImage('logoVelo.png');
 /* $uri est la variable servant a recuperer le nom de la page */
 
 
-
-=======
->>>>>>> m_dev
 $civilites = CivRep::listCivilite()->fetchAll();
 $civCount = count($civilites);
 $motifs = MotifRep::getMotifs()->fetchAll();
