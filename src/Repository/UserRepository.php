@@ -8,11 +8,20 @@ use Enumeration\Roles;
 use Enumeration\Status;
 
 class UserRepository {
+  public static function getHashedPwd($_email, $_pwd){
+    $query = new DB();
+    $return = $query->query("SELECT mdp FROM User WHERE email = '$_email' AND status = '1'");
+    $hash = $return->fetch();
+    return password_verify($_pwd, $hash[0]);
+  }
   public static function loginUser($_email, $_pwd){
     $query = new DB();
-
+    $result = 'no_login';
+    if(self::getHashedPwd($_email, $_pwd)){
+      $result = $query->query("SELECT id, role, status, nom, prenom, email, date_nais, ville, Civilite_id FROM User WHERE email = '$_email'");
+    }
     /* permet de trouver les informations d'un utilisateur dans la BDD*/
-    return $query->query("SELECT id, role, status, nom, prenom, email, date_nais, ville, Civilite_id FROM User WHERE email = '$_email' AND mdp = '$_pwd'");
+    return $result;
   }
   public static function userExist($_email){
     $exists = TRUE;
@@ -41,7 +50,7 @@ class UserRepository {
     $profession = $user->getProfession();
     $role = $user->getRole();
     $motif = $user->getMotif();
-    $mdp = $password;
+    $mdp = password_hash($password, PASSWORD_DEFAULT);
     $status = $user->getStatus();
     $Civilite_id = Tool::civiliteId($user->getCivilite());
     $newsletter = $user->getNewsletter();

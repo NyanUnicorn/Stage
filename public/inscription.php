@@ -47,12 +47,7 @@ $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* $uri est la variable servant a recuperer le nom de la page */
-=======
-require '../view/inscription-view2.php';
->>>>>>> m_dev
 
 
 
@@ -67,6 +62,7 @@ $motifs = MotifRep::getMotifs()->fetchAll();
 $uri = $_SERVER['REQUEST_URI'];
 /* $navStatus determine l'affichage de la navbar selon si l'utilisateur est connecté ou non */
 $navStatus = Connection::navConnexion();
+$menuStatus = Connection::menuConnexion();
 
 /*ouverture de la page*/
 require '../view/inscription-view1.php';

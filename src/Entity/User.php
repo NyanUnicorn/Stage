@@ -29,6 +29,7 @@ class User{
   private $role;
   private $status;
   private $civilite;
+  private $sessionid;
 
   //constructeur utilisant deux fonctions
   function __construct() {
@@ -61,7 +62,7 @@ class User{
     $this->profession = $_profession;
     $this->motif = $_motif;
     $this->newsletter = $_newsletter;
-
+    $this->sessionid = Tool::generateRandomString(10);
     $this->age = Tool::age($this->date_nais);
   }
 
@@ -75,10 +76,14 @@ class User{
     $this->email = $_email;
     $this->date_nais = $_date_nais;
     $this->ville = $_ville;
+    $this->sessionid = Tool::generateRandomString(10);
     $this->civilite = Tool::civilite($_civilite);
     $this->age = Tool::age($this->date_nais);
   }
 
+  public function getSessionId(){
+    return $this->sessionid;
+  }
   public function getNom(){
     return $this->nom;
   }

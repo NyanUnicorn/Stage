@@ -1,7 +1,7 @@
 <!--  -->
 
 <li class="nav_item <?php echo strpos($uri, "agenda") ? 'active' : ''  ?>">
-<a class="itemDeroulants NavForm nav-link" href="#">Agenda</a>
+<a class="" href="#">Agenda</a>
 </li>
 
 <!--
@@ -11,16 +11,11 @@ Si l'utilisateur est connecté affiche son nom et un menu déroulant afin qu'il 
 
 -->
 
-<li class="menuNavItem nav-item dropdown">
-<a class="itemDeroulants NavForm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-<!-- Echo le prenom de l'utilisateur une fois login -->
-
-  <?php echo $_SESSION['USER']->getNom(); ?>
-</a>
-<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-  <a class="itemDeroulants dropdown-item" href="#">Profile</a>
-  <a class="itemDeroulants dropdown-item" href="#">Agenda</a>
-  <a class="itemDeroulants dropdown-item" href="#">Déconnecter</a>
-</div>
+<li class="nav_item">
+  <a class="" href="#"><?php echo $_SESSION['USER']->getNom(); ?></a>
+  <ul class="nav_dropdown">
+    <li><a href="#">Profile</a></li>
+    <li><a href="#">Agenda</a></li>
+    <li><a href="#">Déconnecter</a></li>
+  </ul>
 </li>

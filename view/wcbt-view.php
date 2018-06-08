@@ -26,6 +26,10 @@
 						</div>
 						<div class="main">
 							<div class="content-area">
+								<?php
+								use Service\Content;
+								echo Content::generateParagraphs($uri);
+								 ?>
 
 							<h2 class="Parties">Le World Chiropractic Bike Tour</h2>
 

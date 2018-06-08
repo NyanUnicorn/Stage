@@ -13,3 +13,4 @@
 <script src="http://le-chiro-qui-roule.assets/js/angular-route.min.js" type="text/javascript"></script>
 <script src="http://le-chiro-qui-roule.assets/js/module/lcqr.module.js" type="text/javascript"></script>
 <script src="http://le-chiro-qui-roule.assets/js/controller/navbar.collapse.controller.js" type="text/javascript"></script>
+<script src="http://le-chiro-qui-roule.assets/js/controller/carousel.controller.js" type="text/javascript"></script>

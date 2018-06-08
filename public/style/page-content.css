@@ -124,3 +124,45 @@ footer .footer_wrapper .rdv{
       "desc links contact";
   }
 }
+.review_wrapper{
+  display: grid;
+  margin-top: 70px;
+  height: 386px;
+  border: 3px solid #EEE;
+  border-radius: 10px;
+  grid-template-columns: 40px auto 40px;
+  grid-template-rows: 1fr;
+  grid-template-areas: "sleft reviews sright";
+}
+.review_wrapper .scroll_left{
+  grid-area: sleft;
+  box-shadow: inset -1px 0px 31px 20px rgba(255,255,255,1);
+}
+.review_wrapper .scroll_right{
+  grid-area: sright;
+  box-shadow: inset -1px 0px 31px 20px rgba(255,255,255,1);
+}
+.review_wrapper .fbreviews{
+  grid-area: reviews;
+  box-shadow: inset -1px 0px 31px 20px rgba(255,255,255,1);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.review_wrapper .fbrev_wrap{
+  left: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.review_wrapper .fbreviews .fbrev_wrap .fbrev{
+  display: inline-block;
+  position: absolute;
+  transition: .9s;
+  width: 498px;
+  background-color: blue;
+}
+.review_wrapper i{
+  font-size: 60px;
+  color: #CCC;
+  display: block;
+  margin: 160px 10px 0px;
+}
