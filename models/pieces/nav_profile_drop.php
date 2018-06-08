@@ -16,6 +16,6 @@ Si l'utilisateur est connecté affiche son nom et un menu déroulant afin qu'il 
   <ul class="nav_dropdown">
     <li><a href="#">Profile</a></li>
     <li><a href="#">Agenda</a></li>
-    <li><a href="#">Déconnecter</a></li>
+    <li><a href="logout.php#">Déconnecter</a></li>
   </ul>
 </li>

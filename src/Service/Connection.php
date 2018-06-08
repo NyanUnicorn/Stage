@@ -36,7 +36,7 @@ selon si l'utilisateur est connecté ou non*/
 //fonction qui determine quand déconnecté un utilisateur
   public static function authenticated(){
     $connected = False;
-    if(isset($_SESSION['timeout'])){
+    if(isset($_SESSION['timeout']) && isset($_SESSION['USER'])){
       if($_SESSION['timeout'] >= time()){
         $connected = True;
         self::resetTimeout();
@@ -155,6 +155,10 @@ selon si l'utilisateur est connecté ou non*/
     return $errors;
   }
 
-
+  public static function logout(){
+    if(isset($_SESSION['USER'])){
+      $_SESSION['USER'] = NULL;
+    }
+  }
 
 }
