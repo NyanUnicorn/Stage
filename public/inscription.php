@@ -19,15 +19,16 @@ $errors = [];
 if(isset($_POST['prenom'])){
   $errors = Connection::checkInscription();
   if(count($errors)<=0){
-    var_dump(count($errors));
     $errors = array_merge($errors, Connection::createAccount());
+    if(count($errors)<=0){
+      Connection::authentication($errors, $_POST['email'], $_POST['pswd']);
+    }
   }
 }
-var_dump(count($errors));
-//$errors = array_merge($errors, Connection::createAccount());
 
-
-
+if(Connection::authenticated()){
+  header('Location: /index.php');
+}
 
 
 

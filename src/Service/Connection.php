@@ -70,27 +70,21 @@ selon si l'utilisateur est connecté ou non*/
     return $toReturn;
   }
 
-  public static function authentication($_errors){
+  public static function authentication($_errors, $_email, $_password){
     $toReturn = '';
-    if(!(count($_errors) > 0)){
-      $_SESSION['emailInput'] = Form::getInputPost('email');
-      var_dump($_POST['email']);
-      $userInfo = UserRep::loginUser($_POST['email'], $_POST['password']);
-      if($userInfo != 'no_login'){
-        $data = $userInfo->fetch();
-        if($data){
-          $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
-          $_SESSION['USER'] = $USER;
-          self::resetTimeout();
-          //$_SESSION['emailInput'] = NULL;
-          var_dump($_SESSION['timeout']);
-        }
+    $userInfo = UserRep::loginUser( $_email, $_password);
+    if($userInfo != 'no_login'){
+      $data = $userInfo->fetch();
+      if($data){
+        $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
+        $_SESSION['USER'] = $USER;
+        self::resetTimeout();
       }
-      else{
-        $toReturn = 'password';
-      }
-
     }
+    else{
+      $toReturn = 'password';
+    }
+
     return $toReturn;
   }
 
@@ -138,7 +132,6 @@ selon si l'utilisateur est connecté ou non*/
     $profession = $_POST['profession'];
     $email = $_POST['email'];
     $password = $_POST['pswd'];
-    var_dump($_POST['pswd']);
     $motif = '';
     $dcc = date("Y-m-d");
     if($_POST['motif'] === 'Autre'){
@@ -155,7 +148,6 @@ selon si l'utilisateur est connecté ou non*/
     if(UserRep::userExist($email)){
       $errors[] = 'Ce mail est déja utilisé';
     }else{
-      var_dump(!UserRep::userExist($email));
     //Insert les données dans la BDD
       $User = new User( $role , $status, $civilite, $nom, $prenom, $email, $ddn, $dcc, $phone, $adresse, $cadresse, $cp, $ville, $profession, $motif, $newsletter);
       UserRep::createUser($User, $password);
