@@ -48,7 +48,7 @@ selon si l'utilisateur est connecté ou non*/
 
 //fonction déterminant le temps de timeout
   public static function resetTimeout(){
-    $_SESSION['timeout'] = strtotime('+1 minutes');
+    $_SESSION['timeout'] = $_SESSION['timeout_period'];
   }
 
 
@@ -78,6 +78,15 @@ selon si l'utilisateur est connecté ou non*/
       if($data){
         $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
         $_SESSION['USER'] = $USER;
+        if(isset($_POST['resteConnecte'])){
+          if($_POST['resteConnecte'] == 'resteConnecte'){
+            $_SESSION['timeout_period'] = strtotime('+7 day');
+          }else{
+             $_SESSION['timeout_period'] = strtotime('+1 minutes');
+          }
+        }else{
+           $_SESSION['timeout_period'] = strtotime('+1 minutes');
+        }
         self::resetTimeout();
       }
     }
