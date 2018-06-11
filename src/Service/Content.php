@@ -55,22 +55,26 @@ Class Content{
     $reviews = PageRep::getReviews()->fetchall();
     $section = '';
     $i = 0;
+
+      $section .= '<ol class="carousel-indicators"><li data-target="#myCarousel" data-slide-to="0" class="active"></li>';
+    foreach($reviews as $review){
+      $i = $i + 1;
+      $section .= '<li data-target="#myCarousel" data-slide-to="'.$i.'"></li>';
+    }
+    $section .= '</ol><div class="carousel-inner" role="listbox">';
+
+    $i = 0;
     foreach($reviews as $review){
       if($i == 0){
-        $section .= '<div class="item active">';
+        $section .= '<div class="item active"><div class="frame">';
       }else{
-        $section .= '<div class="item">';
+        $section .= '<div class="item"><div class="frame">';
       }
       $section .= $review['embedded'];
-      $section .= '</div>';
+      $section .= '</div></div>';
       $i = $i + 1;
     }
-    //   <img src="img_chania.jpg" alt="Chania">
-    //   <div class="carousel-caption">
-    //     <h3>Chania</h3>
-    //     <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-    //   </div>
-    // </div>
+    $section .= '</div>';
     return $section;
   }
 

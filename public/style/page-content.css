@@ -166,3 +166,10 @@ footer .footer_wrapper .rdv{
   display: block;
   margin: 160px 10px 0px;
 }
+#myCarousel{
+  margin-top: 50px;
+}
+#myCarousel .carousel-inner .frame{
+  width: 498px;
+  margin: 0 auto;
+}

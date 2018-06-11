@@ -5,7 +5,7 @@ body{
 
 }
 .nav-wrapper{
-	min-height: 50px;
+	min-height: 65px;
 	top: 50px;
 	width: 100%;
 
@@ -61,8 +61,7 @@ body{
 	grid-template-rows: minmax(0, auto);
 	margin: 0 auto;
 	align-items: stretch;
-	height: 50px;
-	transition: 1s;
+	height: 65px;
 	width: auto;
 }
 #custom-menu ul.nav_items > li > a{
@@ -70,34 +69,47 @@ body{
 	text-align: center;
 	font-size: 16px;
 	color: Black;
-	height: 49px;
+	height: 65px;
 }
 
 #custom-menu ul.nav_items li.nav_item{
 	display: grid;
 	grid-template-columns: 1fr;
+	overflow: hidden;
 }
 #custom-menu ul.nav_items li.nav_item a{
 	grid-column: 1;
 	padding: 10px 0 19px;
-	overflow: hidden;
+	transition: .5s;
+}
+#custom-menu ul.nav_items li.nav_item > a:hover{
+	background-color: rgba(232,131,64,.8);
 }
 #custom-menu ul.nav_items li.nav_item >a{
-	background: rgba(255,241,206,1);
+
+}
+#custom-menu ul.nav_items li.nav_item{
+  background: rgba(255,241,206,1);
+}
+#custom-menu.affix ul.nav_items li.nav_item{
+  background: rgba(255,241,206,.8);
+}
+#custom-menu ul.nav_items li.nav_item:hover{
+  background: linear-gradient(to top, rgba(255,241,206,.8) 0%,  rgba(255,241,206,1) 20%, rgba(255,241,206,1) 80%, rgba(0,128,129,1) 100%);
+}
+#custom-menu.affix ul.nav_items li.nav_item:hover{
+  background: linear-gradient(to top, rgba(255,241,206,.8) 80%, rgba(0,128,129,.8) 100%);
 }
 #custom-menu ul.nav_items li.nav_item:hover{
 
-}
-#custom-menu ul.nav_items li.nav_item:hover > a{
-	background: linear-gradient(to top, rgba(255,241,206,1) 80%, rgba(0,128,129,1) 100%);
-	color: Black;
+	overflow: visible;
 }
 #custom-menu.affix ul.nav_items li.nav_item > a{
-	background: rgba(255,241,206,.8);
+
 	color: Black;
 }
 #custom-menu.affix ul.nav_items li.nav_item:hover > a{
-	background: linear-gradient(to top, rgba(255,241,206,.8) 80%, rgba(0,128,129,.8) 100%);
+
 	color: #666;
 	font-weight: bold;
 }
@@ -115,6 +127,7 @@ body{
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	border-top: none;
+	box-shadow: 0px 7px 10px 0px rgba(0,0,0,0.5);
 	visibility: collapse;
 }
 #custom-menu ul.nav_items li.nav_item:hover ul.nav_dropdown{

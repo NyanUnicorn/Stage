@@ -39,7 +39,10 @@ if(Connection::authenticated()){
   /* Verification de l'email et mdp*/
   $errors = Connection::checkLoginInput();
   /* Si pas d'erreurs connexion de l'utilisateur */
-  $errors = Connection::authentication($errors);
+  if(!(count($errors) > 0)){
+    $_SESSION['emailInput'] = Form::getInputPost('email');
+    $errors = Connection::authentication($errors, $_POST['email'], $_POST['password']);
+  }
 }
 //supprimer le mot de passe
 if(isset($_POST['password'])){

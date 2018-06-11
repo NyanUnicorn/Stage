@@ -36,7 +36,7 @@ selon si l'utilisateur est connecté ou non*/
 //fonction qui determine quand déconnecté un utilisateur
   public static function authenticated(){
     $connected = False;
-    if(isset($_SESSION['timeout'])){
+    if(isset($_SESSION['timeout']) && isset($_SESSION['USER'])){
       if($_SESSION['timeout'] >= time()){
         $connected = True;
         self::resetTimeout();
@@ -48,7 +48,7 @@ selon si l'utilisateur est connecté ou non*/
 
 //fonction déterminant le temps de timeout
   public static function resetTimeout(){
-    $_SESSION['timeout'] = strtotime('+1 minutes');
+    $_SESSION['timeout'] = $_SESSION['timeout_period'];
   }
 
 
@@ -70,27 +70,30 @@ selon si l'utilisateur est connecté ou non*/
     return $toReturn;
   }
 
-  public static function authentication($_errors){
+  public static function authentication($_errors, $_email, $_password){
     $toReturn = '';
-    if(!(count($_errors) > 0)){
-      $_SESSION['emailInput'] = Form::getInputPost('email');
-      var_dump($_POST['email']);
-      $userInfo = UserRep::loginUser($_POST['email'], $_POST['password']);
-      if($userInfo != 'no_login'){
-        $data = $userInfo->fetch();
-        if($data){
-          $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
-          $_SESSION['USER'] = $USER;
-          self::resetTimeout();
-          //$_SESSION['emailInput'] = NULL;
-          var_dump($_SESSION['timeout']);
+    $userInfo = UserRep::loginUser( $_email, $_password);
+    if($userInfo != 'no_login'){
+      $data = $userInfo->fetch();
+      if($data){
+        $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
+        $_SESSION['USER'] = $USER;
+        if(isset($_POST['resteConnecte'])){
+          if($_POST['resteConnecte'] == 'resteConnecte'){
+            $_SESSION['timeout_period'] = strtotime('+7 day');
+          }else{
+             $_SESSION['timeout_period'] = strtotime('+1 minutes');
+          }
+        }else{
+           $_SESSION['timeout_period'] = strtotime('+1 minutes');
         }
+        self::resetTimeout();
       }
-      else{
-        $toReturn = 'password';
-      }
-
     }
+    else{
+      $toReturn = 'password';
+    }
+
     return $toReturn;
   }
 
@@ -138,7 +141,6 @@ selon si l'utilisateur est connecté ou non*/
     $profession = $_POST['profession'];
     $email = $_POST['email'];
     $password = $_POST['pswd'];
-    var_dump($_POST['pswd']);
     $motif = '';
     $dcc = date("Y-m-d");
     if($_POST['motif'] === 'Autre'){
@@ -155,7 +157,6 @@ selon si l'utilisateur est connecté ou non*/
     if(UserRep::userExist($email)){
       $errors[] = 'Ce mail est déja utilisé';
     }else{
-      var_dump(!UserRep::userExist($email));
     //Insert les données dans la BDD
       $User = new User( $role , $status, $civilite, $nom, $prenom, $email, $ddn, $dcc, $phone, $adresse, $cadresse, $cp, $ville, $profession, $motif, $newsletter);
       UserRep::createUser($User, $password);
@@ -163,6 +164,10 @@ selon si l'utilisateur est connecté ou non*/
     return $errors;
   }
 
-
+  public static function logout(){
+    if(isset($_SESSION['USER'])){
+      $_SESSION['USER'] = NULL;
+    }
+  }
 
 }
