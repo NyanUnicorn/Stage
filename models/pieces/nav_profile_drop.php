@@ -1,7 +1,7 @@
 <!--  -->
 
 <li class="nav_item <?php echo strpos($uri, "agenda") ? 'active' : ''  ?>">
-<a class="" href="#">Agenda</a>
+<a class="" href="agenda.php">Agenda</a>
 </li>
 
 <!--
@@ -15,7 +15,7 @@ Si l'utilisateur est connecté affiche son nom et un menu déroulant afin qu'il 
   <a class="" href="#"><?php echo $_SESSION['USER']->getNom(); ?></a>
   <ul class="nav_dropdown">
     <li><a href="#">Profile</a></li>
-    <li><a href="#">Agenda</a></li>
+    <li><a href="agenda.php">Agenda</a></li>
     <li><a href="logout.php#">Déconnecter</a></li>
   </ul>
 </li>
