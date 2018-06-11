@@ -1,0 +1,55 @@
+.list-group{
+
+margin: 30px ;
+padding: 10px 20px 10px 20px;
+
+}
+
+.userForm{
+
+
+}
+
+.userLabel{
+
+  font-weight: 400;
+  margin: 20px;
+}
+
+.userItem{
+
+  margin: 20px;
+}
+
+.userItem p{
+
+
+}
+
+
+.nlInput{
+
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 20px 10px 20px;
+	background-color: #008081;
+	border-color: #008081;
+	box-shadow: 0px 0px 5px 1px rgba(85,85,85,1);
+  border-radius: 10px;
+  font-size: small;
+  font-style: normal !important;
+
+}
+
+.RDVButton{
+
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 7px 10px 7px 10px;
+	background-color: #008081;
+	border-color: #008081;
+	box-shadow: 0px 0px 5px 1px rgba(85,85,85,1);
+  border-radius: 10px;
+}
