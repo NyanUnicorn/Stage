@@ -14,7 +14,7 @@ Si l'utilisateur est connecté affiche son nom et un menu déroulant afin qu'il 
 <li class="nav_item">
   <a class="" href="#"><?php echo $_SESSION['USER']->getNom(); ?></a>
   <ul class="nav_dropdown">
-    <li><a href="#">Profile</a></li>
+    <li><a href="user-profile.php">Profile</a></li>
     <li><a href="agenda.php">Agenda</a></li>
     <li><a href="logout.php#">Déconnecter</a></li>
   </ul>
