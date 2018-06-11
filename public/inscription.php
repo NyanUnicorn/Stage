@@ -27,12 +27,6 @@ var_dump(count($errors));
 //$errors = array_merge($errors, Connection::createAccount());
 
 
-
-
-
-
-
-
 /* $head est utilisé pour appeler le header*/
 $head = Style::includeExternalHead();
 /* $stylesheet est utilisé pour appeler les pages de style*/
