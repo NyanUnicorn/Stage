@@ -85,7 +85,7 @@ selon si l'utilisateur est connecté ou non*/
              $_SESSION['timeout_period'] = strtotime('+1 minutes');
           }
         }else{
-           $_SESSION['timeout_period'] = strtotime('+1 minutes');
+           //$_SESSION['timeout_period'] = strtotime('+1 minutes');
         }
         self::resetTimeout();
       }
