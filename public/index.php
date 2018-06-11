@@ -10,7 +10,7 @@ use Service\Image;
 
 session_start();
 
-
+var_dump('hhhhhhhhhhhhhhhhhh');
 /* $head est utilisé pour appeler le header*/
 $head = Style::includeExternalHead();
 /* $stylesheet est utilisé pour appeler les pages de style*/
