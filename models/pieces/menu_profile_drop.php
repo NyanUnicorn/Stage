@@ -17,7 +17,7 @@ Si l'utilisateur est connecté affiche son nom et un menu déroulant afin qu'il 
   <i class="fas fa-caret-right" ng-click=<?php $q = "'"; echo '"selectSub('.$q.'profile'.$_SESSION['USER']->getSessionId().$q.');goToSubmenu();"' ?>></i>
   <ul id=<?php echo '"profile'.$_SESSION['USER']->getSessionId().'"' ?> class="nav_dropdown">
     <li ng-click="goToMainmenu();"><a class="backButton"><i class="fas fa-caret-left"> </i> Retour</a></li>
-    <li><a href="#">Profile</a></li>
+    <li><a href="user-profile.php">Profile</a></li>
     <li><a href="#">Agenda</a></li>
     <li><a href="#">Déconnecter</a></li>
   </ul>

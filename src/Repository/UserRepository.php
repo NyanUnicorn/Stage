@@ -34,6 +34,13 @@ class UserRepository {
     return $exists;
   }
 
+  //recupération d'info sur l'utilisateur connecté
+  public static function userInfo(){
+
+    $query = new DB;
+    $return = $query->query("SELECT prenom, nom, date_nais, adresse, complement, ville, cd_postale, email, phone, profession, newsletter, Civilite_id FROM user WHERE id=$id  ");
+  }
+
   //fonction qui permet de créer un utilisateur
   public static function createUser($user, $password){
     $nom = $user->getNom();

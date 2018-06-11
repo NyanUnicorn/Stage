@@ -25,10 +25,10 @@ if(isset($_POST['prenom'])){
     }
   }
 }
-<<<<<<< HEAD
-var_dump(count($errors));
+
+
 //$errors = array_merge($errors, Connection::createAccount());
-=======
+
 
 if(Connection::authenticated()){
   header('Location: /index.php');
@@ -36,7 +36,7 @@ if(Connection::authenticated()){
 
 
 
->>>>>>> P_dev
+
 
 
 /* $head est utilisé pour appeler le header*/

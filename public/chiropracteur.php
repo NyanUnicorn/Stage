@@ -27,11 +27,7 @@ $image['bande'] = Image::displayImage('fond0.png');
 $image['iconhand'] = Image::displayImage('hand.png');
 $image['iconglobe'] = Image::displayImage('globe.png');
 $image['icontable'] = Image::displayImage('table.png');
-$image['iconspine'] = Image::displayImage('spine.png');
-$image['iconwheel'] = Image::displayImage('roueCrevee.png');
 
-
-$resultat = ComptRep::infoCompteur()->fetchAll();
 
 
 
