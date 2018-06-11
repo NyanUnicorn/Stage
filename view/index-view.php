@@ -31,6 +31,18 @@
 								<img class="img_alexandre_velo"  <?php  echo $image['bande']; ?>/>
 							</div>
 							<div class="content-area">
+								<div class="BandeauCompteur">
+ 			  				<?php
+ 			  				use Service\Image;
+ 			  				foreach($resultat as $compteur) {
+ 			  						$disp = '<div class="Compteurs">';
+ 			  						$disp = $disp . '<img ' . Image::displayImage($compteur['image']) . ' />';
+ 			  						$disp = $disp . '<p class="compteur">' . $compteur['valeure'] . '</p>';
+ 			  						$disp = $disp . '<p>' . $compteur['description'] . '</p>';
+ 			  						$disp = $disp .'</div>';
+ 			  					echo $disp;}
+ 			  				?>
+ 							</div>
 								<?php
 								use Service\Content;
 								echo Content::generateParagraphs($uri);

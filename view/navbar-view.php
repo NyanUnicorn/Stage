@@ -13,7 +13,7 @@
         if (isset($elm['paragraphs'])){
           $item = $item . '<ul class="nav_dropdown">';
           foreach($elm['paragraphs'] as $par){
-            $item = $item . '<li> <a href="' . $elm['linkName'] . '#' . $par['link_label']  . '">' . $par['title'] . '</a> </li>';
+            $item = $item . '<li> <a href="' . $elm['linkName'] .'.php#' . $par['link_label']  . '">' . $par['title'] . '</a> </li>';
           }
           $item = $item . '</ul>';
         }
