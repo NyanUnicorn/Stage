@@ -27,12 +27,6 @@ var_dump(count($errors));
 //$errors = array_merge($errors, Connection::createAccount());
 
 
-
-
-
-
-
-
 /* $head est utilisé pour appeler le header*/
 $head = Style::includeExternalHead();
 /* $stylesheet est utilisé pour appeler les pages de style*/
@@ -50,9 +44,6 @@ $image['logoVelo'] = Image::displayImage('logoVelo.png');
 /* $uri est la variable servant a recuperer le nom de la page */
 
 
-
-=======
->>>>>>> m_dev
 $civilites = CivRep::listCivilite()->fetchAll();
 $civCount = count($civilites);
 $motifs = MotifRep::getMotifs()->fetchAll();
