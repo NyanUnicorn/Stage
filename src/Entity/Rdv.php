@@ -16,6 +16,7 @@ class Rdv{
   private $user_pre;
   private $url_id;
   private $status;
+  private $info_supp;
 
   //constructeur
   public function __construct($_date_crea,$_adresse,$_cd_postale,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_url_id, $_status){
@@ -30,6 +31,16 @@ class Rdv{
     $this->user_pre = $_user_pre;
     $this->url_id = $_url_id;
     $this->status = $_status;
+  }
+
+
+  public function getInfoSupp(){
+    return $this->info_supp;
+  }
+
+  public function setInfoSupp($input){
+    $this->$info_supp = $input;
+
   }
 
   public function getDateCrea(){
@@ -108,21 +119,22 @@ class Rdv{
   }
 
   public function setDureeMinRdv($_duree_min_rdv){
-
     $this->duree_min_rdv = $_duree_min_rdv;
 
   }
 
 
   public function getUser_Id(){
-
       return $this->user_id;
   }
 
   public function setUser_Id($_user_id){
-
     $this->user_id = $user_id;
 
+  }
+
+  public function getUrlId(){
+      return $this->url_id;
   }
 
 }

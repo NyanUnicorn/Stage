@@ -48,7 +48,7 @@ class Calendar{
     foreach($_input as $rdv){
       $urlId = Tool::generateRandomString(30);
       $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['cd_postale'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status']);
-      $_SESSION['rdv'] = $RDV;
+      array_push($_SESSION['rdv'] , $RDV);
 
       $duree = $rdv['date_rdv'];
       $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
@@ -57,9 +57,10 @@ class Calendar{
         'title'       =>  $rdv['nom'] . ' ' . $rdv['prenom'],
         'start'       =>  $rdv['date_rdv'],
         'end'         =>  $duree,
-        'url'         =>  'agenda/rendezvous.php?'.$urlId.''
+        'url'         =>  'rendezvous.php?myrdv='.$urlId.''
       );
     }
+    //array_push($_SESSION['rdv'] , $rdvList);
     return $data;
   }
 
@@ -82,7 +83,7 @@ class Calendar{
         if($rdv['user_id'] == $elem1['user_id']){
           $urlId = Tool::generateRandomString(30);
           $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['cd_postale'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status']);
-          $_SESSION['rdv'] = $RDV;
+          array_push($_SESSION['rdv'] , $RDV);
 
           $duree = $rdv['date_rdv'];
           $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
@@ -91,7 +92,7 @@ class Calendar{
             'title'       =>  $rdv['nom'] . ' ' . $rdv['prenom'],
             'start'       =>  $rdv['date_rdv'],
             'end'         =>  $duree,
-            'url'         =>  'agenda/rendezvous.php?'.$urlId.''
+            'url'         =>  'rendezvous.php?myrdv='.$urlId.''
           );
         }else{
           $duree = $rdv['date_rdv'];
@@ -121,6 +122,61 @@ class Calendar{
       );
       }
     return $data;
+  }
+
+  public static function validRendezVous($_rdvList, $_rdvId){
+    $valid = FALSE;
+    foreach($_rdvList as $rdv){
+      if($rdv->getUrlId() == $_rdvId){
+        $valid = TRUE;
+      }
+    }
+    return $valid;
+  }
+
+
+  public static function getRdv($_rdvList, $_rdvId){
+    $rdv = NULL;
+    foreach($_rdvList as $key=>$rdv){
+      if($rdv->getUrlId() == $_rdvId){
+        $rdv = $_rdvList[$key];
+      }
+    }
+    return $rdv;
+  }
+
+  public static function checkInput($input){
+    $errors = [];
+    if(strlen($input['nom']) <= '10'){
+      array_push($errors , 'Veuillez indiquer votre nom');
+    }
+    if(strlen($input['prenom']) <= 1){
+      array_push($errors , 'Veuillez indiquer votre prenom');
+    }
+    if(strlen($input['adresse']) <= 1){
+      array_push($errors , 'Veuillez indiquer votre adresse de rendez-vous');
+    }
+    if(strlen($input['ville']) <= 1){
+      array_push($errors , 'Veuillez indiquer votre ville');
+    }
+    if($input['dtRdv'] == NULL){
+      array_push($errors , 'Veuillez indiquer votre date de rendez-vous');
+    }
+    return $errors;
+  }
+
+  public static function CreateRdv($_POST){
+    $date_crea
+    $nom
+    $prenom
+    $adresse
+    $ville
+    $info_supp
+    $dateRdv
+    $duree
+    $status
+    $user_id
+    
   }
 
 }

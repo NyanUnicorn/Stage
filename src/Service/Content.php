@@ -87,4 +87,14 @@ Class Content{
     $len = strpos($string, $end, $ini) - $ini;
     return substr($string, $ini, $len);
   }
+
+
+  public static function displayRdv($_RDV){
+    $content = '';
+    
+    return $content;
+  }
+
+
+
 }

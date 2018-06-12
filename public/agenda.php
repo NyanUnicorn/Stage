@@ -14,11 +14,20 @@ if(isset($_GET['load'])){
   }else{
     header('Location: /agenda.php');
   }
-}else if(isset($_GET['rdv'])){
+}
+
+$USER = $_SESSION['USER'];
+
+$errors = [];
+if(isset($_POST['submit'])){
+  $errors = Calendar::checkInput($_POST);
+  if(count($errors) == 0){
+    Calendar::CreateRdv($_POST, $USER->getRole());
+  }
+}
 
 
-}else{
-
+$USER = $_SESSION['USER'];
 
 $head = Style::includeExternalHead();
 $stylesheet = Style::getStylesheet('style') . Style::getStylesheet('navbar1') . Style::getStylesheet('header-grid') . Style::getStylesheet('side-nav-grid') . Style::getStylesheet('page-content') . Style::getStylesheet('font/flaticon');
@@ -38,4 +47,3 @@ $navStatus = Connection::navConnexion();
 $menuStatus = Connection::menuConnexion();
 
   require '../view/agenda-view.php';
-}
