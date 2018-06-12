@@ -7,22 +7,26 @@ use Service\Connection;
 use Service\Image;
 
 session_start();
-
 if(isset($_GET['load'])){
   if($_GET['load']=='true'){
     Calendar::load();
   }else{
     header('Location: /agenda.php');
   }
-}
+}else{
 
-$USER = $_SESSION['USER'];
+//$USER = $_SESSION['USER'];
 
 $errors = [];
 if(isset($_POST['submit'])){
   $errors = Calendar::checkInput($_POST);
+  var_dump($errors);
   if(count($errors) == 0){
-    Calendar::CreateRdv($_POST, $USER->getRole());
+    $errors = Calendar::isValidRdvRequest($_POST);
+    if(count($errors) == 0){
+      Calendar::CreateRdv($_POST);
+      header('Location: /agenda.php');
+    }
   }
 }
 
@@ -47,3 +51,4 @@ $navStatus = Connection::navConnexion();
 $menuStatus = Connection::menuConnexion();
 
   require '../view/agenda-view.php';
+}

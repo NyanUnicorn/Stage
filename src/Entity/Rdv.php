@@ -19,10 +19,35 @@ class Rdv{
   private $info_supp;
 
   //constructeur
-  public function __construct($_date_crea,$_adresse,$_cd_postale,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_url_id, $_status){
+
+  public function __construct(){
+    $output = [];
+    $argv = func_get_args();
+    switch(func_num_args()){
+      case 10:
+        self::__construct0($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8], $argv[9]);
+        break;
+      case 11:
+        self::__construct1($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8], $argv[9], $argv[10]);
+        break;
+    }
+  }
+  public function __construct0($_date_crea,$_adresse,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_status, $_info_supp){
     $this->date_crea = $_date_crea;
     $this->adresse = $_adresse;
-    $this->cd_postale = $_cd_postale;
+    $this->ville = $_ville;
+    $this->date_rdv = $_date_rdv;
+    $this->duree_min_rdv = $_duree_min_rdv;
+    $this->user_id = $_user_id;
+    $this->user_nom = $_user_nom;
+    $this->user_pre = $_user_pre;
+    $this->status = $_status;
+    $this->info_supp = $_info_supp;
+  }
+
+  public function __construct1($_date_crea,$_adresse,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_url_id, $_status, $_info_supp){
+    $this->date_crea = $_date_crea;
+    $this->adresse = $_adresse;
     $this->ville = $_ville;
     $this->date_rdv = $_date_rdv;
     $this->duree_min_rdv = $_duree_min_rdv;
@@ -31,112 +56,65 @@ class Rdv{
     $this->user_pre = $_user_pre;
     $this->url_id = $_url_id;
     $this->status = $_status;
+    $this->info_supp = $_info_supp;
   }
 
 
   public function getInfoSupp(){
     return $this->info_supp;
   }
-
   public function setInfoSupp($input){
     $this->$info_supp = $input;
-
   }
 
   public function getDateCrea(){
-
     return $this->date_crea;
   }
-
   public function setDateCrea($_date_crea){
-
     $this->date_crea = $_date_crea;
-
   }
-
   public function getAdresse(){
-
       return $this->adresse;
   }
-
   public function SetAdresse($_adresse){
-
     $this->adresse = $_adresse;
   }
-
-
-  public function getCdPostale(){
-
-      return $this->cd_postale;
-  }
-
-  public function setCdPostale($_cd_postale){
-
-    $this->cd_postale = $_cd_postale;
-
-  }
-
-
   public function getVille(){
-
       return $this->ville;
   }
-
   public function setVille($_ville){
-
     $this->ville = $_ville;
-
   }
-
-
   public function getDateRdv(){
-
       return $this->date_rdv;
   }
-
   public function setDateRdv($_date_rdv){
-
     $this->date_rdv = $_date_rdv;
-
   }
-
-
-  public function getHeureRdv(){
-
-      return $this->heure_rdv;
-  }
-
-  public function setHeureRdv($_heure_rdv){
-
-    $this->heure_rdv = $_heure_rdv;
-
-  }
-
-
-  public function getDureeMinRdv(){
-
+  public function getDuree(){
       return $this->duree_min_rdv;
   }
-
-  public function setDureeMinRdv($_duree_min_rdv){
+  public function setDuree($_duree_min_rdv){
     $this->duree_min_rdv = $_duree_min_rdv;
-
   }
-
-
-  public function getUser_Id(){
+  public function getUserId(){
       return $this->user_id;
   }
-
   public function setUser_Id($_user_id){
     $this->user_id = $user_id;
-
   }
-
   public function getUrlId(){
       return $this->url_id;
   }
-
+  public function getStatus(){
+      return $this->status;
+  }
+  public function getNom(){
+      return $this->user_nom;
+  }
+  public function getPrenom(){
+      return $this->user_pre;
+  }
 }
 
  ?>

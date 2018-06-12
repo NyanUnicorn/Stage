@@ -8,6 +8,11 @@ use Enumeration\Roles;
 use Enumeration\Status;
 
 class UserRepository {
+  public static function getId($_email){
+    $query = new DB();
+    $return = $query->query("SELECT id FROM User WHERE email = '$_email' AND status = '1'");
+    return $return->fetch();
+  }
   public static function getHashedPwd($_email, $_pwd){
     $query = new DB();
     $return = $query->query("SELECT mdp FROM User WHERE email = '$_email' AND status = '1'");
@@ -58,10 +63,10 @@ class UserRepository {
     //$sql = "INSERT INTO `user` (`nom`, `prenom`, `date_nais`, `date_crea`, `adresse`, `complement`, `cd_postale`, `ville`, `email`, `telephone`, `profession`, `role`, `motif`, `mdp`, `status`, `Civilite_id`, `newsletter`)
     //VALUES ('$nom', '$prenom', '$date_nais', '$date_crea', '$adresse', '$complement', '$cd_postale', '$ville', '$email', '$telephone', '$profession', '$role', '$motif', '$mdp', '$status', '$Civilite_id', '$newsletter');";
     //permet d'integer les données du nouvel utilisateur a la BDD
-    $stmt = $execute->prepare("INSERT INTO `user` (`nom`, `prenom`, `date_nais`, `date_crea`, `adresse`, `complement`, `cd_postale`, `ville`, `email`, `telephone`, `profession`, `role`, `motif`, `mdp`, `status`, `Civilite_id`, `newsletter`)
+    $stmt = $execute->prepare("INSERT INTO `user` (`nom`, `prenom`, `date_nais`, `date_crea`, `adresse`, `complement`, `cd_postale`, `ville`, `email`, `telephone`, `profession`, `role`, `motif`, `mdp`, `status`, `Civilite_id`, `newsletter`) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
     $stmt->execute(array($nom, $prenom, $date_nais, $date_crea, $adresse, $complement, $cd_postale, $ville, $email, $telephone, $profession, $role, $motif, $mdp, $status, $Civilite_id, $newsletter));
-    var_dump(array($nom, $prenom, $date_nais, $date_crea, $adresse, $complement, $cd_postale, $ville, $email, $telephone, $profession, $role, $motif, $mdp, $status, $Civilite_id, $newsletter));
+
   }
 
 

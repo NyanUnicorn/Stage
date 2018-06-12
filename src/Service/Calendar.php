@@ -2,10 +2,12 @@
 namespace Service;
 
 use Entity\Rdv;
+use Repository\UserRepository as UserRep;
 use Repository\RDVRepository as RdvRep;
 use Service\ClassTools as Tool;
 use Service\Connection;
 use Enumeration\Roles;
+use Enumeration\RdvStatus;
 
 class Calendar{
   public static function load(){
@@ -15,14 +17,14 @@ class Calendar{
     if(Connection::authenticated()){
         $User = $_SESSION['USER'];
         if($User->getRole() == $admin){
-          $data = array_merge($data, RdvRep::getRdvAsAdmin());
+          $data = RdvRep::getRdvAsAdmin();
         }else if($User->getRole() == $user){
-          $data = array_merge($data,RdvRep::getRdvAsUser($User->getEmail()));
+          $data = RdvRep::getRdvAsUser($User->getEmail());
         }
     }else{
-      $data = array_merge($data,RdvRep::getRdvAsVisitor());
+      $data = RdvRep::getRdvAsVisitor();
     }
-
+    //var_dump($data);
     echo json_encode($data);
   }
 
@@ -47,7 +49,7 @@ class Calendar{
     $_SESSION['rdv'] = [];
     foreach($_input as $rdv){
       $urlId = Tool::generateRandomString(30);
-      $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['cd_postale'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status']);
+      $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status'],  $rdv['info_supp']);
       array_push($_SESSION['rdv'] , $RDV);
 
       $duree = $rdv['date_rdv'];
@@ -82,7 +84,7 @@ class Calendar{
       foreach($_input1 as $elem1){
         if($rdv['user_id'] == $elem1['user_id']){
           $urlId = Tool::generateRandomString(30);
-          $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['cd_postale'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status']);
+          $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status'],  $rdv['info_supp']);
           array_push($_SESSION['rdv'] , $RDV);
 
           $duree = $rdv['date_rdv'];
@@ -147,7 +149,7 @@ class Calendar{
 
   public static function checkInput($input){
     $errors = [];
-    if(strlen($input['nom']) <= '10'){
+    if(strlen($input['nom']) <= 1){
       array_push($errors , 'Veuillez indiquer votre nom');
     }
     if(strlen($input['prenom']) <= 1){
@@ -165,18 +167,59 @@ class Calendar{
     return $errors;
   }
 
-  public static function CreateRdv($_POST){
-    $date_crea
-    $nom
-    $prenom
-    $adresse
-    $ville
-    $info_supp
-    $dateRdv
-    $duree
-    $status
-    $user_id
-    
+  public static function getRdvStatus($user){
+    $status = NULL;
+    if($user->getRole() == Roles::Admin){
+      $status = RdvStatus::Accepted;
+    }else if($user->getRole() == Roles::USer){
+      $status = RdvStatus::Requested;
+    }
+    return $status;
+  }
+
+  public static function getDuree($post){
+    $duree = NULL;
+    if($post['premier'] == 1){
+      $duree = 60;
+    }else if($post['premier'] == 0){
+      $duree = 90;
+    }
+    return $duree;
+  }
+
+  public static function CreateRdv($post){
+    $USER = $_SESSION['USER'];
+    $date_crea = date('Y-m-d H:i:s', time());
+    $nom = $post['nom'];
+    $prenom = $post['prenom'];
+    $adresse = $post['adresse'];
+    $ville = $post['ville'];
+    $info_supp = $post['supp'];
+    $date_rdv = $post['dtRdv'];
+    $duree = self::getDuree($post);
+    $status = self::getRdvStatus($USER);
+    $user_id = UserRep::getId($USER->getEmail())['id'];
+    $rdv = new RDV($date_crea,$adresse,$ville,$date_rdv,$duree,$user_id, $nom, $prenom, $status, $info_supp);
+    RdvRep::createRdv($rdv);
+  }
+
+  public static function isValidRdvRequest($_post){
+    $error = NULL;
+    //get rendez vous list
+    $rdvList = RdvRep::getRdvAsVisitor();
+    //get start date time and duration
+    $datetiem = $_post['dtRdv'];
+    $duree = self::getDuree($_post);
+    //check for collisions before and after
+    foreach($rdvList as $rdv){
+      if(date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv']))) > $datetime){
+        $error = 'collision de rendez-vous';
+      }else if($rdv['date_rdv'] > date('Y-m-d H:i:s',strtotime('+'.$duree.' minutes', strtotime($datetime))) ){
+        $error = 'collision de rendez-vous';
+      }
+      return $error;
+    }
+
   }
 
 }
