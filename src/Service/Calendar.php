@@ -20,8 +20,7 @@ class Calendar{
           $data = array_merge($data,RdvRep::getRdvAsUser($User->getEmail()));
         }
     }else{
-      //  $data = array_merge($data, RdvRep::getRdvAsAdmin());
-      //$data = array_merge($data,RdvRep::getRdvAsVisitor());
+      $data = array_merge($data,RdvRep::getRdvAsVisitor());
     }
 
     echo json_encode($data);
@@ -35,7 +34,10 @@ class Calendar{
         $output = self::prepareArray1($argv[0]);
         break;
       case 2:
-        $output = prepareArray2($argv[0], $argv[1]);
+        $output = self::prepareArray2($argv[0], $argv[1]);
+        break;
+      case 3:
+        $output = self::prepareArray3($argv[0], $argv[1], $argv[2]);
         break;
     }
     return $output;
@@ -44,10 +46,7 @@ class Calendar{
     $data = [];
     $_SESSION['rdv'] = [];
     foreach($_input as $rdv){
-      //$rdv = [];
       $urlId = Tool::generateRandomString(30);
-      //$rdv['rdv_url_id'] = $rdvId;
-      //$rdv[''];
       $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['cd_postale'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status']);
       $_SESSION['rdv'] = $RDV;
 
@@ -64,10 +63,64 @@ class Calendar{
     return $data;
   }
 
-  public static function prepareArray2($_inpunt1, $_input2){
+  public static function prepareArray2($_input1, $_input2){
     //compare both array
-    //delete from array 2 what exists in array 1 (user_id for reference)
+    foreach($_input2 as $key=>$elem2){
+      foreach($_input1 as $elem1){
+        if($elem2['user_id'] == $elem1['user_id']){
+    //replace array 2 what exists in array 1 (user_id for reference)
+          $_input2[$key] = $elem1;
+        }
+      }
+    }
+
     //loopthrough and create json
+    $data = [];
+    $_SESSION['rdv'] = [];
+    foreach($_input2 as $key=>$rdv){
+      foreach($_input1 as $elem1){
+        if($rdv['user_id'] == $elem1['user_id']){
+          $urlId = Tool::generateRandomString(30);
+          $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['cd_postale'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status']);
+          $_SESSION['rdv'] = $RDV;
+
+          $duree = $rdv['date_rdv'];
+          $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
+          $data[] = array(
+            'id'          =>  $rdv['user_id'],
+            'title'       =>  $rdv['nom'] . ' ' . $rdv['prenom'],
+            'start'       =>  $rdv['date_rdv'],
+            'end'         =>  $duree,
+            'url'         =>  'agenda/rendezvous.php?'.$urlId.''
+          );
+        }else{
+          $duree = $rdv['date_rdv'];
+          $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
+          $data[] = array(
+            'id'          =>  $rdv['user_id'],
+            'title'       =>  'Complet',
+            'start'       =>  $rdv['date_rdv'],
+            'end'         =>  $duree,
+          );
+        }
+      }
+    }
+    return $data;
+  }
+
+  public static function prepareArray3($_input, $visibility, $authority){
+    $data = [];
+    foreach($_input as $rdv){
+      $duree = $rdv['date_rdv'];
+      $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
+      $data[] = array(
+        'id'          =>  $rdv['user_id'],
+        'title'       =>  'Complet',
+        'start'       =>  $rdv['date_rdv'],
+        'end'         =>  $duree,
+      );
+      }
+    return $data;
   }
 
 }

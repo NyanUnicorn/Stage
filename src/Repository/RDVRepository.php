@@ -18,7 +18,9 @@ class RDVRepository{
     return Calendar::prepareArray($result1, $result2);
   }
   public static function getRdvAsVisitor(){
-
+    $query = new DB();
+    $result = $query->query("SELECT Rdv.user_id, Rdv.date_rdv, Rdv.duree_min_rdv, Rdv.date_crea FROM Rdv ")->fetchAll();
+    return Calendar::prepareArray($result, NULL, NULL);
   }
 
 }
