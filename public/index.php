@@ -31,7 +31,7 @@ $image['icontable'] = Image::displayImage('table.png');
 $image['iconspine'] = Image::displayImage('spine.png');
 $image['iconwheel'] = Image::displayImage('roueCrevee.png');
 
-$resultat = ComptRep::infoCompteur()->fetchAll();
+//$resultat = ComptRep::infoCompteur()->fetchAll();
 
 
 
