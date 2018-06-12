@@ -101,7 +101,7 @@ class Calendar{
           $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
           $data[] = array(
             'id'          =>  $rdv['user_id'],
-            'title'       =>  'Complet',
+            'title'       =>  'Horaire occupé',
             'start'       =>  $rdv['date_rdv'],
             'end'         =>  $duree,
           );
@@ -118,7 +118,7 @@ class Calendar{
       $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
       $data[] = array(
         'id'          =>  $rdv['user_id'],
-        'title'       =>  'Complet',
+        'title'       =>  'Horaire occupé',
         'start'       =>  $rdv['date_rdv'],
         'end'         =>  $duree,
       );
