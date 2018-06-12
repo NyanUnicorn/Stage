@@ -46,19 +46,6 @@
 							<p>Vous pouvez aussi me contacter et suivre mon actualité sur <a class="lienReseauxSociaux" href="https://www.facebook.com/Lechiroquiroule/" target = "_blank">facebook</a></p>
 
 
-							<p><a class="Parties" css="bold" href="newsletter.html">newsletter</a></p>
-
-				* Prise de Rendez Vous en ligne (rubrique 6 sur le coté permanent)
-
-				* Les conseils du Chiro qui roule (rubrique 7 sur le coté permanent)
-
-				> Qu’est-ce que la rubrique des conseils du Chiro qui roule ? (sous partie 7.1)
-
-				C’est une rubrique répertoriant les derniers articles d’information spécialement dédiée aux patients ou aux personnes désirant s’informer sur la santé.
-
-				C’est une lettre que votre chiropracteur préparera régulièrement pour vous en sélectionnant certains articles intéressants ou bien en rédigeant les siens. Ces articles porteront sur divers thèmes autour de la santé.
-
-
 
 			</div>
 </div>

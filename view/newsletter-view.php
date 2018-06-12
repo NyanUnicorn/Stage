@@ -7,10 +7,8 @@
 	<meta charset="utf-8">
 
 	<?php
-			includeExternalHead();
-			echo getStylesheet('style');
-			echo getStylesheet('style_form');
-			echo getStylesheet('style_menu');
+			echo $head;
+			echo $stylesheet;
 	 ?>
 
 </head>
@@ -39,8 +37,8 @@
 
 			<p>Lien vers une page où il faut s’enregistrer avec son mail pour les non membres ou bien on peut directement s’inscrire en cochant une case quand on crée son compte sur le site.</p>
 
-			<p><i class="chevron fab fa-facebook fa-spin"></i>Le Chiro qui roule</p>
-		    <p><i class="chevron fab fa-instagram fa-spin"></i>Lechiroquiroule</p>
+			<p><i class="chevron fab fa-facebook"></i><a class="link" href="https://www.facebook.com/Lechiroquiroule/" target="_blank">Le Chiro qui roule</a></p>
+		    <p><i class="chevron fab fa-instagram"></i><a class="link" href="https://www.instagram.com/lechiroquiroule/?hl=fr" target="_blank">Lechiroquiroule</a></p>
 		    <p>Se renseigner sur la <a target="_blank" href="http://www.chiropraxie.com/">chiropraxie</a>.</p>
 		    <p>Se renseigner sur l'<a target="_blank" href="http://www.who.int/fr/">Organisation Mondiale de la santé</a>.</p>
 		    <p>Se renseigner sur l'association <a target="_blank" href="http://www.kheirdafrik.com/">Kheir d’Afrik</a>.</p>
@@ -52,11 +50,9 @@
 
 
 	<?php
-
-		require 'footer-view.php';
-		includeExternalFoot();
-
-	 ?>
+	require 'footer-view.php';
+	echo $foot;
+	?>
 
 </body>
 
