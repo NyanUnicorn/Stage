@@ -101,14 +101,17 @@ div.affix + .img_alexandre_velo{
 
 
 
+/*page newsletter*/
 
+.link{
 
+	text-decoration: none;
+	color : black;
+}
 
-
-
-
-
-
+.link:hover{
+	text-decoration: none;
+}
 
 
 

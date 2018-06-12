@@ -7,14 +7,24 @@ padding: 10px 20px 10px 20px;
 
 .userForm{
 
-
+display: grid;
+grid-template-columns: 2fr 3fr 100px;
+grid-template-rows: 40px;
+grid-gap: 20px;
 }
 
 .userLabel{
-
+  grid-column: 1;
   font-weight: 400;
   margin: 20px;
 }
+
+.userInput{
+
+grid-column:2;
+
+}
+
 
 .userItem{
 

@@ -2,6 +2,7 @@
 namespace Service;
 
 use Repository\CiviliteRepository as CivRep;
+use Repository\UserRepository as UserRep;
 
 class ClassTools{
 //fonction qui permet de recuperer la civilite dans la BDD
@@ -29,6 +30,10 @@ class ClassTools{
     return $randomString;
 }
 
+  public static function SetUserInfo(){
+
+
+  }
 
 }
 

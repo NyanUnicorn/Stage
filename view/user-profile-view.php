@@ -51,37 +51,37 @@
                     </div>
                     <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
                       <h4 id="list-item-1">Mes Informations</h4>
-                      <form class="" action="index.html" method="post">
+                      <form class="userForm" action="index.html" method="post">
 
                         <label class="userLabel" for="prenom">Prenom :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="nom">Nom :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="email">Email :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="adresse">Adresse :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="complement">Complement :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="ville">Ville :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="cd_postale">Code Postale :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="tel">Téléphone :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="profession">Profession :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <label class="userLabel" for="Civilite">Civilite :</label>
-                        <input type="text" name="" value="<?php ?>">
+                        <input class="userInput" type="text" name="" value="<?php ?>">
 
                         <button class="RDVButton" type="submit" name="button">Enregistrer les changements</button>
                       </form>
