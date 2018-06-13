@@ -203,6 +203,8 @@ footer .footer_wrapper .rdv{
   margin-top: 60px;
 }
 .main .calendar_rdv .rendezvous .prendreRendezvous{
+  background-color: #E6F2F2;
+  padding: 50px 100px;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 1fr;
@@ -210,7 +212,7 @@ footer .footer_wrapper .rdv{
 }
 .main .calendar_rdv .rendezvous .prendreRendezvous .elem{
   display: grid;
-  grid-template-columns: minmax(200px, 30%) minmax(70% , 100%);
+  grid-template-columns: minmax(250px, 30%) minmax(70% , 100%);
 }
 .main .calendar_rdv .rendezvous .prendreRendezvous .elem .radio{
   display: grid;
@@ -219,4 +221,39 @@ footer .footer_wrapper .rdv{
 }
 .main .calendar_rdv .rendezvous .prendreRendezvous .elem .radio input{
   padding-left: 70px;
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous > input{
+  border: 2px solid #008081 ;
+  border-radius: 20px;
+  background-color: white;
+  transition: .7s;
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous > input:hover{
+  background-color:  rgba(255,241,206,1);;
+  border-color:  rgba(232,131,64,1);
+}
+
+.main .calendar_rdv .rendezvous .connect{
+  background-color: #E6F2F2;
+  padding: 50px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.main .calendar_rdv .rendezvous .connect p{
+  grid-column: 1/4;
+  grid-row: 1;
+  text-align: center;
+}
+.main .calendar_rdv .rendezvous .connect input{
+  grid-column: 2;
+  grid-row: 2;
+  border: 2px solid #008081 ;
+  border-radius: 20px;
+  background-color: white;
+  transition: .7s;
+}
+.main .calendar_rdv .rendezvous .connect input:hover{
+  background-color:  rgba(255,241,206,1);;
+  border-color:  rgba(232,131,64,1);
 }
