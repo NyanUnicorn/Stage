@@ -45,10 +45,14 @@
   						</div>
   						<div class="main">
   							<div class="content-area">
-                  <h2> <a href="#">FullCalendar</a> </h2>
+                  <div class="calendar_rdv">
+
+
+                  <h2> Prendre rendez-vous </h2>
                   <div id="calendar">
 
                   </div>
+
                   <?php
                   $errorZone = '<div class="errorZone">';
                   foreach($errors as $error){
@@ -87,14 +91,20 @@
                        <div class="elem">
                          <label for="duree">Premier rendez vous ?</label>
                          <div class="radio">
-                           <label for="non">non</label>
-                           <input type="radio" name="premier" id="non" value="1" checked="checked">
-                           <label for="oui">oui</label>
-                           <input type="radio" name="premier" id="oui" value="0">
+                           <div class="">
+                             <label for="non">non</label>
+                             <input type="radio" name="premier" id="non" value="1" checked="checked">
+                           </div>
+                           <div class="">
+                             <label for="oui">oui</label>
+                             <input type="radio" name="premier" id="oui" value="0">
+                           </div>
+
                          </div>
                        </div>
                        <input type="submit" name="submit" value="Confirmer">
                      </form>
+                   </div>
                    </div>
                   </div>
                 </div>

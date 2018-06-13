@@ -173,3 +173,50 @@ footer .footer_wrapper .rdv{
   width: 498px;
   margin: 0 auto;
 }
+.main .calendar_rdv{
+  margin-right: 70px;
+}
+.main .calendar_rdv > h2{
+  font-size: 35px;
+  margin: 40px 0;
+  text-align: center;
+}
+.main .calendar_rdv h2 a{
+  text-decoration: none;
+}
+
+.fc-event,
+.fc-event-dot {
+	background-color: #008081;
+  border-color: #008081;
+  border-radius: 2px;
+}
+.fc-event:hover,
+.fc-event-dot:hover{
+	background-color:  rgba(232,131,64,1);
+  border-color:  rgba(232,131,64,1);
+  border-radius: 2px;
+}
+
+.main .calendar_rdv .rendezvous{
+  display: block;
+  margin-top: 60px;
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous .elem{
+  display: grid;
+  grid-template-columns: minmax(200px, 30%) minmax(70% , 100%);
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous .elem .radio{
+  display: grid;
+  grid-template-columns: minmax(100px , 25%)  minmax(100px , 25%) minmax(0px , 50%);
+  grid-template-rows: 1fr;
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous .elem .radio input{
+  padding-left: 70px;
+}

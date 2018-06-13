@@ -66,13 +66,25 @@ class Calendar{
     return $data;
   }
 
+  public static function arrayContains($class, $classArray){
+    $contains = FALSE;
+    foreach($classArray as $elem){
+      if($elem == $class){
+        $contains = TRUE;
+      }
+    }
+    return $contains;
+  }
+
   public static function prepareArray2($_input1, $_input2){
     //compare both array
+
     foreach($_input2 as $key=>$elem2){
       foreach($_input1 as $elem1){
-        if($elem2['user_id'] == $elem1['user_id']){
+        if($elem2['id'] == $elem1['id']){
     //replace array 2 what exists in array 1 (user_id for reference)
-          $_input2[$key] = $elem1;
+          unset($_input2[$key]);
+          array_push($_input2 , $elem1);
         }
       }
     }
@@ -81,31 +93,29 @@ class Calendar{
     $data = [];
     $_SESSION['rdv'] = [];
     foreach($_input2 as $key=>$rdv){
-      foreach($_input1 as $elem1){
-        if($rdv['user_id'] == $elem1['user_id']){
-          $urlId = Tool::generateRandomString(30);
-          $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status'],  $rdv['info_supp']);
-          array_push($_SESSION['rdv'] , $RDV);
+      if(self::arrayContains($rdv, $_input1)){
+        $urlId = Tool::generateRandomString(30);
+        $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status'],  $rdv['info_supp']);
+        array_push($_SESSION['rdv'] , $RDV);
 
-          $duree = $rdv['date_rdv'];
-          $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
-          $data[] = array(
-            'id'          =>  $rdv['user_id'],
-            'title'       =>  $rdv['nom'] . ' ' . $rdv['prenom'],
-            'start'       =>  $rdv['date_rdv'],
-            'end'         =>  $duree,
-            'url'         =>  'rendezvous.php?myrdv='.$urlId.''
-          );
-        }else{
-          $duree = $rdv['date_rdv'];
-          $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
-          $data[] = array(
-            'id'          =>  $rdv['user_id'],
-            'title'       =>  'Horaire occupé',
-            'start'       =>  $rdv['date_rdv'],
-            'end'         =>  $duree,
-          );
-        }
+        $duree = $rdv['date_rdv'];
+        $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
+        $data[] = array(
+          'id'          =>  $rdv['user_id'],
+          'title'       =>  $rdv['nom'] . ' ' . $rdv['prenom'],
+          'start'       =>  $rdv['date_rdv'],
+          'end'         =>  $duree,
+          'url'         =>  'rendezvous.php?myrdv='.$urlId.''
+        );
+      }else{
+        $duree = $rdv['date_rdv'];
+        $duree = date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv'])));
+        $data[] = array(
+          'id'          =>  $rdv['user_id'],
+          'title'       =>  'Horaire occupé',
+          'start'       =>  $rdv['date_rdv'],
+          'end'         =>  $duree,
+        );
       }
     }
     return $data;

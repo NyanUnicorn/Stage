@@ -13,8 +13,8 @@ class RDVRepository{
   }
   public static function getRdvAsUser($_email){
     $query = new DB();
-    $result1 = $query->query("SELECT Rdv.prenom, Rdv.nom, Rdv.user_id, Rdv.date_rdv, Rdv.duree_min_rdv, Rdv.date_crea, Rdv.adresse, Rdv.ville, Rdv.status, Rdv.info_supp FROM Rdv LEFT JOIN User on User.id = Rdv.user_id WHERE User.email = '$_email'")->fetchAll();
-    $result2 = $query->query("SELECT Rdv.user_id, Rdv.date_rdv, Rdv.duree_min_rdv, Rdv.date_crea FROM Rdv ")->fetchAll();
+    $result1 = $query->query("SELECT Rdv.id, Rdv.prenom, Rdv.nom, Rdv.user_id, Rdv.date_rdv, Rdv.duree_min_rdv, Rdv.date_crea, Rdv.adresse, Rdv.ville, Rdv.status, Rdv.info_supp FROM Rdv LEFT JOIN User on User.id = Rdv.user_id WHERE User.email = '$_email'")->fetchAll();
+    $result2 = $query->query("SELECT Rdv.id, Rdv.user_id, Rdv.date_rdv, Rdv.duree_min_rdv, Rdv.date_crea FROM Rdv ")->fetchAll();
     return Calendar::prepareArray($result1, $result2);
   }
   public static function getRdvAsVisitor(){
