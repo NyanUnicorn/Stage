@@ -80,14 +80,11 @@
                         <label class="userLabel" for="profession">Profession :</label>
                         <input class="userInput" type="text" name="" value="<?php ?>">
 
-                        <label class="userLabel" for="Civilite">Civilite :</label>
-                        <input class="userInput" type="text" name="" value="<?php ?>">
-
                         <button class="RDVButton" type="submit" name="button">Enregistrer les changements</button>
                       </form>
 
                       <h4 id="list-item-2">Mes Rendes-Vous</h4>
-                      <p>...</p>
+                        
                       <h4 id="list-item-3">Newsletter</h4>
                       <div class="userItem">
                         <p>Abonné à la newsletter:</p>

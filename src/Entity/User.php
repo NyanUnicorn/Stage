@@ -187,6 +187,10 @@ class User{
     return $this->newsletter;
   }
 
+  public function SetNewsletter($input){
+    $this->newsletter = $input;
+  }
+
   private function age($_date_nais){
     $ajd = date("Y-m-d");
     $diff = date_diff(date_create($_date_nais), date_create($ajd));

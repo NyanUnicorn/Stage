@@ -35,10 +35,10 @@ class UserRepository {
   }
 
   //recupération d'info sur l'utilisateur connecté
-  public static function userInfo(){
+  public static function userInfo($_email){
 
     $query = new DB;
-    $return = $query->query("SELECT prenom, nom, date_nais, adresse, complement, ville, cd_postale, email, phone, profession, newsletter, Civilite_id FROM User WHERE email='$_email'");
+    return $query->query("SELECT prenom, nom, date_nais, adresse, complement, ville, cd_postale, email, telephone, profession, newsletter, Civilite_id FROM User WHERE email='$_email'");
   }
 
   //fonction qui permet de créer un utilisateur

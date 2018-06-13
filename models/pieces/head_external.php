@@ -10,6 +10,7 @@
 <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>-->
 <!--<script src="D:\wamp64\www\Stage\public\assets\js\angular.min.js" type="text/javascript"></script>-->
 <script src="http://le-chiro-qui-roule.assets/js/angular.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
 <script src="http://le-chiro-qui-roule.assets/js/angular-route.min.js" type="text/javascript"></script>
 <script src="http://le-chiro-qui-roule.assets/js/module/lcqr.module.js" type="text/javascript"></script>
 <script src="http://le-chiro-qui-roule.assets/js/controller/navbar.collapse.controller.js" type="text/javascript"></script>
