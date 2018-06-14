@@ -17,17 +17,28 @@ $stylesheet = Style::getStylesheet('style') . Style::getStylesheet('header-grid'
 /* $foot est utilisé pour appeler le footer*/
 $foot = Style::includeExternalFoot();
 
-if(isset($_POST['Pneus_Crevés']) && isset($_POST['km'])){
+var_dump($_POST);
+if(isset($_POST['Pneus_Creves']) && isset($_POST['km']) && isset($_POST['air'])){
   $valeure = $_POST;
   ComptRep::SetKm($_POST['km']);
-  ComptRep::SetPneu($_POST['Pneus_Crevés']);
+  ComptRep::SetPneu($_POST['Pneus_Creves']);
+  ComptRep::SetAir($_POST['air']);
+  var_dump($_POST);
 }
 
 $resultat = ComptRep::infoCompteur()->fetchAll();
 $km = $resultat[0]['valeure'];
 $air = 0.271*$km;
+$resultat = ComptRep::infoCompteur()->fetchAll();
+
 $result =ComptRep::infoCompteur()->fetchAll();
 $pneu = $result[1]['valeure'];
+
+
+
+var_dump($km);
+var_dump($air);
+var_dump($pneu);
 
 
 

@@ -62,10 +62,10 @@
           <input type="text" name="km" placeholder="<?php echo $km ?>">
 
           <p class="gererCompt">Compteur des Kg de CO₂ économisés :</p>
-          <p><?php echo $air ?></p>
+          <input type="text" name="air" placeholder="<?php echo $air ?>">
 
           <p class="gererCompt">Compteur des Pneus crevés :</p>
-          <input class="Pneus" type="text" name="Pneus_Crevés" placeholder="<?php echo $pneu ?>">
+          <input class="Pneus" type="text" name="Pneus_Creves" placeholder="<?php echo $pneu ?>">
 
           <div class="FormButtonDiv">
             <button class="FormButton" type="submit" name="button">Sauvegarder les changements <i class="fab fa-angellist"></i></button>

@@ -30,9 +30,17 @@ $image['iconglobe'] = Image::displayImage('globe.png');
 $image['icontable'] = Image::displayImage('table.png');
 $image['iconspine'] = Image::displayImage('spine.png');
 $image['iconwheel'] = Image::displayImage('roueCrevee.png');
+$image['iconcloud'] = Image::displayImage('nuage.jpg');
 
 $resultat = ComptRep::infoCompteur()->fetchAll();
+var_dump($resultat);
 
+if(isset($resultat)){
+
+  $resKm = ComptRep::recupKm()->fetchAll();
+
+  $resultat[2]['valeure'] = $resKm[0]['valeure'] * 0.271;
+}
 
 
 
