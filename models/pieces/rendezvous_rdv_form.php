@@ -38,4 +38,7 @@
     </div>
   </div>
   <input type="submit" name="submit" value="Confirmer">
+
+  <p>Veuillez prendre un rendez-vous u moins 48heures à l'avance.</p>
+  <p>lors de votre prise de rendez-vous vous rez cotacté par téléphone pour confirmer</p>
 </form>

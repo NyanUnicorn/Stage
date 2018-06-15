@@ -1,9 +1,7 @@
 <?php
 require '../src/autoload.php';
 
-/* Ici on demande a la machine d'aller chercher les services
- nous permettant de trouver les pages de style,
-connection et les images dans l'explorateur de fichier */
+
 use Service\Style;
 use Service\Connection;
 use Service\Image;
@@ -11,6 +9,7 @@ use Service\Calendar;
 
 session_start();
 
+$RDV = NULL;
 
 if(isset($_SESSION['rdv']) && isset($_SESSION['USER'])  && isset($_GET['myrdv'])){
   if(Calendar::validRendezVous($_SESSION['rdv'], $_GET['myrdv'])){
@@ -22,7 +21,19 @@ if(isset($_SESSION['rdv']) && isset($_SESSION['USER'])  && isset($_GET['myrdv'])
   header('Location: /agenda.php');
 }
 
+$USER = $_SESSION['USER'];
 
+
+
+//change to Admin when finnished!!!!!!!!!!
+if(isset($_GET['option'])){
+  if($USER->getRole() == Roles::User){
+    if($RDV->getStatus() == RdvStatus::Requested){
+      Calendar::executeRdvOption($_GET['option'], $RDV);
+      //header('Location: /agenda.php');
+    }
+  }
+}
 
 
 $head = Style::includeExternalHead();

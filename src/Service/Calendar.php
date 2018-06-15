@@ -49,7 +49,7 @@ class Calendar{
     $_SESSION['rdv'] = [];
     foreach($_input as $rdv){
       $urlId = Tool::generateRandomString(30);
-      $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status'],  $rdv['info_supp']);
+      $RDV = new Rdv($rdv['id'], $rdv['date_crea'], $rdv['adresse'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status'],  $rdv['info_supp']);
       array_push($_SESSION['rdv'] , $RDV);
 
       $duree = $rdv['date_rdv'];
@@ -62,7 +62,6 @@ class Calendar{
         'url'         =>  'rendezvous.php?myrdv='.$urlId.''
       );
     }
-    //array_push($_SESSION['rdv'] , $rdvList);
     return $data;
   }
 
@@ -95,7 +94,7 @@ class Calendar{
     foreach($_input2 as $key=>$rdv){
       if(self::arrayContains($rdv, $_input1)){
         $urlId = Tool::generateRandomString(30);
-        $RDV = new Rdv($rdv['date_crea'], $rdv['adresse'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status'],  $rdv['info_supp']);
+        $RDV = new Rdv($rdv['id'], $rdv['date_crea'], $rdv['adresse'], $rdv['ville'], $rdv['date_rdv'], $rdv['duree_min_rdv'], $rdv['user_id'], $rdv['nom'], $rdv['prenom'], $urlId, $rdv['status'],  $rdv['info_supp']);
         array_push($_SESSION['rdv'] , $RDV);
 
         $duree = $rdv['date_rdv'];
@@ -181,7 +180,7 @@ class Calendar{
     $status = NULL;
     if($user->getRole() == Roles::Admin){
       $status = RdvStatus::Accepted;
-    }else if($user->getRole() == Roles::USer){
+    }else if($user->getRole() == Roles::User){
       $status = RdvStatus::Requested;
     }
     return $status;
@@ -214,15 +213,17 @@ class Calendar{
   }
 
   public static function isValidRdvRequest($_post){
-    $error = NULL;
+    $error = [];
     //get rendez vous list
-    $rdvList = RdvRep::getRdvAsVisitor();
+    $rdvList = RdvRep::getRdvMini();
     //get start date time and duration
-    $datetiem = $_post['dtRdv'];
+    $datetime = $_post['dtRdv'];
+    var_dump($rdvList);
     $duree = self::getDuree($_post);
     //check for collisions before and after
     foreach($rdvList as $rdv){
-      if(date('Y-m-d H:i:s',strtotime('+'.$rdv['duree_min_rdv'].' minutes', strtotime($rdv['date_rdv']))) > $datetime){
+      $rdvduree = $rdv['duree_min_rdv'];
+      if(date('Y-m-d H:i:s',strtotime('+'.$rdvduree.' minutes', strtotime($rdv['date_rdv']))) > $datetime){
         $error = 'collision de rendez-vous';
       }else if($rdv['date_rdv'] > date('Y-m-d H:i:s',strtotime('+'.$duree.' minutes', strtotime($datetime))) ){
         $error = 'collision de rendez-vous';
@@ -230,6 +231,14 @@ class Calendar{
       return $error;
     }
 
+  }
+
+  public static function executeRdvOption($input, $RDV){
+    if($input == 'confirm'){
+      RdvRep::confirmRdv($RDV);
+    }else if($input == 'refuse'){
+      RdvRep::refuseRdv($RDV);
+    }
   }
 
 }

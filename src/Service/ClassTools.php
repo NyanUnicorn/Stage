@@ -6,7 +6,6 @@ use Repository\CiviliteRepository as CivRep;
 class ClassTools{
 //fonction qui permet de recuperer la civilite dans la BDD
   public static function civilite($_civilite){
-    var_dump(CivRep::getCivilite($_civilite));
     return CivRep::getCivilite($_civilite);
   }
 //fonction qui permet de calculer l'age

@@ -17,6 +17,7 @@ class Rdv{
   private $url_id;
   private $status;
   private $info_supp;
+  private $phone;
 
   //constructeur
 
@@ -30,9 +31,12 @@ class Rdv{
       case 11:
         self::__construct1($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8], $argv[9], $argv[10]);
         break;
+      case 12:
+        self::__construct2($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8], $argv[9], $argv[10], $argv[11]);
+        break;
     }
   }
-  public function __construct0($_date_crea,$_adresse,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_status, $_info_supp){
+  public function __construct0($_id, $_date_crea,$_adresse,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_status, $_info_supp){
     $this->date_crea = $_date_crea;
     $this->adresse = $_adresse;
     $this->ville = $_ville;
@@ -58,8 +62,27 @@ class Rdv{
     $this->status = $_status;
     $this->info_supp = $_info_supp;
   }
+  public function __construct2($_date_crea,$_adresse,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_url_id, $_status, $_info_supp){
+    $this->id = $_id;
+    $this->date_crea = $_date_crea;
+    $this->adresse = $_adresse;
+    $this->ville = $_ville;
+    $this->date_rdv = $_date_rdv;
+    $this->duree_min_rdv = $_duree_min_rdv;
+    $this->user_id = $_user_id;
+    $this->user_nom = $_user_nom;
+    $this->user_pre = $_user_pre;
+    $this->url_id = $_url_id;
+    $this->status = $_status;
+    $this->info_supp = $_info_supp;
+  }
 
-
+  public function getId(){
+    return $this->id;
+  }
+  public function getPhone(){
+    return $this->phone;
+  }
   public function getInfoSupp(){
     return $this->info_supp;
   }

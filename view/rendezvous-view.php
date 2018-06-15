@@ -26,12 +26,29 @@
 						</div>
 						<div class="main">
 							<div class="content-area">
+                 <div class="monRendezvous">
+                   <label class="userLabel" for="">Nom : <?php echo $RDV->getNom() ?></label>
+                   <label class="userLabel" for="">Prenom : <?php echo $RDV->getPrenom() ?></label>
+                   <label class="userLabel" for="">Adresse : <?php echo $RDV->getAdresse() ?></label>
+                   <label class="userLabel" for="">Ville : <?php echo $RDV->getVille() ?></label>
+                   <label class="userLabel" for="">Date du rendez-vous : <?php echo $RDV->getDateRdv() ?></label>
+                   <label class="userLabel" for="">Durée du rendez-vous : <?php echo $RDV->getDuree() ?></label>
+                   <label class="userLabel" for="">Informations supplémentaires : <?php echo $RDV->getInfoSupp() ?></label>
+                   <?php
+                   use Enumeration\RdvStatus;
+                   use Enumeration\Roles;
+                   $output = '<div class="pendingRdvOptions">';
+                   if($USER->getRole() == Roles::User){
+                     if($RDV->getStatus() == RdvStatus::Requested){
+                       $output .= '<a href="rendezvous.php?myrdv='.$RDV->getUrlId().'&option=confirm">Confirmer</a>';
+                       $output .= '<a href="rendezvous.php?myrdv='.$RDV->getUrlId().'&option=refuse">Refuser</a>';
+                     }
+                   }
+                   echo $output . '</div>';
 
-                <?php
-                use Service\Content;
-                echo Content::displayRdv($RDV);
-                 ?>
+                    ?>
 
+                 </div>
 							 </div>
 							</div>
 						</div>
