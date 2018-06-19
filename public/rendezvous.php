@@ -27,7 +27,7 @@ $USER = $_SESSION['USER'];
 
 //change to Admin when finnished!!!!!!!!!!
 if(isset($_GET['option'])){
-  if($USER->getRole() == Roles::User){
+  if($USER->getRole() == Roles::Admin){
     if($RDV->getStatus() == RdvStatus::Requested){
       Calendar::executeRdvOption($_GET['option'], $RDV);
       //header('Location: /agenda.php');
