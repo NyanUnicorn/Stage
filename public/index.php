@@ -33,7 +33,7 @@ $image['iconwheel'] = Image::displayImage('roueCrevee.png');
 $image['iconcloud'] = Image::displayImage('nuage.jpg');
 
 $resultat = ComptRep::infoCompteur()->fetchAll();
-//var_dump($resultat);
+
 
 if(isset($resultat)){
 

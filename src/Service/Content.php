@@ -88,13 +88,12 @@ Class Content{
     return substr($string, $ini, $len);
   }
 
+  public static function displayMails($emailListe){
 
-  public static function displayRdv($_RDV){
-    $content = '';
-    
-    return $content;
+    $output = '';
+    foreach($emailListe as $email){
+      $output .= $email['email'] . ' ; ';
+    }
+    return $output;
   }
-
-
-
 }

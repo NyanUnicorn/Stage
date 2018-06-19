@@ -46,6 +46,32 @@ class UserRepository {
     return $query->query("SELECT prenom, nom, date_nais, adresse, complement, ville, cd_postale, email, telephone, profession, newsletter, Civilite_id FROM User WHERE email='$_email'");
   }
 
+  //fonction qui permet de récuperer toutes les adresses mails des abonnés de la newsletter
+  public static function getMails(){
+
+    $query = new DB;
+    return $query->query("SELECT email FROM User WHERE newsletter='1'");
+  }
+
+  public static function updateUser($user){
+    $curruntEmail = $_SESSION['usersEmail0099'];
+    $nom = $user->getNom();
+    $prenom = $user->getPre();
+    $adresse = $user->getAdresse();
+    $complement = $user->getCompAdresse();
+    if(strlen($complement)==0){$complement = NULL;}
+    $cd_postale = $user->getCodePostale();
+    $ville = $user->getVille();
+    $email = $user->getEmail();
+    $telephone = $user->getTel();
+    $profession = $user->getProfession();
+    $newsletter = $user->getNewsletter();
+    $update = new DB();
+    var_dump("UPDATE User set nom = '$nom', prenom = '$prenom', adresse = '$adresse', complement = '$complement', cd_postale = '$cd_postale', ville = '$ville', email = '$email', telephone = '$telephone', profession = '$profession', newsletter = '$newsletter' WHERE email = '$curruntEmail' AND status = '1' ");
+    $update->exec("UPDATE User set nom = '$nom', prenom = '$prenom', adresse = '$adresse', complement = '$complement', cd_postale = '$cd_postale', ville = '$ville', email = '$email', telephone = '$telephone', profession = '$profession', newsletter = '$newsletter' WHERE email = '$curruntEmail' AND status = '1' ");
+    var_dump($user);
+  }
+
   //fonction qui permet de créer un utilisateur
   public static function createUser($user, $password){
     $nom = $user->getNom();
@@ -75,6 +101,8 @@ class UserRepository {
     $stmt->execute(array($nom, $prenom, $date_nais, $date_crea, $adresse, $complement, $cd_postale, $ville, $email, $telephone, $profession, $role, $motif, $mdp, $status, $Civilite_id, $newsletter));
 
   }
+
+
 
 
 }

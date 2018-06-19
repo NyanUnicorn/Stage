@@ -7,7 +7,7 @@ connection et les images dans l'explorateur de fichier */
 use Service\Style;
 use Service\Connection;
 use Service\Image;
-use Repository\UserRepository as Rep;
+use Repository\UserRepository as UserRep;
 session_start();
 
 /* $head est utilisé pour appeler le header*/
@@ -18,19 +18,55 @@ $stylesheet = Style::getStylesheet('style') . Style::getStylesheet('header-grid'
 $foot = Style::includeExternalFoot();
 
 
+///////////////////////////////////////////////////////////////////////
+// if(Connection::authenticated()){
+//   header('Location: /index.php');
+// }else{
+//   /* Verification de l'email et mdp*/
+//   $errors = Connection::checkLoginInput();
+//   /* Si pas d'erreurs connexion de l'utilisateur */
+//   if(!(count($errors) > 0)){
+//     $_SESSION['emailInput'] = Form::getInputPost('email');
+//     $errors = Connection::authentication($errors, $_POST['email'], $_POST['password']);
+//   }
+// }
+
+////////////////////////////////////////////////////////////////////////////////
+
+$USER = $_SESSION['USER'];
+$_SESSION['usersEmail0099'] = $_SESSION['USER']->getEmail();
+
+$errors = [];
+var_dump($_POST);
+$errors = Connection::checkLoginInput();
+/* Si pas d'erreurs connexion de l'utilisateur */
+if(!(count($errors) > 0)){
+    $errors = Connection::canette2Soda();
+
+    if(count($errors)<=0){
+      $userInfo = UserRep::loginUser( $_POST['email'], $_POST['password']);
+
+      if($userInfo != 'no_login'){
+        $errors = array_merge($errors, Connection::modifUser());
+        var_dump($errors);
+    }
+  }
+}
+
 /* $image est utilisé pour récuperer les images*/
 $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 /* $uri est la variable servant a recuperer le nom de la page */
 $uri = $_SERVER['REQUEST_URI'];
 $USER = $_SESSION['USER'];
-//var_dump($USER);
+$_SESSION['usersEmail0099'] = $_SESSION['USER']->getEmail();
+
 
 
 if(Connection::authenticated()){
 
-  $result = Rep::userInfo($_SESSION['USER']->getEmail())->fetchAll()['0'];
-//  var_dump($result);
+  $result = UserRep::userInfo($_SESSION['USER']->getEmail())->fetchAll()['0'];
+
   $USER->setPre($result['prenom']);
   $USER->setNom($result['nom']);
   $USER->setDataNais($result['date_nais']);

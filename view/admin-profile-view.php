@@ -21,10 +21,7 @@
           <a class="nav-link active" href="../">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Clients</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Agenda</a>
+          <a class="nav-link" href="agenda.php">Agenda</a>
         </li>
       </ul>
     </div>
@@ -36,7 +33,12 @@
 
 
       <div class="multi-menu">
-        <h3 class="decoh3">Notifications :</h3>
+        <h3 class="decoh3">Newsletter :</h3>
+
+        <h4>Adresses Mails pour la Newsletter:</h4>
+        <textarea name="mailsUser" rows="8" cols="80"><?php use Service\Content; echo Content::displayMails($newsletter); ?></textarea>
+
+        <!--
         <ul class="list-group">
           <li class="list-group-item d-flex justify-content-between align-items-center"><a href="#">Clients</a>
             <span class="badge badge-primary badge-pill"><a href="#">14</a></span>
@@ -50,6 +52,7 @@
             <span class="badge badge-primary badge-pill"><a href="#">1</a></span>
           </li>
         </ul>
+      -->
 
       </div>
 

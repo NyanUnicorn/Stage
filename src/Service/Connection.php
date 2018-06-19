@@ -170,4 +170,40 @@ selon si l'utilisateur est connecté ou non*/
     }
   }
 
+  public static function canette2Soda(){
+    $errors = [];
+      if(strlen($_POST['prenom']) <= 1){$errors[] = 'veuillez entrer votre prénom';}
+      if(strlen($_POST['nom']) <= 1){$errors[] = 'veuillez entrer votre nom';}
+      if(strlen($_POST['ville']) <= 2){$errors[] = 'veuillez préciser la ville dans laquel vous habitez';}
+      if(strlen($_POST['cd_postale']) <= 1){$errors[] = 'veuillez préciser votre code postale';}
+      if(strlen($_POST['adresse']) <= 1){$errors[] = 'veuillez préciser votre adresse';}
+      if(strlen($_POST['tel']) < 10){$errors[] = 'veuillez ajouter un numéro de télephone';}
+      if(strlen($_POST['profession']) <= 1){$errors[] = 'veuillez préciser votre profession';}
+      if(strlen($_POST['email']) <= 3){$errors[] = 'veuillez ajouter une adresse e-mail';}
+    return $errors;
+    }
+
+    public static function modifUser(){
+      $status = Status::Active;
+      $role = Roles::User;
+      $errors = [];
+      $prenom = $_POST['prenom'];
+      $nom = $_POST['nom'];
+      $adresse = $_POST['adresse'];
+      $cadresse = $_POST['complement'];
+      $ville = $_POST['ville'];
+      $cp = $_POST['cd_postale'];
+      $phone = $_POST['tel'];
+      $profession = $_POST['profession'];
+      $email = $_POST['email'];
+      $newsletter = $_POST['newsletter'];
+      $password = $_POST['password'];
+      //var_dump($_POST);
+
+      //Insert les données dans la BDD
+        $User = new User($nom, $prenom, $email, $phone, $adresse, $cadresse, $cp, $ville, $profession, $newsletter);
+        var_dump($User);
+        UserRep::updateUser($User);
+      return $errors;
+    }
 }
