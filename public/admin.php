@@ -8,6 +8,7 @@ use Service\Style;
 use Service\Connection;
 use Service\Image;
 use Repository\CompteurRepository as ComptRep;
+use Repository\UserRepository as UserRep;
 session_start();
 
 /* $head est utilisé pour appeler le header*/
@@ -17,13 +18,16 @@ $stylesheet = Style::getStylesheet('style') . Style::getStylesheet('header-grid'
 /* $foot est utilisé pour appeler le footer*/
 $foot = Style::includeExternalFoot();
 
-var_dump($_POST);
+
+$newsletter = UserRep::getMails()->fetchAll();
+
+
 if(isset($_POST['Pneus_Creves']) && isset($_POST['km']) && isset($_POST['air'])){
   $valeure = $_POST;
   ComptRep::SetKm($_POST['km']);
   ComptRep::SetPneu($_POST['Pneus_Creves']);
   ComptRep::SetAir($_POST['air']);
-  var_dump($_POST);
+
 }
 
 $resultat = ComptRep::infoCompteur()->fetchAll();
@@ -35,10 +39,6 @@ $result =ComptRep::infoCompteur()->fetchAll();
 $pneu = $result[1]['valeure'];
 
 
-
-var_dump($km);
-var_dump($air);
-var_dump($pneu);
 
 
 

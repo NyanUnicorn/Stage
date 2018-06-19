@@ -29,7 +29,7 @@
          <a class="lien" href="https://www.instagram.com/lechiroquiroule/?hl=fr" target="_blank"><i class="icones fab fa-instagram"></i> Lechiroquiroule</a>
       </div>
         <h5 class="RDV">RDV</h5>
-        <div class="RDVButton">
+        <div class="RDVFooterButton">
           <a href="agenda.php" class="btn btn-secondary btn-sm" role="button" aria-pressed="true">Prendre rendez-vous</a>
         </div>
         <p class="RDVtxt">N'hésitez pas à prendre rendez-vous dès maintenant.</p>

@@ -12,6 +12,7 @@ use Service\ClassTools as Tool;
 class User{
 
   //parametres de l'objet
+  private $id;
   private $nom;
   private $prenom;
   private $email;
@@ -41,6 +42,9 @@ class User{
                 break;
             case 9:
                 self::__construct2($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8]);
+                break;
+            case 10:
+                self::__construct3($argv[0], $argv[1], $argv[2], $argv[3], $argv[4], $argv[5], $argv[6], $argv[7], $argv[8], $argv[9]);
                 break;
          }
     }
@@ -80,6 +84,20 @@ class User{
     $this->civilite = Tool::civilite($_civilite);
     $this->age = Tool::age($this->date_nais);
   }
+
+  public function __construct3($_nom, $_pre, $_email, $_phone, $_adresse, $_cadresse, $_cp, $_ville, $_profession, $_newsletter){
+    $this->nom = $_nom;
+    $this->prenom = $_pre;
+    $this->email = $_email;
+    $this->phone = $_phone;
+    $this->adresse = $_adresse;
+    $this->cadresse = $_cadresse;
+    $this->cd_postale = $_cp;
+    $this->ville = $_ville;
+    $this->profession = $_profession;
+    $this->newsletter = $_newsletter;
+  }
+
 
   public function getSessionId(){
     return $this->sessionid;

@@ -87,4 +87,13 @@ Class Content{
     $len = strpos($string, $end, $ini) - $ini;
     return substr($string, $ini, $len);
   }
+
+  public static function displayMails($emailListe){
+
+    $output = '';
+    foreach($emailListe as $email){
+      $output .= $email['email'] . ' ; ';
+    }
+    return $output;
+  }
 }
