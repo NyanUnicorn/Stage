@@ -62,7 +62,7 @@ class Rdv{
     $this->status = $_status;
     $this->info_supp = $_info_supp;
   }
-  public function __construct2($_date_crea,$_adresse,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_url_id, $_status, $_info_supp){
+  public function __construct2($_id, $_date_crea,$_adresse,$_ville,$_date_rdv,$_duree_min_rdv,$_user_id, $_user_nom, $_user_pre, $_url_id, $_status, $_info_supp){
     $this->id = $_id;
     $this->date_crea = $_date_crea;
     $this->adresse = $_adresse;
