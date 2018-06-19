@@ -173,3 +173,118 @@ footer .footer_wrapper .rdv{
   width: 498px;
   margin: 0 auto;
 }
+.main .calendar_rdv{
+  margin-right: 70px;
+}
+.main .calendar_rdv > h2{
+  font-size: 35px;
+  margin: 40px 0;
+  text-align: center;
+}
+.main .calendar_rdv h2 a{
+  text-decoration: none;
+}
+
+.fc-event,
+.fc-event-dot {
+	background-color: #008081;
+  border-color: #008081;
+  border-radius: 2px;
+}
+.fc-event:hover,
+.fc-event-dot:hover{
+	background-color:  rgba(232,131,64,1);
+  border-color:  rgba(232,131,64,1);
+  border-radius: 2px;
+}
+
+.main .calendar_rdv .rendezvous{
+  display: block;
+  margin-top: 60px;
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous{
+  background-color: #E6F2F2;
+  padding: 50px 100px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous .elem{
+  display: grid;
+  grid-template-columns: minmax(250px, 30%) minmax(70% , 100%);
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous .elem .radio{
+  display: grid;
+  grid-template-columns: minmax(100px , 25%)  minmax(100px , 25%) minmax(0px , 50%);
+  grid-template-rows: 1fr;
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous .elem .radio input{
+  padding-left: 70px;
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous > input{
+  border: 2px solid #008081 ;
+  border-radius: 20px;
+  background-color: white;
+  transition: .7s;
+}
+.main .calendar_rdv .rendezvous .prendreRendezvous > input:hover{
+  background-color:  rgba(255,241,206,1);;
+  border-color:  rgba(232,131,64,1);
+}
+
+.main .calendar_rdv .rendezvous .connect{
+  background-color: #E6F2F2;
+  padding: 50px 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.main .calendar_rdv .rendezvous .connect p{
+  grid-column: 1/4;
+  grid-row: 1;
+  text-align: center;
+}
+.main .calendar_rdv .rendezvous .connect input{
+  grid-column: 2;
+  grid-row: 2;
+  border: 2px solid #008081 ;
+  border-radius: 20px;
+  background-color: white;
+  transition: .7s;
+}
+.main .calendar_rdv .rendezvous .connect input:hover{
+  background-color:  rgba(255,241,206,1);
+  border-color:  rgba(232,131,64,1);
+}
+
+.content-area .monRendezvous{
+  margin-top: 100px;
+  padding: 50px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #E6F2F2;
+}
+.content-area .monRendezvous label{
+  grid-column: 1/3;
+}
+.content-area .monRendezvous .pendingRdvOptions{
+  grid-column: 1/3;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.content-area .monRendezvous .pendingRdvOptions a{
+  width: auto;
+  text-align: center;
+  text-decoration: none;
+  color: #008081;
+  background-color: RGBA(200,212,212,0.4);
+  padding: 6px 0;
+  margin-top: 20px;
+  transition: .4s;
+}
+.content-area .monRendezvous .pendingRdvOptions a:hover{
+  background-color: rgba(232,131,64,.6);
+  font-weight: bold;
+}

@@ -85,7 +85,7 @@ selon si l'utilisateur est connecté ou non*/
              $_SESSION['timeout_period'] = strtotime('+1 minutes');
           }
         }else{
-           $_SESSION['timeout_period'] = strtotime('+1 minutes');
+           //$_SESSION['timeout_period'] = strtotime('+1 minutes');
         }
         self::resetTimeout();
       }
@@ -114,7 +114,7 @@ selon si l'utilisateur est connecté ou non*/
     if(strlen($_POST['confirmEmail']) <= 1){$errors[] = 'veuillez confirmer votre e-mail';}else{
       if(!Form::testPasswordConfirm($_POST['email'], $_POST['confirmEmail'])){ $errors[] = 'Votre confirmation de e-mail ne coincide pas';}
     }}
-    if(strlen($_POST['pswd']) <= 1){$errors[]= 'veuillez entrez un mot de passe';}else if(strlen($_POST['pswd']) <= 6){$errors[]= 'votre mot de passe est trop court';}else{
+    if(strlen($_POST['pswd']) <= 1){$errors[]= 'veuillez entrez un mot de passe';}else if(strlen($_POST['pswd']) <= 5){$errors[]= 'votre mot de passe est trop court';}else{
     if(strlen($_POST['confirmPswd']) <= 1){$errors[]= 'veuillez confirmer votre mot de passe';}else{
       if(!Form::testPasswordConfirm($_POST['pswd'], $_POST['confirmPswd'])){ $errors[] = 'Votre confirmation de mod de passe ne coincide pas';}
     }}

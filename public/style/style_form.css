@@ -60,7 +60,7 @@
   background-color: #008081;
   border: 1px double white;
 }
-<<<<<<< HEAD
+
 .content .stayConnected{
   display: inline-block;
   width: calc(100% - 142px);
@@ -108,9 +108,8 @@
 .content fieldset > div.radio-set > div.radio-set-3 > label,
 .content fieldset > div.radio-set > div.radio-set-4 > label{
   width: calc(100% - 25px);
-=======
 
-
+}
 
 /* Style inputs, select elements and textareas */
 input[type=text], select, textarea, input[type=tel], input[type=date], input[type=password], input[type=password],input[type=email]{

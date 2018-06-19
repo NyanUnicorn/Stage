@@ -25,17 +25,9 @@ if(isset($_POST['prenom'])){
     }
   }
 }
-
-
-//$errors = array_merge($errors, Connection::createAccount());
-
-
 if(Connection::authenticated()){
   header('Location: /index.php');
 }
-
-
-
 
 
 
