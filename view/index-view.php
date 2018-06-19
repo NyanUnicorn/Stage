@@ -40,8 +40,9 @@
  			  						$disp = $disp . '<p class="compteur">' . $compteur['valeure'] . '</p>';
  			  						$disp = $disp . '<p>' . $compteur['description'] . '</p>';
  			  						$disp = $disp .'</div>';
- 			  					echo $disp;}
- 			  				?>
+ 			  					echo $disp;
+								}
+ 			  				?>								
  							</div>
 								<?php
 								use Service\Content;

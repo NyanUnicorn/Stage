@@ -21,7 +21,14 @@ class CompteurRepository{
 
     $query = new DB();
 
-    return $query->query("SELECT description, valeure, image FROM Compteurs WHERE description = 'pneu'");
+    return $query->query("SELECT description, valeure, image FROM Compteurs WHERE description = 'Pneus Crevés'");
+  }
+
+  public static function recupKm(){
+
+    $query = new DB();
+
+    return $query->query("SELECT description, valeure, image FROM Compteurs WHERE id='1'");
   }
 
   public static function userExist($_email){
@@ -31,14 +38,6 @@ class CompteurRepository{
     $result = $return->fetchAll();
   }
 
-public static function SetPneu($valeure){
-
-  $exec = new DB();
-  $exec->exec("UPDATE compteurs set valeure = $valeure WHERE id = 2");
-
-}
-
-
   public static function SetKm($valeure){
 
 
@@ -47,6 +46,23 @@ public static function SetPneu($valeure){
 
 
   }
+
+public static function SetPneu($valeure){
+
+  $exec = new DB();
+  $exec->exec("UPDATE compteurs set valeure = $valeure WHERE id = 2");
+
+}
+
+public static function SetAir($valeure){
+
+  $exec = new DB();
+  $exec->exec("UPDATE compteurs set valeure = $valeure WHERE id = 3");
+
+}
+
+
+
 
 }
 

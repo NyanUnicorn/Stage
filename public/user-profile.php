@@ -23,7 +23,31 @@ $image['logoTable'] = Image::displayImage('logoTable.png');
 $image['logoVelo'] = Image::displayImage('logoVelo.png');
 /* $uri est la variable servant a recuperer le nom de la page */
 $uri = $_SERVER['REQUEST_URI'];
-var_dump($_SESSION['USER']);
+$USER = $_SESSION['USER'];
+var_dump($USER);
+
+
+if(Connection::authenticated()){
+
+  $result = Rep::userInfo($_SESSION['USER']->getEmail())->fetchAll()['0'];
+  var_dump($result);
+  $USER->setPre($result['prenom']);
+  $USER->setNom($result['nom']);
+  $USER->setDataNais($result['date_nais']);
+  $USER->setAdresse($result['adresse']);
+  $USER->setCompAdresse($result['complement']);
+  $USER->setVille($result['ville']);
+  $USER->setCodePostale($result['cd_postale']);
+  $USER->setTel($result['telephone']);
+  $USER->setEmail($result['email']);
+  $USER->setProfession($result['profession']);
+  $USER->setNewsletter($result['newsletter']);
+
+}else{
+  echo '<script type="text/javascript">alert("Vous n\'êtes pas connecté ou vous avez été déconnecté")</script>';
+  header('Location: /index.php');
+
+  }
 /* $navStatus determine l'affichage de la navbar selon si l'utilisateur est connecté ou non */
 $navStatus = Connection::navConnexion();
 $menuStatus = Connection::menuConnexion();
