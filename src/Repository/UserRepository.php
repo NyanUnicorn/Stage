@@ -25,6 +25,7 @@ class UserRepository {
     if(self::getHashedPwd($_email, $_pwd)){
       $result = $query->query("SELECT id, role, status, nom, prenom, email, date_nais, ville, Civilite_id FROM User WHERE email = '$_email'");
     }
+
     /* permet de trouver les informations d'un utilisateur dans la BDD*/
     return $result;
   }
@@ -96,7 +97,7 @@ class UserRepository {
     //$sql = "INSERT INTO `user` (`nom`, `prenom`, `date_nais`, `date_crea`, `adresse`, `complement`, `cd_postale`, `ville`, `email`, `telephone`, `profession`, `role`, `motif`, `mdp`, `status`, `Civilite_id`, `newsletter`)
     //VALUES ('$nom', '$prenom', '$date_nais', '$date_crea', '$adresse', '$complement', '$cd_postale', '$ville', '$email', '$telephone', '$profession', '$role', '$motif', '$mdp', '$status', '$Civilite_id', '$newsletter');";
     //permet d'integer les données du nouvel utilisateur a la BDD
-    $stmt = $execute->prepare("INSERT INTO `user` (`nom`, `prenom`, `date_nais`, `date_crea`, `adresse`, `complement`, `cd_postale`, `ville`, `email`, `telephone`, `profession`, `role`, `motif`, `mdp`, `status`, `Civilite_id`, `newsletter`) 
+    $stmt = $execute->prepare("INSERT INTO `user` (`nom`, `prenom`, `date_nais`, `date_crea`, `adresse`, `complement`, `cd_postale`, `ville`, `email`, `telephone`, `profession`, `role`, `motif`, `mdp`, `status`, `Civilite_id`, `newsletter`)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
     $stmt->execute(array($nom, $prenom, $date_nais, $date_crea, $adresse, $complement, $cd_postale, $ville, $email, $telephone, $profession, $role, $motif, $mdp, $status, $Civilite_id, $newsletter));
 

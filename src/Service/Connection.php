@@ -76,16 +76,17 @@ selon si l'utilisateur est connecté ou non*/
     if($userInfo != 'no_login'){
       $data = $userInfo->fetch();
       if($data){
+          var_dump($data);
         $USER = new User($data['id'], $data['role'], $data['status'], $data['nom'], $data['prenom'], $data['email'], $data['date_nais'], $data['ville'], $data['Civilite_id']);
         $_SESSION['USER'] = $USER;
         if(isset($_POST['resteConnecte'])){
           if($_POST['resteConnecte'] == 'resteConnecte'){
             $_SESSION['timeout_period'] = strtotime('+7 day');
           }else{
-             $_SESSION['timeout_period'] = strtotime('+1 minutes');
+             $_SESSION['timeout_period'] = strtotime('+30 minutes');
           }
         }else{
-           //$_SESSION['timeout_period'] = strtotime('+1 minutes');
+           $_SESSION['timeout_period'] = strtotime('+30 minutes');
         }
         self::resetTimeout();
       }
@@ -93,7 +94,6 @@ selon si l'utilisateur est connecté ou non*/
     else{
       $toReturn = 'password';
     }
-
     return $toReturn;
   }
 
