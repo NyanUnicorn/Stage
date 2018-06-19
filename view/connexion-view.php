@@ -47,7 +47,7 @@
 							</form>
 							<form class="" action="inscription.php" method="post">
 								<div class="content small-content">
-									<p>vous n'avez pas encor de compte?</p>
+									<p>Vous n'avez pas encore de compte?</p>
 								</div>
 								<div class="content small-content">
 									<input class="createAcc" type="submit" name="button" value="Créer un compte"/>
