@@ -1,7 +1,5 @@
 <?php
-
 namespace Repository;
-
 use Service\DB;
 use Service\ClassTools as Tool;
 use Enumeration\Roles;
@@ -13,7 +11,7 @@ class CompteurRepository{
 
     $query = new DB();
     $query->exec("SET NAMES 'utf8';");
-    return $query->query("SELECT description, valeure, image FROM Compteurs");
+    return $query->query("SELECT description, valeure, image FROM compteurs");
 
   }
 
